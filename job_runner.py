@@ -12,18 +12,18 @@ NUM_REPS = 10
 n = 1000
 s0 = 4
 graph_type = 'SF'
-sem_type = 'exp'
+sem_type = 'gumbel'
 method = 'dagma'
 
 # model params
 
 # loss_type = 'logistic'
 # lambda1, w_threshold = 0.007, 0.3
-# max_iter, warm_iter = 5e4, 3e4
+# max_iter, warm_iter = 6e4, 3e4
 # rho_iter, rho_init = 5, 10
 # mu_factor = 0.1
 # lr = 0.0003
-# alpha = '1 1 1 1 1' 
+# alpha = '1 .9 .8 .7 .6'
 # verbose = True
 # checkpoint = 1000
 
@@ -33,9 +33,9 @@ max_iter, warm_iter = 6e4, 3e4
 rho_iter, rho_init = 5, 1
 mu_factor = 0.1
 lr = 0.0003
-alpha = '.8 .7 .7 .6 .6'
+alpha = '1 .9 .8 .7 .6'
 verbose = True
-checkpoint = 2000
+checkpoint = 1000
 
 
 
