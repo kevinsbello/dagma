@@ -9,10 +9,10 @@ NUM_NODES = [20, 30, 50, 80, 100]
 NUM_REPS = 10
 
 # graph params
-n = 1000
+n = 5000
 s0 = 4
-graph_type = 'SF'
-sem_type = 'gumbel'
+graph_type = 'ER'
+sem_type = 'gauss'
 method = 'dagma'
 
 # model params

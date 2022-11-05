@@ -35,7 +35,7 @@ class DAGMA_linear:
         """Evaluate value and gradient of the logdet acyclicity constraint."""
         M = s * self.Id - W * W
         h = - la.slogdet(M)[1] + self.d * np.log(s)
-        G_h = 2 * W * la.inv(M).T 
+        G_h = 2 * W * sla.inv(M).T 
         return h, G_h
 
     def _func(self, W, mu, s=1.0):
@@ -60,7 +60,7 @@ class DAGMA_linear:
         
         for iter in range(1, int(max_iter)+1):
             ## Compute the (sub)gradient of the objective
-            M = la.inv(s * self.Id - W * W) + 1e-16
+            M = sla.inv(s * self.Id - W * W) + 1e-16
             while np.any(M < 0): # sI - W o W is not an M-matrix
                 if iter == 1 or s <= 0.9:
                     self.vprint(f'W went out of domain for s={s} at iteration {iter}')
@@ -71,7 +71,7 @@ class DAGMA_linear:
                     if lr <= 1e-16:
                         return W, True
                     W -= lr * grad
-                    M = la.inv(s * self.Id - W * W) + 1e-16
+                    M = sla.inv(s * self.Id - W * W) + 1e-16
                     self.vprint(f'Learning rate decreased to lr: {lr}')
             
             if self.loss_type == 'l2':
@@ -99,7 +99,7 @@ class DAGMA_linear:
     def fit(self, X, lambda1, w_threshold=0.3, T=5,
             mu_init=1.0, mu_factor=0.1, s=[1.0, .9, .8, .7, .6], 
             warm_iter=3e4, max_iter=6e4, lr=0.0003, 
-            checkpoint=2000, beta_1=0.99, beta_2=0.999,
+            checkpoint=1000, beta_1=0.99, beta_2=0.999,
         ):
         ## INITALIZING VARIABLES 
         self.X, self.lambda1, self.checkpoint = X, lambda1, checkpoint
@@ -127,8 +127,7 @@ class DAGMA_linear:
             lr_adam, success = lr, False
             inner_iters = max_iter if i == T - 1 else warm_iter
             while success is False:
-                W_temp, success = self.minimize(self.W_est.copy(), mu, inner_iters, s[i], 
-                                                lr=lr_adam, beta_1=beta_1, beta_2=beta_2)
+                W_temp, success = self.minimize(self.W_est.copy(), mu, inner_iters, s[i], lr=lr_adam, beta_1=beta_1, beta_2=beta_2)
                 if success is False:
                     self.vprint(f'Retrying with larger s')
                     lr_adam *= 0.5

@@ -3,12 +3,4 @@ scipy
 python-igraph
 torch
 networkx
-pytz
-matplotlib
 scikit-learn
-more-itertools
-ipykernel
-seaborn
-tqdm
-numba
-jupyter
