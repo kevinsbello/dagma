@@ -2,8 +2,6 @@
 import numpy as np
 import scipy.linalg as sla
 import numpy.linalg as la
-from timeit import default_timer as timer
-import utils
 from scipy.special import expit as sigmoid
 
 
@@ -143,9 +141,12 @@ class DAGMA_linear:
 
 
 if __name__ == '__main__':
+    import utils
+    from timeit import default_timer as timer
     utils.set_random_seed(1)
-    n, d, s0 = 1000, 10, 20 # the ground truth is a DAG of 10 nodes and 20 edges in expectation
-    graph_type, sem_type = 'SF', 'gauss'
+    
+    n, d, s0 = 500, 20, 20 # the ground truth is a DAG of 10 nodes and 20 edges in expectation
+    graph_type, sem_type = 'ER', 'gauss'
     
     B_true = utils.simulate_dag(d, s0, graph_type)
     W_true = utils.simulate_parameter(B_true)
@@ -153,11 +154,16 @@ if __name__ == '__main__':
     
     model = DAGMA_linear(loss_type='l2', verbose=True)
     start = timer()
-    Wh = model.fit(X, lambda1=0.02)
+    W_est = model.fit(X, lambda1=0.02)
     end = timer()
-    acc = utils.count_accuracy(B_true, Wh != 0)
+    acc = utils.count_accuracy(B_true, W_est != 0)
     print(acc)
     print(f'time: {end-start:.4f}s')
+    
+    # Store outputs and ground-truth
+    np.savetxt('W_true.csv', W_true, delimiter=',')
+    np.savetxt('W_est.csv', W_est, delimiter=',')
+    np.savetxt('X.csv', X, delimiter=',')
 
     
 
