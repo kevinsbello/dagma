@@ -12,7 +12,6 @@ class DAGMA_linear:
         losses = ['l2', 'logistic']
         assert loss_type in losses, f"loss_type should be one of {losses}"
         self.loss_type = loss_type
-        self.verbose = verbose
         self.dtype = dtype
         self.vprint = print if verbose else lambda *a, **k: None
             
@@ -51,7 +50,7 @@ class DAGMA_linear:
         grad = m_hat / (np.sqrt(v_hat) + 1e-8)
         return grad
     
-    def minimize(self, W, mu, max_iter, s, lr=0.0003, tol=1e-6, beta_1=0.99, beta_2=0.999):
+    def minimize(self, W, mu, max_iter, s, lr, tol=1e-6, beta_1=0.99, beta_2=0.999):
         obj_prev = 1e16
         self.opt_m, self.opt_v = 0, 0
         self.vprint(f'\n\nMinimize with -- mu:{mu} -- lr: {lr} -- s: {s} -- l1: {self.lambda1} for {max_iter} max iterations')
