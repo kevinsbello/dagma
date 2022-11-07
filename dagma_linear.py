@@ -3,7 +3,7 @@ import numpy as np
 import scipy.linalg as sla
 import numpy.linalg as la
 from scipy.special import expit as sigmoid
-
+import tqdm
 
 class DAGMA_linear:
     
@@ -119,7 +119,7 @@ class DAGMA_linear:
             ValueError("s should be a list, int, or float.")    
         
         ## START DAGMA
-        for i in range(T):
+        for i in tqdm.tqdm(range(int(T))):
             self.vprint(f'\nIteration -- {i+1}:')
             lr_adam, success = lr, False
             inner_iters = max_iter if i == T - 1 else warm_iter
@@ -151,7 +151,7 @@ if __name__ == '__main__':
     W_true = utils.simulate_parameter(B_true)
     X = utils.simulate_linear_sem(W_true, n, sem_type)
     
-    model = DAGMA_linear(loss_type='l2', verbose=True)
+    model = DAGMA_linear(loss_type='l2')
     start = timer()
     W_est = model.fit(X, lambda1=0.02)
     end = timer()

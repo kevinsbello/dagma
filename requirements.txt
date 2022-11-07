@@ -2,3 +2,4 @@ numpy
 scipy
 python-igraph
 torch
+tqdm

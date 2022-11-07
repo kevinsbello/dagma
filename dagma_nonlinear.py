@@ -4,17 +4,16 @@ import torch.nn as nn
 import numpy as np
 from  torch import optim
 import copy
+import tqdm
 
 class DagmaNN(nn.Module):
     
-    def __init__(self, dims, bias=True, verbose=False):
+    def __init__(self, dims, bias=True):
         super(DagmaNN, self).__init__()
         assert len(dims) >= 2
         assert dims[-1] == 1
-        self.d = dims[0]
         self.I = torch.eye(self.d)
-        self.vprint = print if verbose else lambda *a, **k: None
-        self.dims = dims
+        self.dims, self.d = dims, dims[0]
         self.fc1 = nn.Linear(self.d, self.d * dims[1], bias=bias)
         nn.init.zeros_(self.fc1.weight)
         nn.init.zeros_(self.fc1.bias)
@@ -110,7 +109,7 @@ def dagma_nonlinear(
         s = T * [s]
     else:
         ValueError("s should be a list, int, or float.") 
-    for i in range(int(T)):
+    for i in tqdm.tqdm(range(int(T))):
         vprint(f'\nDagma iter t={i+1} -- mu: {mu}', 30*'-')
         success, s_cur = False, s[i]
         inner_iter = max_iter if i == T - 1 else warm_iter

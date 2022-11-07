@@ -18,7 +18,7 @@ If you find this code useful, please consider citing:
 
 ## TL;DR
 
-We propose a new acyclicity characterization of DAGs via a log-det function for learning DAGs from observational data. Similar to previously proposed acyclicity functions (e.g. [NOTEARS][notears]), our characterization is also exact and differentiable. However, when compared to existing characterizations, our log-det function: (1) Is better at detecting large cycles; (2) Has better behaved gradients; and (3) Its runtime is in practice about an order of magnitude faster.
+We propose a new acyclicity characterization of DAGs via a log-det function for learning DAGs from observational data. Similar to previously proposed acyclicity functions (e.g. [NOTEARS][notears]), our characterization is also exact and differentiable. However, when compared to existing characterizations, our log-det function: (1) Is better at detecting large cycles; (2) Has better behaved gradients; and (3) Its runtime is in practice about an order of magnitude faster. This advantages of our log-det formulation leads to significant improvements in structure accuracy (e.g. SHD).
 
 
 ## Requirements
@@ -36,14 +36,18 @@ We propose a new acyclicity characterization of DAGs via a log-det function for 
 - `locally_connected.py` - special layer structure used for MLP
 - `utils.py` - graph simulation, data simulation, and accuracy evaluation
 
+
 ## Running DAGMA
 
+Use `requirements.txt` to install the dependencies (recommended to use virtualenv or conda).
 The simplest way to try out DAGMA is to run a simple example:
 ```bash
 $ git clone https://github.com/kevinsbello/dagma.git
+$ pip3 install -r requirements.txt
 $ python3 dagma_linear.py
 ```
-This runs the L1-regularized DAGMA on a randomly generated 20-node Erdos-Renyi graph with 500 samples. 
+
+The above runs the L1-regularized DAGMA on a randomly generated 20-node Erdos-Renyi graph with 500 samples. 
 Within a few seconds, you should see an output like this:
 ```
 {'fdr': 0.0, 'tpr': 1.0, 'fpr': 0.0, 'shd': 0, 'nnz': 20}
@@ -53,6 +57,6 @@ The data, ground truth graph, and the estimate will be stored in `X.csv`, `W_tru
 
 ## Acknowledgments
 
-We thank the authors of the [NOTEARS repo][notears-repo] for making their code available. Part of our code is based their implementation, specially the `utils.py` file and code from their implementation of nonlinear models.
+We thank the authors of the [NOTEARS repo][notears-repo] for making their code available. Part of our code is based on their implementation, specially the `utils.py` file and some code from their implementation of nonlinear models.
 
 [notears-repo]: https://github.com/xunzheng/notears
