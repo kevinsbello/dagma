@@ -3,7 +3,7 @@ import torch
 import torch.nn as nn
 import numpy as np
 from  torch import optim
-
+import copy
 
 class DagmaNN(nn.Module):
     
@@ -41,14 +41,6 @@ class DagmaNN(nn.Module):
         h = -torch.slogdet(s * self.I - A)[1] + self.d * np.log(s)
         return h
 
-    def l2_reg(self):
-        """Take 2-norm-squared of all parameters"""
-        reg = 0.
-        reg += torch.sum(self.fc1.weight ** 2)
-        for fc in self.fc2:
-            reg += torch.sum(fc.weight ** 2)
-        return reg
-
     def fc1_l1_reg(self):
         """Take l1 norm of fc1 weight"""
         return torch.sum(torch.abs(self.fc1.weight))
@@ -64,28 +56,33 @@ class DagmaNN(nn.Module):
         return W
 
 
-def squared_loss(output, target):
+def log_mse_loss(output, target):
     n, d = target.shape
-    # loss = 0.5 / n * torch.sum((output - target) ** 2)
     loss = 0.5 * d * torch.log(1 / n * torch.sum((output - target) ** 2))
     return loss
 
 
-def minimize(model, X, max_iter, lr, lambda1, lambda2, mu, s, checkpoint=1000, tol=1e-6, verbose=False):
+def minimize(model, X, max_iter, lr, lambda1, lambda2, mu, s, lr_decay=False, checkpoint=1000, tol=1e-6, verbose=False):
     vprint = print if verbose else lambda *a, **k: None
-    optimizer = optim.Adam(model.parameters(), lr=lr, betas=(.99,.999))#, weight_decay=rho*lambda2)
+    vprint(f'\nMinimize s={s} -- lr={lr}')
+    optimizer = optim.Adam(model.parameters(), lr=lr, betas=(.99,.999), weight_decay=mu*lambda2)
+    if lr_decay is True:
+        scheduler = optim.lr_scheduler.ExponentialLR(optimizer, gamma=0.8)
     obj_prev = 1e16
     for i in range(int(max_iter)):
         optimizer.zero_grad()
-        X_hat = model(X)
-        score = squared_loss(X_hat, X)
         h_val = model.h_func(s)
-        l2_reg = 0.5 * lambda2 * model.l2_reg()
+        if h_val.item() < 0:
+            vprint(f'Found h negative {h_val.item()} at iter {i}')
+            return False
+        X_hat = model(X)
+        score = log_mse_loss(X_hat, X)
         l1_reg = lambda1 * model.fc1_l1_reg()
-        obj = mu * (score + l2_reg + l1_reg) + 0.5 * h_val * h_val
-        # obj = rho * (loss + l1_reg) + h_val
+        obj = mu * (score + l1_reg) + h_val
         obj.backward()
         optimizer.step()
+        if lr_decay and (i+1) % 1000 == 0: #every 1000 iters reduce lr
+            scheduler.step()
         if i % checkpoint == 0 or i == max_iter-1:
             obj_new = obj.item()
             vprint(f"\nInner iteration {i}")
@@ -94,18 +91,14 @@ def minimize(model, X, max_iter, lr, lambda1, lambda2, mu, s, checkpoint=1000, t
             if np.abs((obj_prev - obj_new) / obj_prev) <= tol:
                 break
             obj_prev = obj_new
-    with torch.no_grad():
-        h_new = model.h_func(s).item()
-    return h_new
+    return True
 
 
 def dagma_nonlinear(
-        model: nn.Module, X: torch.tensor,
-        lambda1=.02, lambda2=.005,
-        T=5, mu_init=1., mu_factor=.1,
-        warm_iter=int(5e4), max_iter=int(8e4),
-        s=1., h_tol=1e-8, w_threshold=0.15,
-        lr=0.0002, checkpoint=1000, verbose=False
+        model: nn.Module, X: torch.tensor, lambda1=.02, lambda2=.005,
+        T=4, mu_init=.1, mu_factor=.1, s=1.0,
+        warm_iter=5e4, max_iter=8e4, lr=.0002, 
+        w_threshold=0.3, checkpoint=1000, verbose=False
     ):
     vprint = print if verbose else lambda *a, **k: None
     mu = mu_init
@@ -118,14 +111,22 @@ def dagma_nonlinear(
     else:
         ValueError("s should be a list, int, or float.") 
     for i in range(int(T)):
-        vprint(f'\nDagma iter t={i+1} -- mu: {mu}')
+        vprint(f'\nDagma iter t={i+1} -- mu: {mu}', 30*'-')
+        success, s_cur = False, s[i]
         inner_iter = max_iter if i == T - 1 else warm_iter
-        h = minimize(model, X, inner_iter, lr, lambda1, lambda2, mu, s[i], 
-                     checkpoint=checkpoint, verbose=verbose)
+        model_copy = copy.deepcopy(model)
+        lr_decay = False
+        while success is False:
+            success = minimize(model, X, inner_iter, lr, lambda1, lambda2, mu, s_cur, 
+                                  lr_decay, checkpoint=checkpoint, verbose=verbose)
+            if success is False:
+                model.load_state_dict(model_copy.state_dict().copy())
+                lr *= 0.5 
+                lr_decay = True
+                if lr < 1e-10:
+                    break # lr is too small
+                s_cur = 1
         mu *= mu_factor
-        vprint(f'h: {h}')
-        if h <= h_tol:
-            break
     W_est = model.fc1_to_adj()
     W_est[np.abs(W_est) < w_threshold] = 0
     return W_est
@@ -139,7 +140,7 @@ if __name__ == '__main__':
     utils.set_random_seed(1)
     torch.manual_seed(1)
     
-    n, d, s0, graph_type, sem_type = 2000, 20, 20, 'ER', 'mlp'
+    n, d, s0, graph_type, sem_type = 1000, 20, 20, 'ER', 'mlp'
     B_true = utils.simulate_dag(d, s0, graph_type)
     X = utils.simulate_nonlinear_sem(B_true, n, sem_type)
 
