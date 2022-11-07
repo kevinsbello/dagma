@@ -12,8 +12,8 @@ class DagmaNN(nn.Module):
         super(DagmaNN, self).__init__()
         assert len(dims) >= 2
         assert dims[-1] == 1
-        self.I = torch.eye(self.d)
         self.dims, self.d = dims, dims[0]
+        self.I = torch.eye(self.d)
         self.fc1 = nn.Linear(self.d, self.d * dims[1], bias=bias)
         nn.init.zeros_(self.fc1.weight)
         nn.init.zeros_(self.fc1.bias)
