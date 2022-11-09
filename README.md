@@ -1,10 +1,11 @@
-# DAGMA
+# DAGMA: Faster and more accurate structure learning with a log-det constraint
 
 This is an implementation of the following paper:
 
-[1] Bello K., Aragam B., Ravikumar P. (2022). [DAGMA: Learning DAGs via M-matrices and a Log-Determinant Acyclicity Characterization](https://arxiv.org/abs/2209.08037) ([NeurIPS 2022](https://nips.cc/Conferences/2022/)). 
+[1] Bello K., Aragam B., Ravikumar P. (2022). [DAGMA: Learning DAGs via M-matrices and a Log-Determinant Acyclicity Characterization](https://arxiv.org/abs/2209.08037). [NeurIPS'22](https://nips.cc/Conferences/2022/). 
 
 [notears]: https://arxiv.org/abs/1803.01422
+[dagma]: https://arxiv.org/abs/2209.08037
 
 If you find this code useful, please consider citing:
 ```
@@ -16,9 +17,11 @@ If you find this code useful, please consider citing:
 }
 ```
 
-## TL;DR
+## Summary
 
-We propose a new acyclicity characterization of DAGs via a log-det function for learning DAGs from observational data. Similar to previously proposed acyclicity functions (e.g. [NOTEARS][notears]), our characterization is also exact and differentiable. However, when compared to existing characterizations, our log-det function: (1) Is better at detecting large cycles; (2) Has better behaved gradients; and (3) Its runtime is in practice about an order of magnitude faster. This advantages of our log-det formulation leads to significant improvements in structure accuracy (e.g. SHD).
+We propose a new acyclicity characterization of DAGs via a log-det function for learning DAGs from observational data. Similar to previously proposed acyclicity functions (e.g. [NOTEARS][notears]), our characterization is also exact and differentiable. However, when compared to existing characterizations, our log-det function: (1) Is better at detecting large cycles; (2) Has better behaved gradients; and (3) Its runtime is in practice about an order of magnitude faster. These advantages of our log-det formulation leads to significant improvements in structure accuracy (e.g. SHD).
+
+
 
 
 ## Requirements
