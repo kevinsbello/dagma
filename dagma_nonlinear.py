@@ -4,7 +4,7 @@ import torch.nn as nn
 import numpy as np
 from  torch import optim
 import copy
-import tqdm
+from tqdm.auto import tqdm
 
 class DagmaNN(nn.Module):
     
@@ -61,14 +61,14 @@ def log_mse_loss(output, target):
     return loss
 
 
-def minimize(model, X, max_iter, lr, lambda1, lambda2, mu, s, lr_decay=False, checkpoint=1000, tol=1e-6, verbose=False):
+def minimize(model, X, max_iter, lr, lambda1, lambda2, mu, s, lr_decay=False, checkpoint=1000, tol=1e-6, verbose=False, pbar=None):
     vprint = print if verbose else lambda *a, **k: None
     vprint(f'\nMinimize s={s} -- lr={lr}')
     optimizer = optim.Adam(model.parameters(), lr=lr, betas=(.99,.999), weight_decay=mu*lambda2)
     if lr_decay is True:
         scheduler = optim.lr_scheduler.ExponentialLR(optimizer, gamma=0.8)
     obj_prev = 1e16
-    for i in range(int(max_iter)):
+    for i in range(max_iter):
         optimizer.zero_grad()
         h_val = model.h_func(s)
         if h_val.item() < 0:
@@ -88,8 +88,10 @@ def minimize(model, X, max_iter, lr, lambda1, lambda2, mu, s, lr_decay=False, ch
             vprint(f'\th(W(model)): {h_val.item()}')
             vprint(f'\tscore(model): {obj_new}')
             if np.abs((obj_prev - obj_new) / obj_prev) <= tol:
+                pbar.update(max_iter-i)
                 break
             obj_prev = obj_new
+        pbar.update(1)
     return True
 
 
@@ -109,23 +111,24 @@ def dagma_nonlinear(
         s = T * [s]
     else:
         ValueError("s should be a list, int, or float.") 
-    for i in tqdm.tqdm(range(int(T))):
-        vprint(f'\nDagma iter t={i+1} -- mu: {mu}', 30*'-')
-        success, s_cur = False, s[i]
-        inner_iter = max_iter if i == T - 1 else warm_iter
-        model_copy = copy.deepcopy(model)
-        lr_decay = False
-        while success is False:
-            success = minimize(model, X, inner_iter, lr, lambda1, lambda2, mu, s_cur, 
-                                  lr_decay, checkpoint=checkpoint, verbose=verbose)
-            if success is False:
-                model.load_state_dict(model_copy.state_dict().copy())
-                lr *= 0.5 
-                lr_decay = True
-                if lr < 1e-10:
-                    break # lr is too small
-                s_cur = 1
-        mu *= mu_factor
+    with tqdm(total=(T-1)*warm_iter+max_iter) as pbar:
+        for i in range(int(T)):
+            vprint(f'\nDagma iter t={i+1} -- mu: {mu}', 30*'-')
+            success, s_cur = False, s[i]
+            inner_iter = int(max_iter) if i == T - 1 else int(warm_iter)
+            model_copy = copy.deepcopy(model)
+            lr_decay = False
+            while success is False:
+                success = minimize(model, X, inner_iter, lr, lambda1, lambda2, mu, s_cur, 
+                                    lr_decay, checkpoint=checkpoint, verbose=verbose, pbar=pbar)
+                if success is False:
+                    model.load_state_dict(model_copy.state_dict().copy())
+                    lr *= 0.5 
+                    lr_decay = True
+                    if lr < 1e-10:
+                        break # lr is too small
+                    s_cur = 1
+            mu *= mu_factor
     W_est = model.fc1_to_adj()
     W_est[np.abs(W_est) < w_threshold] = 0
     return W_est

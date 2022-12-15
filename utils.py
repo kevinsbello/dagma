@@ -260,35 +260,3 @@ def count_accuracy(B_true, B_est):
     missing_lower = np.setdiff1d(cond_lower, pred_lower, assume_unique=True)
     shd = len(extra_lower) + len(missing_lower) + len(reverse)
     return {'fdr': fdr, 'tpr': tpr, 'fpr': fpr, 'shd': shd, 'nnz': pred_size}
-
-
-def get_best_shd(W, B_true):
-    min_shd, min_acc = np.inf, None
-    for thr in np.arange(0.05, 1, 0.01):
-        acc = do_threshold(W, B_true, thr, inc=0.01)
-        if acc[0]['shd'] < min_shd:
-            min_shd = acc[0]['shd']
-            min_acc = acc
-    return min_acc
-
-
-def make_dag(B, eps=1e-12):
-    W = B.copy()
-    while not is_dag(W):
-        mn = np.abs(W[np.abs(W) > eps]).min()
-        W[np.abs(W) <= mn] = 0
-    return W
-
-
-def do_threshold(W_est, B_true, t, inc=0.01):
-    W = W_est.copy()
-    worked = False
-    while not worked:
-        try:
-            W[np.abs(W) < t] = 0
-            acc = count_accuracy(B_true, W != 0)
-            worked = True
-        except:
-            t += inc
-    return acc, t
-

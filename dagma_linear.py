@@ -1,9 +1,8 @@
-# %%
 import numpy as np
 import scipy.linalg as sla
 import numpy.linalg as la
 from scipy.special import expit as sigmoid
-import tqdm
+from tqdm.auto import tqdm
 
 class DAGMA_linear:
     
@@ -50,12 +49,12 @@ class DAGMA_linear:
         grad = m_hat / (np.sqrt(v_hat) + 1e-8)
         return grad
     
-    def minimize(self, W, mu, max_iter, s, lr, tol=1e-6, beta_1=0.99, beta_2=0.999):
+    def minimize(self, W, mu, max_iter, s, lr, tol=1e-6, beta_1=0.99, beta_2=0.999, pbar=None):
         obj_prev = 1e16
         self.opt_m, self.opt_v = 0, 0
         self.vprint(f'\n\nMinimize with -- mu:{mu} -- lr: {lr} -- s: {s} -- l1: {self.lambda1} for {max_iter} max iterations')
         
-        for iter in range(1, int(max_iter)+1):
+        for iter in range(1, max_iter+1):
             ## Compute the (sub)gradient of the objective
             M = sla.inv(s * self.Id - W * W) + 1e-16
             while np.any(M < 0): # sI - W o W is not an M-matrix
@@ -89,8 +88,10 @@ class DAGMA_linear:
                 self.vprint(f'\tscore(W_est): {score:.4e}')
                 self.vprint(f'\tobj(W_est): {obj_new:.4e}')
                 if np.abs((obj_prev - obj_new) / obj_prev) <= tol:
+                    pbar.update(max_iter-iter+1)
                     break
                 obj_prev = obj_new
+            pbar.update(1)
         return W, True
     
     def fit(self, X, lambda1, w_threshold=0.3, T=5,
@@ -119,18 +120,19 @@ class DAGMA_linear:
             ValueError("s should be a list, int, or float.")    
         
         ## START DAGMA
-        for i in tqdm.tqdm(range(int(T))):
-            self.vprint(f'\nIteration -- {i+1}:')
-            lr_adam, success = lr, False
-            inner_iters = max_iter if i == T - 1 else warm_iter
-            while success is False:
-                W_temp, success = self.minimize(self.W_est.copy(), mu, inner_iters, s[i], lr=lr_adam, beta_1=beta_1, beta_2=beta_2)
-                if success is False:
-                    self.vprint(f'Retrying with larger s')
-                    lr_adam *= 0.5
-                    s[i] += 0.1
-            self.W_est = W_temp
-            mu *= mu_factor
+        with tqdm(total=(T-1)*warm_iter+max_iter) as pbar:
+            for i in range(int(T)):
+                self.vprint(f'\nIteration -- {i+1}:')
+                lr_adam, success = lr, False
+                inner_iters = int(max_iter) if i == T - 1 else int(warm_iter)
+                while success is False:
+                    W_temp, success = self.minimize(self.W_est.copy(), mu, inner_iters, s[i], lr=lr_adam, beta_1=beta_1, beta_2=beta_2, pbar=pbar)
+                    if success is False:
+                        self.vprint(f'Retrying with larger s')
+                        lr_adam *= 0.5
+                        s[i] += 0.1
+                self.W_est = W_temp
+                mu *= mu_factor
         
         ## Store final h and score values and threshold
         self.h_final, _ = self._h(self.W_est)
@@ -144,7 +146,7 @@ if __name__ == '__main__':
     from timeit import default_timer as timer
     utils.set_random_seed(1)
     
-    n, d, s0 = 500, 20, 20 # the ground truth is a DAG of 10 nodes and 20 edges in expectation
+    n, d, s0 = 500, 20, 20 # the ground truth is a DAG of 20 nodes and 20 edges in expectation
     graph_type, sem_type = 'ER', 'gauss'
     
     B_true = utils.simulate_dag(d, s0, graph_type)
