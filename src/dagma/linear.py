@@ -4,8 +4,7 @@ import numpy.linalg as la
 from scipy.special import expit as sigmoid
 from tqdm.auto import tqdm
 
-class DAGMA_linear:
-    
+class DagmaLinear:
     def __init__(self, loss_type, verbose=False, dtype=np.float64):
         super().__init__()
         losses = ['l2', 'logistic']
@@ -153,7 +152,7 @@ if __name__ == '__main__':
     W_true = utils.simulate_parameter(B_true)
     X = utils.simulate_linear_sem(W_true, n, sem_type)
     
-    model = DAGMA_linear(loss_type='l2')
+    model = DagmaLinear(loss_type='l2')
     start = timer()
     W_est = model.fit(X, lambda1=0.02)
     end = timer()

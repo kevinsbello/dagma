@@ -62,37 +62,29 @@ Below we have 4 plots, where each illustrates the solution to an unconstrained p
 
 ## Requirements
 
-- Python 3.6+
+- Python 3.7+
 - `numpy`
 - `scipy`
-- `python-igraph`
+- `igraph`
+- `tqdm`
 - `torch`: Only used for nonlinear models.
 
 ## Contents 
 
-- `dagma_linear.py` - implementation of DAGMA for linear models with l1 regularization (supports L2 and Logistic losses).
-- `dagma_nonlinear.py` - implementation of DAGMA for nonlinear models using MLP
+- `linear.py` - implementation of DAGMA for linear models with l1 regularization (supports L2 and Logistic losses).
+- `nonlinear.py` - implementation of DAGMA for nonlinear models using MLP
 - `locally_connected.py` - special layer structure used for MLP
 - `utils.py` - graph simulation, data simulation, and accuracy evaluation
 
 
 ## Running DAGMA
 
-Use `requirements.txt` to install the dependencies (recommended to use virtualenv or conda).
-The simplest way to try out DAGMA is to run a simple example:
+We recommend using a virtual environment via `virtualenv` or `conda`, and use `pip` to install the `dagma` package.
 ```bash
-$ git clone https://github.com/kevinsbello/dagma.git
-$ cd dagma/
-$ pip3 install -r requirements.txt
-$ python3 dagma_linear.py
+$ pip install dagma
 ```
 
-The above runs the L1-regularized DAGMA on a randomly generated 20-node Erdos-Renyi graph with 500 samples. 
-Within a few seconds, you should see an output like this:
-```
-{'fdr': 0.0, 'tpr': 1.0, 'fpr': 0.0, 'shd': 0, 'nnz': 20}
-```
-The data, ground truth graph, and the estimate will be stored in `X.csv`, `W_true.csv`, and `W_est.csv`. 
+See an example on how to use dagma in the iPython notebook `./examples/dagma_test.ipynb`
 
 
 ## Acknowledgments
