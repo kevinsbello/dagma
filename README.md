@@ -17,13 +17,21 @@ If you find this code useful, please consider citing:
 }
 ```
 
+## Installing DAGMA
+
+We recommend using a virtual environment via `virtualenv` or `conda`, and use `pip` to install the `dagma` package.
+```bash
+$ pip install dagma
+```
+
+See an example on how to use dagma in this [iPython notebook][example].
+
 ## Table of Content
   * [Summary](#summary)
     + [The log-det acyclicity characterization](#the-log-det-acyclicity-characterization)
     + [A path-following approach](#a-path-following-approach)
   * [Requirements](#requirements)
   * [Contents](#contents)
-  * [Running DAGMA](#running-dagma)
   * [Acknowledgments](#acknowledgments)
 
 ## Summary
@@ -77,18 +85,9 @@ Below we have 4 plots, where each illustrates the solution to an unconstrained p
 - `utils.py` - graph simulation, data simulation, and accuracy evaluation
 
 
-## Running DAGMA
-
-We recommend using a virtual environment via `virtualenv` or `conda`, and use `pip` to install the `dagma` package.
-```bash
-$ pip install dagma
-```
-
-See an example on how to use dagma in the iPython notebook `./examples/dagma_test.ipynb`
-
-
 ## Acknowledgments
 
 We thank the authors of the [NOTEARS repo][notears-repo] for making their code available. Part of our code is based on their implementation, specially the `utils.py` file and some code from their implementation of nonlinear models.
 
 [notears-repo]: https://github.com/xunzheng/notears
+[example]: https://github.com/kevinsbello/dagma/blob/main/examples/dagma_test.ipynb
