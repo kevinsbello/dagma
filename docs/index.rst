@@ -29,3 +29,12 @@ how to do :ref:`installation` of the project.
 .. note::
 
    This project is under active development.
+
+Contents
+--------
+
+.. toctree::
+
+   Home <self>
+   usage
+   api

@@ -10,3 +10,15 @@ dagma.linear
    :toctree: generated
 
    DagmaLinear 
+
+
+dagma.nonlinear
+---
+
+.. automodule:: dagma.nonlinear
+
+.. autosummary::
+   :toctree: generated
+
+   DagmaNonlinear 
+   DagmaMLP
