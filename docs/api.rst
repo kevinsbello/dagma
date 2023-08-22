@@ -5,12 +5,12 @@ dagma.linear
 ------------
 
 .. automodule:: dagma.linear
-   :members: DagmaLinear
+   .. :members: DagmaLinear
 
-.. .. autosummary::
-..    :toctree: generated
+.. autosummary::
+   :toctree: generated
 
-..    DagmaLinear 
+   DagmaLinear 
 
 
 dagma.nonlinear
