@@ -116,11 +116,15 @@ class DagmaLinear:
         ):
         """
         Runs the DAGMA algorithm and returns a weighted adjacency matrix
-        :param X: Dataset with shape :math:`n \\times d`, where :math:`n` is the number of samples, 
-        and :math:`d` is the number of variables.
-        :type X: numpy.array
-        :return: A weighted adjacency matrix
-        :rtype: numpy.array()
+        
+        Args:
+            X (np.ndarray): :math:`(n, d)` data matrix, 
+            where :math:`n` is the number of samples, and :math:`d` is the number of variables.
+            lambda1 (float): l1 penalty parameter
+            w_threshold (float): drop edge if :math:`|W_{ij}| < threshold`
+
+        Returns:
+            W_est (np.ndarray): :math:`(d, d)` weighted adjacency matrix.
         """
         
         ## INITALIZING VARIABLES 

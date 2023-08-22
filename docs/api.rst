@@ -2,23 +2,24 @@ API
 ===
 
 dagma.linear
----
+------------
 
 .. automodule:: dagma.linear
+   :members: DagmaLinear
 
-.. autosummary::
-   :toctree: generated
+.. .. autosummary::
+..    :toctree: generated
 
-   DagmaLinear 
+..    DagmaLinear 
 
 
 dagma.nonlinear
----
+---------------
 
 .. automodule:: dagma.nonlinear
 
-.. autosummary::
-   :toctree: generated
+.. .. autosummary::
+..    :toctree: generated
 
-   DagmaNonlinear 
-   DagmaMLP
+..    DagmaNonlinear 
+..    DagmaMLP
