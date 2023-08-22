@@ -16,6 +16,8 @@ making the optimization more tractable.
 
    If you find this code useful, please consider citing:
 
+   .. code-block:: tex
+      
       @inproceedings{bello2022dagma,
       author = {Bello, Kevin and Aragam, Bryon and Ravikumar, Pradeep},
       booktitle = {Advances in Neural Information Processing Systems},

@@ -117,11 +117,12 @@ class DagmaLinear:
         """
         Runs the DAGMA algorithm and returns a weighted adjacency matrix
         :param X: Dataset with shape :math:`n \\times d`, where :math:`n` is the number of samples, 
-        and $d$ is the number of variables.
+        and :math:`d` is the number of variables.
         :type X: numpy.array
         :return: A weighted adjacency matrix
         :rtype: numpy.array()
         """
+        
         ## INITALIZING VARIABLES 
         self.X, self.lambda1, self.checkpoint = X, lambda1, checkpoint
         self.n, self.d = X.shape
