@@ -1,3 +1,7 @@
+"""
+Implementation of DAGMA for linear models.
+"""
+
 import numpy as np
 import scipy.linalg as sla
 import numpy.linalg as la
@@ -5,6 +9,9 @@ from scipy.special import expit as sigmoid
 from tqdm.auto import tqdm
 
 class DagmaLinear:
+    """
+    Implements DAGMA for linear models
+    """
     def __init__(self, loss_type, verbose=False, dtype=np.float64):
         super().__init__()
         losses = ['l2', 'logistic']
@@ -107,6 +114,14 @@ class DagmaLinear:
             checkpoint=1000, beta_1=0.99, beta_2=0.999,
             exclude_edges=None, include_edges=None,
         ):
+        """
+        Runs the DAGMA algorithm and returns a weighted adjacency matrix
+        :param X: Dataset with shape $n\times d$, where $n$ is the number of samples, 
+        and $d$ is the number of variables.
+        :type X: numpy.array
+        :return: A weighted adjacency matrix
+        :rtype: numpy.array()
+        """
         ## INITALIZING VARIABLES 
         self.X, self.lambda1, self.checkpoint = X, lambda1, checkpoint
         self.n, self.d = X.shape
