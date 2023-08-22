@@ -1,0 +1,47 @@
+[build-system]
+requires = ['setuptools>=65']
+build-backend = 'setuptools.build_meta'
+
+[project]
+name = 'dagma'
+requires-python = ">=3.7"
+dynamic = ['version']
+authors = [
+    {name = "Kevin Bello", email = "kbello@cs.cmu.edu"},
+]
+description = 'Implementation of the DAGMA algorithm'
+readme = "README.md"
+license = {text = "LICENCE"}
+keywords = ['dagma', 'notears', 'causal discovery', 'bayesian network', 'structure learning']
+classifiers = [
+    'Programming Language :: Python :: 3',
+    'License :: OSI Approved :: Apache Software License',
+    'Operating System :: OS Independent',
+    'Topic :: Scientific/Engineering :: Artificial Intelligence',
+    'Intended Audience :: Science/Research',
+    'Development Status :: 3 - Alpha',
+]
+dependencies = [
+    'numpy', 
+    'scipy', 
+    "torch", 
+    'tqdm', 
+    'igraph'
+]
+
+[tool.setuptools.dynamic]
+version = {file = "src/VERSION"}
+
+[project.urls]
+'Bug Tracker' = 'https://github.com/kevinsbello/dagma/issues'
+'repository' = 'https://github.com/kevinsbello/dagma'
+
+[metadata]
+long_description = 'file: README.md, LICENSE'
+long_description_content_type = 'text/markdown'
+url = 'https://github.com/kevinsbello/dagma'
+
+[tool.setuptools.packages.find]
+where = ["src"]  # list of folders that contain the packages (["."] by default)
+exclude = [".tests*", ".examples*"]  # exclude packages matching these glob patterns (empty by default)
+
