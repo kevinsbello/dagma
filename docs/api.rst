@@ -16,10 +16,11 @@ dagma.linear
 dagma.nonlinear
 ---------------
 
-.. .. automodule:: dagma.nonlinear
+.. automodule:: dagma.nonlinear
 
 .. autosummary::
    :toctree: generated
    :recursive:
 
-   dagma.nonlinear
+   DagmaNonlinear
+   DagmaMLP
