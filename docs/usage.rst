@@ -6,29 +6,14 @@ Usage
 Installation
 ------------
 
+We recommend using a virtual environment via ``virtualenv`` or ``conda``, and use ``pip`` to install ``dagma``.
 To use DAGMA, first install it using pip:
 
 .. code-block:: console
 
-   (.venv) $ pip install dagma
+   (venv) $ pip install --upgrade dagma
 
-.. Creating recipes
-.. ----------------
+Using DAGMA
+-----------
 
-.. To retrieve a list of random ingredients,
-.. you can use the ``lumache.get_random_ingredients()`` function:
-
-.. .. autofunction:: lumache.get_random_ingredients
-
-.. The ``kind`` parameter should be either ``"meat"``, ``"fish"``,
-.. or ``"veggies"``. Otherwise, :py:func:`lumache.get_random_ingredients`
-.. will raise an exception.
-
-.. .. autoexception:: lumache.InvalidKindError
-
-.. For example:
-
-.. >>> import lumache
-.. >>> lumache.get_random_ingredients()
-.. ['shells', 'gorgonzola', 'parsley']
-
+See the `iPython notebook <https://github.com/kevinsbello/dagma/blob/main/examples/dagma_test.ipynb>`_ for a tutorial.
