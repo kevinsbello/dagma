@@ -1,10 +1,12 @@
 API
 ===
 
+dagma.linear
+---
+
+.. automodule:: dagma.linear
+
 .. autosummary::
    :toctree: generated
 
-   ../src/dagma/linear
-   ../src/dagma/nonlinear
-   ../src/dagma/locally_connected
-   ../src/dagma/utils
+   DagmaLinear 
