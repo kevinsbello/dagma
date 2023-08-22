@@ -24,6 +24,8 @@ We recommend using a virtual environment via `virtualenv` or `conda`, and use `p
 $ pip install dagma
 ```
 
+## Using DAGMA
+
 See an example on how to use dagma in this [iPython notebook][example].
 
 ## Table of Content

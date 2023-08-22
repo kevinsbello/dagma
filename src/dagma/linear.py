@@ -52,7 +52,13 @@ class DagmaLinear:
         obj_prev = 1e16
         self.opt_m, self.opt_v = 0, 0
         self.vprint(f'\n\nMinimize with -- mu:{mu} -- lr: {lr} -- s: {s} -- l1: {self.lambda1} for {max_iter} max iterations')
-        
+        mask_inc = np.zeros((self.d, self.d))
+        if self.inc_c is not None:
+            mask_inc[self.inc_r, self.inc_c] = -2 * mu * self.lambda1
+        mask_exc = np.ones((self.d, self.d), dtype=self.dtype)
+        if self.exc_c is not None:
+                mask_exc[self.exc_r, self.exc_c] = 0.
+                
         for iter in range(1, max_iter+1):
             ## Compute the (sub)gradient of the objective
             M = sla.inv(s * self.Id - W * W) + 1e-16
@@ -73,12 +79,14 @@ class DagmaLinear:
                 G_score = -mu * self.cov @ (self.Id - W) 
             elif self.loss_type == 'logistic':
                 G_score = mu / self.n * self.X.T @ sigmoid(self.X @ W) - mu * self.cov
-            Gobj = G_score + mu * self.lambda1 * np.sign(W) + 2 * W * M.T
+            
+            Gobj = G_score + mu * self.lambda1 * np.sign(W) + 2 * W * M.T + mask_inc * np.sign(W)
             
             ## Adam step
             grad = self._adam_update(Gobj, iter, beta_1, beta_2)
             W -= lr * grad
-            
+            W *= mask_exc
+                
             ## Check obj convergence
             if iter % self.checkpoint == 0 or iter == max_iter:
                 obj_new, score, h = self._func(W, mu, s)
@@ -97,6 +105,7 @@ class DagmaLinear:
             mu_init=1.0, mu_factor=0.1, s=[1.0, .9, .8, .7, .6], 
             warm_iter=3e4, max_iter=6e4, lr=0.0003, 
             checkpoint=1000, beta_1=0.99, beta_2=0.999,
+            exclude_edges=None, include_edges=None,
         ):
         ## INITALIZING VARIABLES 
         self.X, self.lambda1, self.checkpoint = X, lambda1, checkpoint
@@ -105,6 +114,21 @@ class DagmaLinear:
         
         if self.loss_type == 'l2':
             self.X -= X.mean(axis=0, keepdims=True)
+        
+        self.exc_r, self.exc_c = None, None
+        self.inc_r, self.inc_c = None, None
+        
+        if exclude_edges is not None:
+            if type(exclude_edges) is tuple and type(exclude_edges[0]) is tuple and np.all(np.array([len(e) for e in exclude_edges]) == 2):
+                self.exc_r, self.exc_c = zip(*exclude_edges)
+            else:
+                ValueError("blacklist should be a tuple of edges, e.g., ((1,2), (2,3))")
+        
+        if include_edges is not None:
+            if type(include_edges) is tuple and type(include_edges[0]) is tuple and np.all(np.array([len(e) for e in include_edges]) == 2):
+                self.inc_r, self.inc_c = zip(*include_edges)
+            else:
+                ValueError("whitelist should be a tuple of edges, e.g., ((1,2), (2,3))")        
             
         self.cov = X.T @ X / float(self.n)    
         self.W_est = np.zeros((self.d,self.d)).astype(self.dtype) # init W0 at zero matrix
