@@ -4,13 +4,13 @@ API
 dagma.linear
 ------------
 
-.. automodule:: dagma.linear
-   .. :members: DagmaLinear
+.. .. automodule:: dagma.linear
+..    :members: DagmaLinear
 
 .. autosummary::
    :toctree: generated
 
-   DagmaLinear 
+   dagma.linear 
 
 
 dagma.nonlinear
