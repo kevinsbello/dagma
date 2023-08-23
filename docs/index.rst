@@ -40,3 +40,5 @@ Contents
    Home <self>
    usage
    api
+   gen/dagma
+   gen/modules
