@@ -1,7 +1,3 @@
-"""
-Implementation of DAGMA for linear models.
-"""
-
 import numpy as np
 import scipy.linalg as sla
 import numpy.linalg as la
@@ -10,9 +6,15 @@ from tqdm.auto import tqdm
 
 class DagmaLinear:
     """
-    Implements DAGMA for linear models
+    Class that implements DAGMA for linear models
     """
+    
     def __init__(self, loss_type, verbose=False, dtype=np.float64):
+        """
+        Args:
+            loss_type (str): One of ["l2", "logistic"]
+            verbose (bool): Optional
+        """
         super().__init__()
         losses = ['l2', 'logistic']
         assert loss_type in losses, f"loss_type should be one of {losses}"
@@ -117,14 +119,24 @@ class DagmaLinear:
         """
         Runs the DAGMA algorithm and returns a weighted adjacency matrix
         
-        Args:
-            X (np.ndarray): :math:`(n, d)` data matrix, 
-                where :math:`n` is the number of samples, and :math:`d` is the number of variables.
-            lambda1 (float): l1 penalty parameter
-            w_threshold (float): drop edge if :math:`|W_{ij}| < threshold`
+        Parameters
+        ----------
+            X : numpy 2d-array
+                :math:`(n, d)` data matrix, where :math:`n` is the number of samples,
+                and :math:`d` is the number of variables.
+            lambda1 : float
+                l1 penalty parameter
+            w_threshold : float
+                remove edge if :math:`|W_{ij}| < \\mathrm{w_threshold}`
+            T : float, optional
+                sets the number of outer iterations of DAGMA. (default: ``T=5``)
+            mu_init : float, optional
+            mu_factor : float, optional
 
-        Returns:
-            W_est (np.ndarray): :math:`(d, d)` weighted adjacency matrix.
+        Returns
+        -------
+            W_est : numpy 2d-array
+                :math:`(d, d)` weighted adjacency matrix.
         """
         
         ## INITALIZING VARIABLES 
