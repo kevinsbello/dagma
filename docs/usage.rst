@@ -1,10 +1,10 @@
-Usage
-=====
+Getting Started
+===============
 
 .. _installation:
 
-Installation
-------------
+Install the package
+-------------------
 
 We recommend using a virtual environment via ``virtualenv`` or ``conda``, and use ``pip`` to install ``dagma``.
 To use DAGMA, first install it using pip:

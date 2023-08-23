@@ -1,26 +1,28 @@
 API
-===
+=============
 
 dagma.linear
-------------
+-------------------
 
 .. automodule:: dagma.linear
-
-.. autosummary::
-   :toctree: generated
-   :recursive:
-
-   DagmaLinear 
+   :members:
+   :undoc-members:
+   :show-inheritance:
 
 
 dagma.nonlinear
----------------
+----------------------
 
 .. automodule:: dagma.nonlinear
+   :members:
+   :undoc-members:
+   :show-inheritance:
 
-.. autosummary::
-   :toctree: generated
-   :recursive:
+dagma.utils 
+------------------
 
-   DagmaNonlinear
-   DagmaMLP
+.. automodule:: dagma.utils
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
