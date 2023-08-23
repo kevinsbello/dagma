@@ -39,6 +39,7 @@ extensions = [
     "sphinx.ext.napoleon",
     "sphinx_immaterial",
     "sphinx_immaterial.apidoc.python.apigen",
+    "myst_parser",
     "sphinx_design",
 ]
 
@@ -152,6 +153,7 @@ autodoc_typehints = "signature"
 autodoc_typehints_description_target = "documented"
 autodoc_typehints_format = "short"
 
+myst_enable_extensions = ["dollarmath"]
 
 
 # -- Sphinx Immaterial configs -------------------------------------------------
