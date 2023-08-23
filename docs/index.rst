@@ -1,4 +1,4 @@
-.. image:: logo/dagma.jpeg
+.. image:: ../logo/dagma.jpeg
    :align: center
 
 

@@ -82,6 +82,9 @@ html_css_files = [
 html_title = "DAGMA"
 
 html_theme_options = {
+    "icon": {
+        "repo": "fontawesome/brands/github",
+    },
     "site_url": "https://dagma.readthedocs.io/",
     "repo_url": "https://github.com/kevinsbello/dagma",
     "repo_name": "kevinsbello/dagma",
