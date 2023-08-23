@@ -38,14 +38,12 @@ making the optimization ammenable to continuous optimization methods such as gra
 
    This project is under active development. If you encounter any issues, please raise the issue in the `GitHub page <https://github.com/kevinsbello/dagma>`_.
 
-.. Features
-.. --------
 
 .. toctree::
    :caption: Home
    :hidden:
 
-   index.rst
+   <self>
 
 .. toctree::
    :caption: Getting Started
