@@ -6,14 +6,21 @@ from tqdm.auto import tqdm
 
 class DagmaLinear:
     """
-    Class that implements DAGMA for linear models
+    A Python object that contains the implementation of DAGMA for linear models using numpy and scipy.
+    
+    Group
+    -----
+        dagma-linear
     """
     
     def __init__(self, loss_type, verbose=False, dtype=np.float64):
         """
-        Args:
-            loss_type (str): One of ["l2", "logistic"]
-            verbose (bool): Optional
+        Parameters
+        ----------
+            loss_type : str
+                One of ["l2", "logistic"]
+            verbose : bool, optional
+                prints in stdout the score and h values during training
         """
         super().__init__()
         losses = ['l2', 'logistic']
@@ -116,18 +123,18 @@ class DagmaLinear:
             checkpoint=1000, beta_1=0.99, beta_2=0.999,
             exclude_edges=None, include_edges=None,
         ):
-        """
-        Runs the DAGMA algorithm and returns a weighted adjacency matrix
+        r"""
+        Runs the DAGMA algorithm and returns a weighted adjacency matrix.
         
         Parameters
         ----------
-            X : numpy 2d-array
+            X : numpy 2D array
                 :math:`(n, d)` data matrix, where :math:`n` is the number of samples,
                 and :math:`d` is the number of variables.
             lambda1 : float
                 l1 penalty parameter
             w_threshold : float
-                remove edge if :math:`|W_{ij}| < \\mathrm{w_threshold}`
+                remove edge if :math:`|W_{ij}| < \mathrm{w_threshold}`
             T : float, optional
                 sets the number of outer iterations of DAGMA. (default: ``T=5``)
             mu_init : float, optional
@@ -135,8 +142,12 @@ class DagmaLinear:
 
         Returns
         -------
-            W_est : numpy 2d-array
+            W_est : numpy 2D array
                 :math:`(d, d)` weighted adjacency matrix.
+        
+        Group
+        -----
+            dagma-linear
         """
         
         ## INITALIZING VARIABLES 

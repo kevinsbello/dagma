@@ -1,28 +1,9 @@
-API
-=============
+.. py:module:: dagma
 
-dagma.linear
--------------------
+dagma
+=====
 
-.. automodule:: dagma.linear
-   :members:
-   :undoc-members:
-   :show-inheritance:
+Dagma Linear
+------------
 
-
-dagma.nonlinear
-----------------------
-
-.. automodule:: dagma.nonlinear
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-dagma.utils 
-------------------
-
-.. automodule:: dagma.utils
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
+.. python-apigen-group:: dagma-linear
