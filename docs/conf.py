@@ -17,9 +17,9 @@
 
 # -- Project information -----------------------------------------------------
 
-project = "Basic Sphinx Example Project"
-copyright = "2022, Read the Docs core team"
-author = "Read the Docs core team"
+project = "DAGMA"
+copyright = "2023, Kevin Bello"
+author = "Kevin Bello"
 
 
 # -- General configuration ---------------------------------------------------
@@ -32,7 +32,14 @@ extensions = [
     "sphinx.ext.autosummary",
     "sphinx.ext.intersphinx",
     "sphinx.ext.napoleon",
+    "sphinx_immaterial",
+    "sphinx_immaterial.apidoc.python.apigen",
 ]
+
+python_apigen_modules = {
+      "dagma": "dagma/api",
+}
+
 
 intersphinx_mapping = {
     "rtd": ("https://docs.readthedocs.io/en/stable/", None),
@@ -56,9 +63,71 @@ exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = "sphinx_rtd_theme"
+html_theme = "sphinx_immaterial"
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-# html_static_path = ["_static"]
+html_static_path = ["_static"]
+
+html_css_files = [
+    "extra.css",
+]
+
+html_title = "DAGMA"
+
+html_theme_options = {
+    "site_url": "https://dagma.readthedocs.io/",
+    "repo_url": "https://github.com/kevinsbello/dagma",
+    "repo_name": "kevinsbello/dagma",
+    "repo_type": "github",
+    "social": [
+        {
+            "icon": "fontawesome/brands/github",
+            "link": "https://github.com/kevinsbello/dagma",
+        },
+        {
+            "icon": "fontawesome/brands/python",
+            "link": "https://pypi.org/project/dagma/",
+        },
+    ],
+    "edit_uri": "",
+    "globaltoc_collapse": False,
+    "features": [
+        # "navigation.expand",
+        "navigation.tabs",
+        # "toc.integrate",
+        # "navigation.sections",
+        # "navigation.instant",
+        # "header.autohide",
+        "navigation.top",
+        "navigation.tracking",
+        "toc.follow",
+        "toc.sticky",
+        "content.tabs.link",
+        "announce.dismiss",
+    ],
+    "palette": [
+        {
+            "media": "(prefers-color-scheme: light)",
+            "scheme": "default",
+            "toggle": {
+                "icon": "material/weather-night",
+                "name": "Switch to dark mode",
+            },
+        },
+        {
+            "media": "(prefers-color-scheme: dark)",
+            "scheme": "slate",
+            "toggle": {
+                "icon": "material/weather-sunny",
+                "name": "Switch to light mode",
+            },
+        },
+    ],
+    "version_dropdown": False,
+}
+
+html_last_updated_fmt = ""
+html_use_index = True
+html_domain_indices = True
