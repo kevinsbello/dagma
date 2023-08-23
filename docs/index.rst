@@ -1,5 +1,9 @@
+=====
 DAGMA
 =====
+---------------------------------------------------------------------
+Faster and more accurate structure learning with a log-det constraint
+---------------------------------------------------------------------
 
 The :obj:`dagma` library is a Python 3 package for learning DAGs (a.k.a. Bayesian networks) from data.
 
@@ -17,6 +21,10 @@ Citation
 
 If this library was useful in your research, please consider citing us. 
 
+[1] Bello K., Aragam B., Ravikumar P. (2022). 
+`DAGMA: Learning DAGs via M-matrices and a Log-Determinant Acyclicity Characterization. <https://arxiv.org/abs/2209.08037>`_ 
+Neural Information Processing Systems (NeurIPS).
+
 .. md-tab-set::
 
    .. md-tab-item:: BibTeX
@@ -30,22 +38,12 @@ If this library was useful in your research, please consider citing us.
             year = {2022}
          }
 
-   .. md-tab-item:: APA
-
-      .. code-block:: text
-
-         Bello K., Aragam B., Ravikumar P. (2022). `DAGMA: Learning DAGs via M-matrices and a Log-Determinant Acyclicity Characterization. <https://arxiv.org/abs/2209.08037>`_ 
-         Neural Information Processing Systems (NeurIPS).
-
-
 .. note::
 
    This project is under active development. If you encounter any issues, please raise the issue in the `GitHub page <https://github.com/kevinsbello/dagma>`_.
 
 .. Features
 .. --------
-
-
 
 .. toctree::
    :caption: Home
