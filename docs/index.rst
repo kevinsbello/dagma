@@ -41,4 +41,3 @@ Contents
    usage
    api
    gen/dagma
-   gen/modules

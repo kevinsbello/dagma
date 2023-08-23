@@ -1,10 +1,7 @@
-dagma package
+API
 =============
 
-Submodules
-----------
-
-dagma.linear module
+dagma.linear
 -------------------
 
 .. automodule:: dagma.linear
@@ -12,15 +9,8 @@ dagma.linear module
    :undoc-members:
    :show-inheritance:
 
-dagma.locally\_connected module
--------------------------------
 
-.. automodule:: dagma.locally_connected
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-dagma.nonlinear module
+dagma.nonlinear
 ----------------------
 
 .. automodule:: dagma.nonlinear
@@ -28,7 +18,7 @@ dagma.nonlinear module
    :undoc-members:
    :show-inheritance:
 
-dagma.utils module
+dagma.utils 
 ------------------
 
 .. automodule:: dagma.utils
@@ -36,10 +26,3 @@ dagma.utils module
    :undoc-members:
    :show-inheritance:
 
-Module contents
----------------
-
-.. automodule:: dagma
-   :members:
-   :undoc-members:
-   :show-inheritance:

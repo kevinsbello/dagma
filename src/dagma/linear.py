@@ -119,7 +119,7 @@ class DagmaLinear:
         
         Args:
             X (np.ndarray): :math:`(n, d)` data matrix, 
-            where :math:`n` is the number of samples, and :math:`d` is the number of variables.
+                where :math:`n` is the number of samples, and :math:`d` is the number of variables.
             lambda1 (float): l1 penalty parameter
             w_threshold (float): drop edge if :math:`|W_{ij}| < threshold`
 
