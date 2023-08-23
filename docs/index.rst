@@ -1,4 +1,4 @@
-.. image:: ../logo/dagma.jpeg
+.. image:: /logo/dagma.png
    :align: center
 
 
@@ -38,6 +38,12 @@ making the optimization ammenable to continuous optimization methods such as gra
 
    This project is under active development. If you encounter any issues, please raise the issue in the `GitHub page <https://github.com/kevinsbello/dagma>`_.
 
+Features
+--------
+
+- Supports continuous data for linear and nonlinear models.
+- Supports binary (0/1) data for generalized linear models, via ``DagmaLinear`` and using ``logistic`` as score.
+- Faster than other continuous optimization methods for structure learning, e.g., NOTEARS, GOLEM.
 
 .. toctree::
    :caption: Home
