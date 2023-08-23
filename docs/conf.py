@@ -163,7 +163,7 @@ myst_enable_extensions = ["dollarmath"]
 
 # Python apigen configuration
 python_apigen_modules = {
-      "dagma": "src/dagma",
+      "dagma": "dagma",
 }
 
 python_apigen_default_groups = [
