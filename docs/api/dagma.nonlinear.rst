@@ -1,23 +1,13 @@
 dagma.nonlinear
 ===============
 
-.. automodule:: dagma.nonlinear
+.. currentmodule:: dagma.nonlinear
 
-   
-   
-   
-
-   
-   
-   
-
-   
-   
    .. rubric:: Classes
 
    .. autosummary::
-      :toctree: api
-      
+      :toctree: 
+
       DagmaMLP
       DagmaNonlinear
    

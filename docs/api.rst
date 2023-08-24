@@ -3,13 +3,12 @@ dagma
 
 .. currentmodule:: dagma
 
-.. .. toctree::
-
-..     api/dagma.linear
-..     api/dagma.nonlinear
-..     api/dagma.utils
-
-.. python-apigen-group:: dagma-linear
+.. toctree::
+    :hidden:
+    
+    api/dagma.linear
+    api/dagma.nonlinear
+    api/dagma.utils
 
 
 

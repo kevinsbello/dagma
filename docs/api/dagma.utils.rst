@@ -1,19 +1,13 @@
 dagma.utils
 ===========
 
-.. automodule:: dagma.utils
+.. currentmodule:: dagma.utils
 
-   
-   
-   
-
-   
-   
    .. rubric:: Functions
 
    .. autosummary::
-      :toctree: api
-      
+      :toctree: 
+
       count_accuracy
       is_dag
       set_random_seed

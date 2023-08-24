@@ -1,23 +1,13 @@
 dagma.linear
 ============
 
-.. automodule:: dagma.linear
+.. currentmodule:: dagma.linear
 
-   
-   
-   
-
-   
-   
-   
-
-   
-   
    .. rubric:: Classes
 
    .. autosummary::
-      :toctree: api
-      
+      :toctree:
+
       DagmaLinear
    
    
