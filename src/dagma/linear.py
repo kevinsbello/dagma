@@ -8,20 +8,11 @@ class DagmaLinear:
     """
     A Python object that contains the implementation of DAGMA for linear models using numpy and scipy.
     
-    Group
-    -----
+    Group:
         dagma-linear
     """
     
     def __init__(self, loss_type, verbose=False, dtype=np.float64):
-        """
-        Parameters
-        ----------
-            loss_type : str
-                One of ["l2", "logistic"]
-            verbose : bool, optional
-                prints in stdout the score and h values during training
-        """
         super().__init__()
         losses = ['l2', 'logistic']
         assert loss_type in losses, f"loss_type should be one of {losses}"
@@ -126,27 +117,7 @@ class DagmaLinear:
         r"""
         Runs the DAGMA algorithm and returns a weighted adjacency matrix.
         
-        Parameters
-        ----------
-            X : numpy 2D array
-                :math:`(n, d)` data matrix, where :math:`n` is the number of samples,
-                and :math:`d` is the number of variables.
-            lambda1 : float
-                l1 penalty parameter
-            w_threshold : float
-                remove edge if :math:`|W_{ij}| < \mathrm{w_threshold}`
-            T : float, optional
-                sets the number of outer iterations of DAGMA. (default: ``T=5``)
-            mu_init : float, optional
-            mu_factor : float, optional
-
-        Returns
-        -------
-            W_est : numpy 2D array
-                :math:`(d, d)` weighted adjacency matrix.
-        
-        Group
-        -----
+        Group:
             dagma-linear
         """
         
