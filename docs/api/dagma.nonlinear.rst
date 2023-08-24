@@ -1,8 +1,18 @@
 dagma.nonlinear
 ===============
 
-.. currentmodule:: dagma.nonlinear
+.. automodule:: dagma.nonlinear
 
+   
+   
+   
+
+   
+   
+   
+
+   
+   
    .. rubric:: Classes
 
    .. autosummary::

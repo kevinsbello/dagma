@@ -1,8 +1,14 @@
 dagma.utils
 ===========
 
-.. currentmodule:: dagma.utils
+.. automodule:: dagma.utils
 
+   
+   
+   
+
+   
+   
    .. rubric:: Functions
 
    .. autosummary::
