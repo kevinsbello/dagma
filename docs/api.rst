@@ -2,7 +2,7 @@ dagma
 =====
 
 
-.. currentmodule:: dagma
+.. automodule:: dagma
 
 .. autosummary::
     :toctree: api
@@ -11,20 +11,12 @@ dagma
     dagma.nonlinear
 
 
-.. Linear Models
-.. -------------
+dagma.linear
+------------
 
-.. .. python-apigen-group:: dagma-linear
+.. automodule:: dagma.linear
 
-.. .. python-apigen-group:: Classes
+.. autosummary::
+    :toctree: api
 
-
-.. Nonlinear Models
-.. ----------------
-
-
-
-.. .. autoclass:: dagma.nonlinear.DagmaNonlinear
-
-.. .. autoclass:: dagma.nonlinear.DagmaMLP
-
+    dagma.linear.DagmaLinear
