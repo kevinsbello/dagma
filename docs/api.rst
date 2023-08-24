@@ -2,13 +2,13 @@ dagma
 =====
 
 
-.. automodule:: dagma
+.. .. automodule:: dagma
 
-.. autosummary::
-    :toctree: api
+.. .. autosummary::
+..     :toctree: api
 
-    dagma.linear
-    dagma.nonlinear
+..     dagma.linear
+..     dagma.nonlinear
 
 
 dagma.linear
