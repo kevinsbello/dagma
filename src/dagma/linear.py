@@ -8,8 +8,7 @@ class DagmaLinear:
     """
     A Python object that contains the implementation of DAGMA for linear models using numpy and scipy.
     
-    Group:
-        dagma-linear
+    :group: dagma-linear
     """
     
     def __init__(self, loss_type, verbose=False, dtype=np.float64):
@@ -117,8 +116,7 @@ class DagmaLinear:
         r"""
         Runs the DAGMA algorithm and returns a weighted adjacency matrix.
         
-        Group:
-            dagma-linear
+        :group: dagma-linear
         """
         
         ## INITALIZING VARIABLES 
