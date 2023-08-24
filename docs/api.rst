@@ -1,23 +1,23 @@
 dagma
 =====
 
-
-.. .. automodule:: dagma
-
-.. .. autosummary::
-..     :toctree: api
-
-..     dagma.linear
-..     dagma.nonlinear
-
-
-dagma.linear
-------------
-
-.. currentmodule:: dagma.linear
+.. currentmodule:: dagma
 
 .. autosummary::
     :toctree: api
-    :recursive:
 
-    DagmaLinear
+    linear
+    nonlinear
+    utils
+
+
+.. dagma.linear
+.. ------------
+
+.. .. currentmodule:: dagma.linear
+
+.. .. autosummary::
+..     :toctree: api
+..     :recursive:
+
+..     DagmaLinear
