@@ -14,9 +14,10 @@ dagma
 dagma.linear
 ------------
 
-.. automodule:: dagma.linear
+.. currentmodule:: dagma.linear
 
 .. autosummary::
     :toctree: api
+    :recursive:
 
-    dagma.linear.DagmaLinear
+    DagmaLinear
