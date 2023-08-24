@@ -3,12 +3,11 @@ dagma
 
 .. currentmodule:: dagma
 
-.. autosummary::
-    :toctree: api
+.. toctree::
 
-    linear
-    nonlinear
-    utils
+    api/dagma.linear
+    api/dagma.nonlinear
+    api/dagma.utils
 
 
 .. dagma.linear
