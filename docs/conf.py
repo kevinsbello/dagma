@@ -15,8 +15,8 @@ import os
 import sys
 
 sys.path.insert(0, os.path.abspath("."))
-sys.path.insert(0, os.path.abspath(".."))
-
+sys.path.insert(0, os.path.abspath('../src'))
+                
 import sphinx
 import numpy
 
@@ -88,7 +88,7 @@ html_theme_options = {
     "site_url": "https://dagma.readthedocs.io/",
     "repo_url": "https://github.com/kevinsbello/dagma",
     "repo_name": "kevinsbello/dagma",
-    "repo_type": "github",
+    # "repo_type": "github",
     "social": [
         {
             "icon": "fontawesome/brands/github",
@@ -160,6 +160,7 @@ myst_enable_extensions = ["dollarmath"]
 
 
 # -- Sphinx Immaterial configs -------------------------------------------------
+
 
 # Python apigen configuration
 python_apigen_modules = {

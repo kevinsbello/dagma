@@ -1,9 +1,6 @@
-.. py:module:: dagma
-
 dagma
 =====
 
-Dagma Linear
-------------
+.. automodule:: dagma.linear
 
-.. python-apigen-group:: dagma-linear
+

@@ -1,4 +1,4 @@
-.. image:: /logo/dagma.png
+.. image:: ../logo/dagma.png
    :align: center
 
 
@@ -45,22 +45,17 @@ Features
 - Supports binary (0/1) data for generalized linear models, via ``DagmaLinear`` and using ``logistic`` as score.
 - Faster than other continuous optimization methods for structure learning, e.g., NOTEARS, GOLEM.
 
-.. toctree::
-   :caption: Home
-   :hidden:
-
-   <self>
 
 .. toctree::
    :caption: Getting Started
    :hidden:
 
-   usage.rst
+   usage
 
 .. toctree::
    :caption: API Reference
    :hidden:
    :maxdepth: 2
 
-   api.rst
+   api
 
