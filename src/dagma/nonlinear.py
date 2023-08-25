@@ -7,6 +7,7 @@ import copy
 from tqdm.auto import tqdm
 
 
+
 class DagmaMLP(nn.Module): 
     def __init__(self, dims, bias=True, dtype=torch.double):
         torch.set_default_dtype(dtype)
