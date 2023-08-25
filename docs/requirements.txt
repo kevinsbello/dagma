@@ -60,3 +60,4 @@ urllib3==1.26.9
 sphinx-immaterial
 myst-parser
 sphinx-design
+sphinx-autoapi
