@@ -43,6 +43,7 @@ extensions = [
     "sphinx_design",
 ]
 
+autosummary_generate = True
 master_doc = "index"
 
 

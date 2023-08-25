@@ -4,8 +4,6 @@ dagma.utils
 .. automodule:: dagma.utils
 
    
-   
-   
 
    
    
