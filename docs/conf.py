@@ -46,7 +46,7 @@ extensions = [
 
 autoapi_dirs = ['../src/dagma/']
 autoapi_root = 'api'
-
+autoapi_options = [ 'members', 'undoc-members', 'private-members', 'show-inheritance', 'special-members', 'imported-members', ]
 
 # autosummary_generate = True
 master_doc = "index"

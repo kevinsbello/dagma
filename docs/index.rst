@@ -55,7 +55,7 @@ Features
 .. toctree::
    :caption: API Reference
    :hidden:
-   :maxdepth: 2
+   :maxdepth: 4
 
    api/dagma/index
 
