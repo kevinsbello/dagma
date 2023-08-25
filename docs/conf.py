@@ -44,9 +44,11 @@ extensions = [
     'autoapi.extension',
 ]
 
-autoapi_dirs = ['../src/dagma']
+autoapi_dirs = ['../src/dagma/']
+autoapi_root = 'api'
 
-autosummary_generate = True
+
+# autosummary_generate = True
 master_doc = "index"
 
 
@@ -54,7 +56,10 @@ intersphinx_mapping = {
     "rtd": ("https://docs.readthedocs.io/en/stable/", None),
     "python": ("https://docs.python.org/3/", None),
     "sphinx": ("https://www.sphinx-doc.org/en/master/", None),
+    "numpy": ("https://numpy.org/doc/stable/", None),
+    "torch": ("https://pytorch.org/docs/stable/", None),
 }
+
 intersphinx_disabled_domains = ["std"]
 
 # templates_path = ["_templates"]
@@ -144,12 +149,6 @@ html_last_updated_fmt = ""
 html_use_index = True
 html_domain_indices = True
 
-
-intersphinx_mapping = {
-    "python": ("https://docs.python.org/3", None),
-    "numpy": ("https://numpy.org/doc/stable/", None),
-    "torch": ("https://pytorch.org/docs/stable/", None),
-}
 
 autodoc_default_options = {
     "imported-members": True,

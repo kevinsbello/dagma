@@ -52,10 +52,10 @@ Features
 
    usage
 
-.. .. toctree::
-..    :caption: API Reference
-..    :hidden:
-..    :maxdepth: 2
+.. toctree::
+   :caption: API Reference
+   :hidden:
+   :maxdepth: 2
 
-..    api
+   api/dagma/index
 
