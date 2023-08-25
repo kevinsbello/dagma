@@ -8,8 +8,8 @@ class LocallyConnected(nn.Module):
 
     Args:
         num_linear: num of local linear layers, i.e.
-        in_features: m1
-        out_features: m2
+        input_features: m1
+        output_features: m2
         bias: whether to include bias or not
 
     Shape:
