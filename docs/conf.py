@@ -48,6 +48,8 @@ autoapi_dirs = ['../src/dagma/']
 autoapi_root = 'api'
 # autoapi_options = [ 'members', 'undoc-members', 'private-members', 'show-inheritance', 'show-module-summary', 'special-members',  ]
 autoapi_keep_files = True
+autoapi_template_dir = '_autoapi_templates'
+
 
 # autosummary_generate = True
 master_doc = "index"
@@ -168,49 +170,49 @@ autodoc_typehints_format = "short"
 # -- Sphinx Immaterial configs -------------------------------------------------
 
 # Python apigen configuration
-python_apigen_modules = {
-      "dagma": "api/",
-}
+# python_apigen_modules = {
+#       "dagma": "api/",
+# }
 
-python_apigen_default_groups = [
-    ("class:.*", "Classes"),
-    ("data:.*", "Variables"),
-    ("function:.*", "Functions"),
-    ("classmethod:.*", "Class methods"),
-    ("method:.*", "Methods"),
-    (r"method:.*\.[A-Z][A-Za-z,_]*", "Constructors"),
-    (r"method:.*\.__[A-Za-z,_]*__", "Special methods"),
-    (r"method:.*\.__(init|new)__", "Constructors"),
-    (r"method:.*\.__(str|repr)__", "String representation"),
-    ("property:.*", "Properties"),
-    (r".*:.*\.is_[a-z,_]*", "Attributes"),
-]
+# python_apigen_default_groups = [
+#     ("class:.*", "Classes"),
+#     ("data:.*", "Variables"),
+#     ("function:.*", "Functions"),
+#     ("classmethod:.*", "Class methods"),
+#     ("method:.*", "Methods"),
+#     (r"method:.*\.[A-Z][A-Za-z,_]*", "Constructors"),
+#     (r"method:.*\.__[A-Za-z,_]*__", "Special methods"),
+#     (r"method:.*\.__(init|new)__", "Constructors"),
+#     (r"method:.*\.__(str|repr)__", "String representation"),
+#     ("property:.*", "Properties"),
+#     (r".*:.*\.is_[a-z,_]*", "Attributes"),
+# ]
 
-python_apigen_default_order = [
-    ("class:.*", 10),
-    ("data:.*", 11),
-    ("function:.*", 12),
-    ("classmethod:.*", 40),
-    ("method:.*", 50),
-    (r"method:.*\.[A-Z][A-Za-z,_]*", 20),
-    (r"method:.*\.__[A-Za-z,_]*__", 28),
-    (r"method:.*\.__(init|new)__", 20),
-    (r"method:.*\.__(str|repr)__", 30),
-    ("property:.*", 60),
-    (r".*:.*\.is_[a-z,_]*", 70),
-]
+# python_apigen_default_order = [
+#     ("class:.*", 10),
+#     ("data:.*", 11),
+#     ("function:.*", 12),
+#     ("classmethod:.*", 40),
+#     ("method:.*", 50),
+#     (r"method:.*\.[A-Z][A-Za-z,_]*", 20),
+#     (r"method:.*\.__[A-Za-z,_]*__", 28),
+#     (r"method:.*\.__(init|new)__", 20),
+#     (r"method:.*\.__(str|repr)__", 30),
+#     ("property:.*", 60),
+#     (r".*:.*\.is_[a-z,_]*", 70),
+# ]
 
-python_apigen_order_tiebreaker = "alphabetical"
-python_apigen_case_insensitive_filesystem = False
-python_apigen_show_base_classes = True
+# python_apigen_order_tiebreaker = "alphabetical"
+# python_apigen_case_insensitive_filesystem = False
+# python_apigen_show_base_classes = True
 
-# Python domain directive configuration
-python_module_names_to_strip_from_xrefs = ["collections.abc"]
+# # Python domain directive configuration
+# python_module_names_to_strip_from_xrefs = ["collections.abc"]
 
-# General API configuration
-object_description_options = [
-    ("py:.*", dict(include_rubrics_in_toc=True)),
-]
+# # General API configuration
+# object_description_options = [
+#     ("py:.*", dict(include_rubrics_in_toc=True)),
+# ]
 
 # sphinx_immaterial_custom_admonitions = [
 #     {
@@ -309,21 +311,6 @@ def autodoc_skip_member(app, what, name, obj, skip, options):
     elif hasattr(obj, "__objclass__"):
         # This is a NumPy method, don't include docs
         return True
-    elif getattr(obj, "__qualname__", None) in ["FunctionMixin.dot", "Array.astype"]:
-        # NumPy methods that were overridden, don't include docs
-        return True
-    elif (
-        hasattr(obj, "__qualname__")
-        and getattr(obj, "__qualname__").split(".")[0] == "FieldArray"
-        and hasattr(numpy.ndarray, name)
-    ):
-        if name in ["__repr__", "__str__"]:
-            # Specifically allow these methods to be documented
-            return False
-        else:
-            # This is a NumPy method that was overridden in one of our ndarray subclasses. Also don't include
-            # these docs.
-            return True
 
     if name in SPECIAL_MEMBERS:
         # Don't skip members in "special-members"
