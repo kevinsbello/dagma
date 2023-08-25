@@ -201,7 +201,7 @@ python_apigen_case_insensitive_filesystem = False
 python_apigen_show_base_classes = True
 
 # Python domain directive configuration
-# python_module_names_to_strip_from_xrefs = ["collections.abc"]
+python_module_names_to_strip_from_xrefs = ["collections.abc"]
 
 # General API configuration
 object_description_options = [
@@ -238,117 +238,117 @@ object_description_options = [
 
 # -- Monkey-patching ---------------------------------------------------------
 
-# SPECIAL_MEMBERS = [
-#     "__repr__",
-#     "__str__",
-#     "__int__",
-#     "__call__",
-#     "__len__",
-#     "__eq__",
-# ]
+SPECIAL_MEMBERS = [
+    "__repr__",
+    "__str__",
+    "__int__",
+    "__call__",
+    "__len__",
+    "__eq__",
+]
 
 
-# def autodoc_process_signature(app, what, name, obj, options, signature, return_annotation):
-#     signature = modify_type_hints(signature)
-#     return_annotation = modify_type_hints(return_annotation)
-#     return signature, return_annotation
+def autodoc_process_signature(app, what, name, obj, options, signature, return_annotation):
+    signature = modify_type_hints(signature)
+    return_annotation = modify_type_hints(return_annotation)
+    return signature, return_annotation
 
 
-# def modify_type_hints(signature):
-#     """
-#     Fix shortening numpy type annotations in string annotations created with
-#     `from __future__ import annotations` that Sphinx can't process before Python
-#     3.10.
+def modify_type_hints(signature):
+    """
+    Fix shortening numpy type annotations in string annotations created with
+    `from __future__ import annotations` that Sphinx can't process before Python
+    3.10.
 
-#     See https://github.com/jbms/sphinx-immaterial/issues/161
-#     """
-#     if signature:
-#         signature = signature.replace("np", "~numpy")
-#     return signature
+    See https://github.com/jbms/sphinx-immaterial/issues/161
+    """
+    if signature:
+        signature = signature.replace("np", "~numpy")
+    return signature
 
 
-# def monkey_patch_parse_see_also():
-#     """
-#     Use the NumPy docstring parsing of See Also sections for convenience. This automatically
-#     hyperlinks plaintext functions and methods.
-#     """
-#     # Add the special parsing method from NumpyDocstring
-#     method = sphinx.ext.napoleon.NumpyDocstring._parse_numpydoc_see_also_section
-#     sphinx.ext.napoleon.GoogleDocstring._parse_numpydoc_see_also_section = method
+def monkey_patch_parse_see_also():
+    """
+    Use the NumPy docstring parsing of See Also sections for convenience. This automatically
+    hyperlinks plaintext functions and methods.
+    """
+    # Add the special parsing method from NumpyDocstring
+    method = sphinx.ext.napoleon.NumpyDocstring._parse_numpydoc_see_also_section
+    sphinx.ext.napoleon.GoogleDocstring._parse_numpydoc_see_also_section = method
 
-#     def _parse_see_also_section(self, section: str):
-#         """Copied from NumpyDocstring._parse_see_also_section()."""
-#         lines = self._consume_to_next_section()
+    def _parse_see_also_section(self, section: str):
+        """Copied from NumpyDocstring._parse_see_also_section()."""
+        lines = self._consume_to_next_section()
 
-#         # Added: strip whitespace from lines to satisfy _parse_numpydoc_see_also_section()
-#         for i in range(len(lines)):
-#             lines[i] = lines[i].strip()
+        # Added: strip whitespace from lines to satisfy _parse_numpydoc_see_also_section()
+        for i in range(len(lines)):
+            lines[i] = lines[i].strip()
 
-#         try:
-#             return self._parse_numpydoc_see_also_section(lines)
-#         except ValueError:
-#             return self._format_admonition("seealso", lines)
+        try:
+            return self._parse_numpydoc_see_also_section(lines)
+        except ValueError:
+            return self._format_admonition("seealso", lines)
 
-#     sphinx.ext.napoleon.GoogleDocstring._parse_see_also_section = _parse_see_also_section
+    sphinx.ext.napoleon.GoogleDocstring._parse_see_also_section = _parse_see_also_section
     
     
-# def autodoc_skip_member(app, what, name, obj, skip, options):
-#     """
-#     Instruct autodoc to skip members that are inherited from np.ndarray.
-#     """
-#     if skip:
-#         # Continue skipping things Sphinx already wants to skip
-#         return skip
+def autodoc_skip_member(app, what, name, obj, skip, options):
+    """
+    Instruct autodoc to skip members that are inherited from np.ndarray.
+    """
+    if skip:
+        # Continue skipping things Sphinx already wants to skip
+        return skip
 
-#     if name == "__init__":
-#         return False
-#     elif hasattr(obj, "__objclass__"):
-#         # This is a NumPy method, don't include docs
-#         return True
-#     elif getattr(obj, "__qualname__", None) in ["FunctionMixin.dot", "Array.astype"]:
-#         # NumPy methods that were overridden, don't include docs
-#         return True
-#     elif (
-#         hasattr(obj, "__qualname__")
-#         and getattr(obj, "__qualname__").split(".")[0] == "FieldArray"
-#         and hasattr(numpy.ndarray, name)
-#     ):
-#         if name in ["__repr__", "__str__"]:
-#             # Specifically allow these methods to be documented
-#             return False
-#         else:
-#             # This is a NumPy method that was overridden in one of our ndarray subclasses. Also don't include
-#             # these docs.
-#             return True
+    if name == "__init__":
+        return False
+    elif hasattr(obj, "__objclass__"):
+        # This is a NumPy method, don't include docs
+        return True
+    elif getattr(obj, "__qualname__", None) in ["FunctionMixin.dot", "Array.astype"]:
+        # NumPy methods that were overridden, don't include docs
+        return True
+    elif (
+        hasattr(obj, "__qualname__")
+        and getattr(obj, "__qualname__").split(".")[0] == "FieldArray"
+        and hasattr(numpy.ndarray, name)
+    ):
+        if name in ["__repr__", "__str__"]:
+            # Specifically allow these methods to be documented
+            return False
+        else:
+            # This is a NumPy method that was overridden in one of our ndarray subclasses. Also don't include
+            # these docs.
+            return True
 
-#     if name in SPECIAL_MEMBERS:
-#         # Don't skip members in "special-members"
-#         return False
+    if name in SPECIAL_MEMBERS:
+        # Don't skip members in "special-members"
+        return False
 
-#     if name[0] == "_":
-#         # For some reason we need to tell Sphinx to hide private members
-#         return True
+    if name[0] == "_":
+        # For some reason we need to tell Sphinx to hide private members
+        return True
 
-#     return skip
+    return skip
 
 
-# def autodoc_process_bases(app, name, obj, options, bases):
-#     """
-#     Remove private classes or mixin classes from documented class bases.
-#     """
-#     # Determine the bases to be removed
-#     remove_bases = []
-#     for base in bases:
-#         if base.__name__[0] == "_" or "Mixin" in base.__name__:
-#             remove_bases.append(base)
+def autodoc_process_bases(app, name, obj, options, bases):
+    """
+    Remove private classes or mixin classes from documented class bases.
+    """
+    # Determine the bases to be removed
+    remove_bases = []
+    for base in bases:
+        if base.__name__[0] == "_" or "Mixin" in base.__name__:
+            remove_bases.append(base)
 
-#     # Remove from the bases list in-place
-#     for base in remove_bases:
-#         bases.remove(base)
+    # Remove from the bases list in-place
+    for base in remove_bases:
+        bases.remove(base)
         
 
-# def setup(app):
-#     monkey_patch_parse_see_also()
-#     app.connect("autodoc-skip-member", autodoc_skip_member)
-#     app.connect("autodoc-process-bases", autodoc_process_bases)
-#     app.connect("autodoc-process-signature", autodoc_process_signature)
+def setup(app):
+    monkey_patch_parse_see_also()
+    app.connect("autodoc-skip-member", autodoc_skip_member)
+    app.connect("autodoc-process-bases", autodoc_process_bases)
+    app.connect("autodoc-process-signature", autodoc_process_signature)
