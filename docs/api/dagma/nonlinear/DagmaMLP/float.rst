@@ -1,3 +1,5 @@
+:py:mod:`dagma.nonlinear.DagmaMLP.float`
+========================================
 .. py:method:: float() -> T
 
    Casts all floating point parameters and buffers to ``float`` datatype.

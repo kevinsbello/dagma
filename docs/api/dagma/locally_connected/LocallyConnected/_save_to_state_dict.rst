@@ -1,3 +1,5 @@
+:py:mod:`dagma.locally_connected.LocallyConnected._save_to_state_dict`
+======================================================================
 .. py:method:: _save_to_state_dict(destination, prefix, keep_vars)
 
    Saves module state to `destination` dictionary, containing a state

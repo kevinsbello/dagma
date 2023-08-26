@@ -1,3 +1,5 @@
+:py:mod:`dagma.nonlinear.DagmaMLP.get_submodule`
+================================================
 .. py:method:: get_submodule(target: str) -> Module
 
    Returns the submodule given by ``target`` if it exists,

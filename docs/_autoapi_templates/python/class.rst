@@ -1,4 +1,7 @@
 {% if obj.display %}
+:py:mod:`{{ obj.id }}`
+=========={{ "=" * obj.id|length }}
+
 .. py:{{ obj.type }}:: {{ obj.short_name }}{% if obj.args %}({{ obj.args }}){% endif %}
 
 {% for (args, return_annotation) in obj.overloads %}
@@ -59,7 +62,7 @@
 
    .. toctree::
       :titlesonly:
-      :maxdepth: 2
+      :maxdepth: 1
       :hidden:
 
     {% for method in visible_methods %}

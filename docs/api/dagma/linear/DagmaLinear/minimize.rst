@@ -1,3 +1,5 @@
+:py:mod:`dagma.linear.DagmaLinear.minimize`
+===========================================
 .. py:method:: minimize(W: numpy.ndarray, mu: float, max_iter: int, s: float, lr: float, tol: float = 1e-06, beta_1: float = 0.99, beta_2: float = 0.999, pbar: Optional[tqdm.auto.tqdm.asyncio.tqdm_asyncio] = None) -> Tuple[numpy.ndarray, bool]
 
    Solves the optimization problem:

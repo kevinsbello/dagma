@@ -1,3 +1,5 @@
+:py:mod:`dagma.nonlinear.DagmaMLP.double`
+=========================================
 .. py:method:: double() -> T
 
    Casts all floating point parameters and buffers to ``double`` datatype.

@@ -1,3 +1,5 @@
+:py:mod:`dagma.nonlinear.DagmaMLP.apply`
+========================================
 .. py:method:: apply(fn: Callable[[Module], None]) -> T
 
    Applies ``fn`` recursively to every submodule (as returned by ``.children()``)

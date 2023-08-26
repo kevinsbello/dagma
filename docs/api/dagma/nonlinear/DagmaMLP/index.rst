@@ -1,3 +1,6 @@
+:py:mod:`dagma.nonlinear.DagmaMLP`
+==================================
+
 .. py:class:: DagmaMLP(dims: List[int], bias: bool = True, dtype: torch.dtype = torch.double)
 
 
@@ -17,7 +20,7 @@
 
    .. toctree::
       :titlesonly:
-      :maxdepth: 2
+      :maxdepth: 1
       :hidden:
 
       forward.rst

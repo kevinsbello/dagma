@@ -45,13 +45,13 @@ extensions = [
 ]
 
 autoapi_dirs = ['../src/dagma/']
+autoapi_generate_api_docs = False
 # autoapi_root = 'api'
 # autoapi_options = [ 'members', 'undoc-members', 'private-members', 'show-inheritance', 'show-module-summary', 'special-members', ]
 # autoapi_keep_files = True
 # autoapi_python_class_content = "both"
 # autoapi_render_in_single_page = ["class", "function", "method"]
 # autoapi_template_dir = '_autoapi_templates'
-autoapi_generate_api_docs = False
 
 
 # autosummary_generate = True

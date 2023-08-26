@@ -1,3 +1,6 @@
+:py:mod:`dagma.linear.DagmaLinear`
+==================================
+
 .. py:class:: DagmaLinear(loss_type: str, verbose: bool = False, dtype: type = np.float64)
 
 
@@ -18,7 +21,7 @@
 
    .. toctree::
       :titlesonly:
-      :maxdepth: 2
+      :maxdepth: 1
       :hidden:
 
       _score.rst

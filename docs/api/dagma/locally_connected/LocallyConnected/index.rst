@@ -1,3 +1,6 @@
+:py:mod:`dagma.locally_connected.LocallyConnected`
+==================================================
+
 .. py:class:: LocallyConnected(num_linear, input_features, output_features, bias=True)
 
 
@@ -29,7 +32,7 @@
 
    .. toctree::
       :titlesonly:
-      :maxdepth: 2
+      :maxdepth: 1
       :hidden:
 
       reset_parameters.rst

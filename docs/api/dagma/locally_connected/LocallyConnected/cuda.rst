@@ -1,3 +1,5 @@
+:py:mod:`dagma.locally_connected.LocallyConnected.cuda`
+=======================================================
 .. py:method:: cuda(device: Optional[Union[int, Module.cuda.device]] = None) -> T
 
    Moves all model parameters and buffers to the GPU.

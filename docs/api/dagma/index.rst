@@ -8,7 +8,7 @@ Submodules
 ----------
 .. toctree::
    :titlesonly:
-   :maxdepth: 3
+   :maxdepth: 1
 
    linear/index.rst
    locally_connected/index.rst

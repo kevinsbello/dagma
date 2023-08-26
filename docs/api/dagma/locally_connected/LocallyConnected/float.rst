@@ -1,3 +1,5 @@
+:py:mod:`dagma.locally_connected.LocallyConnected.float`
+========================================================
 .. py:method:: float() -> T
 
    Casts all floating point parameters and buffers to ``float`` datatype.

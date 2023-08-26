@@ -1,3 +1,5 @@
+:py:mod:`dagma.linear.DagmaLinear._h`
+=====================================
 .. py:method:: _h(W: numpy.ndarray, s: float = 1.0) -> Tuple[float, numpy.ndarray]
 
    Evaluate value and gradient of the logdet acyclicity constraint.

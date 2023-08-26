@@ -1,3 +1,6 @@
+:py:mod:`dagma.nonlinear.DagmaNonlinear`
+========================================
+
 .. py:class:: DagmaNonlinear(model: torch.nn.Module, verbose=False, dtype=torch.double)
 
 
@@ -6,7 +9,7 @@
 
    .. toctree::
       :titlesonly:
-      :maxdepth: 2
+      :maxdepth: 1
       :hidden:
 
       log_mse_loss.rst

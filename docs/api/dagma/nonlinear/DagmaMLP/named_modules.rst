@@ -1,3 +1,5 @@
+:py:mod:`dagma.nonlinear.DagmaMLP.named_modules`
+================================================
 .. py:method:: named_modules(memo: Optional[Set[Module]] = None, prefix: str = '', remove_duplicate: bool = True)
 
    Returns an iterator over all modules in the network, yielding

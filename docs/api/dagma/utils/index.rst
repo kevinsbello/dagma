@@ -13,7 +13,7 @@ Functions
 
 .. toctree::
    :titlesonly:
-   :maxdepth: 2
+   :maxdepth: 1
    :hidden:
 
    set_random_seed.rst

@@ -1,3 +1,5 @@
+:py:mod:`dagma.nonlinear.DagmaMLP.set_extra_state`
+==================================================
 .. py:method:: set_extra_state(state: Any)
 
    This function is called from :func:`load_state_dict` to handle any extra state

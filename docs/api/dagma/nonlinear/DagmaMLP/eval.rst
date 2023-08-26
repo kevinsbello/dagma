@@ -1,3 +1,5 @@
+:py:mod:`dagma.nonlinear.DagmaMLP.eval`
+=======================================
 .. py:method:: eval() -> T
 
    Sets the module in evaluation mode.
