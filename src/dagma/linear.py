@@ -6,6 +6,8 @@ from tqdm.auto import tqdm
 import typing
 
 
+__all__ = ["DagmaLinear"]
+
 class DagmaLinear:
     """
     A Python object that contains the implementation of DAGMA for linear models using numpy and scipy.
@@ -13,8 +15,6 @@ class DagmaLinear:
     
     def __init__(self, loss_type: str, verbose: bool = False, dtype: type = np.float64) -> None:
         r"""
-        Initializes the class by defining the score function.
-
         Parameters
         ----------
         loss_type : str
@@ -25,7 +25,7 @@ class DagmaLinear:
             as defined in :py:obj:`fit`. Defaults to ``False``.
         dtype : type, optional
            Defines the float precision, for large number of nodes it is recommened to use ``np.float64``. 
-            Defaults to ``np.float64``.
+           Defaults to ``np.float64``.
         """
         super().__init__()
         losses = ['l2', 'logistic']

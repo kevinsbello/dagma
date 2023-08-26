@@ -5,11 +5,27 @@ import numpy as np
 from  torch import optim
 import copy
 from tqdm.auto import tqdm
+import typing
 
+
+__all__ = ["DagmaMLP", "DagmaNonlinear"]
 
 
 class DagmaMLP(nn.Module): 
-    def __init__(self, dims, bias=True, dtype=torch.double):
+    """
+    Python class that models the structural equations for the causal graph.
+    """
+    def __init__(self, dims: typing.List[int], bias: bool = True, dtype: torch.dtype = torch.double):
+        r"""
+        Parameters
+        ----------
+        dims : typing.List[int]
+            Number of neurons in hidden layers of each MLP representing each structural equation.
+        bias : bool, optional
+            Flag whether to consider bias or not, by default ``True``
+        dtype : torch.dtype, optional
+            Float precision, by default ``torch.double``
+        """
         torch.set_default_dtype(dtype)
         super(DagmaMLP, self).__init__()
         assert len(dims) >= 2
