@@ -67,7 +67,7 @@ Submodules
 Classes
 ~~~~~~~
 
-.. autoapisummary::
+.. autosummary::
    :toctree:
    :template: class.rst
    :recursive:
@@ -84,7 +84,7 @@ Classes
 Functions
 ~~~~~~~~~
 
-.. autoapisummary::
+.. autosummary::
    :toctree:
    :recursive:
 
