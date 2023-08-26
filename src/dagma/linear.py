@@ -7,11 +7,19 @@ from tqdm.auto import tqdm
 class DagmaLinear:
     """
     A Python object that contains the implementation of DAGMA for linear models using numpy and scipy.
-    
-    :group: dagma-linear
     """
     
-    def __init__(self, loss_type, verbose=False, dtype=np.float64):
+    def __init__(self, loss_type: str, verbose: bool = False, dtype: type = np.float64):
+        r"""
+
+        Args:
+            loss_type (str): One of ["l2", "logistic"]. `l2` refers to the least squares loss, while `logistic`
+            refers to the logistic loss. For continuous data: use `l2`. For discrete 0/1 data: use `logistic`.
+            verbose (bool, optional): If true, the loss/score and h values will print to stdout every `checkpoint` iterations,
+            as defined in :py:obj:`fit`. Defaults to `False`.
+            dtype (type, optional): Defines the float precision, for large number of nodes it is recommened to use `np.float64`. 
+            Defaults to np.float64.
+        """
         super().__init__()
         losses = ['l2', 'logistic']
         assert loss_type in losses, f"loss_type should be one of {losses}"
