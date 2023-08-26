@@ -44,7 +44,7 @@ extensions = [
     'autoapi.extension',
 ]
 
-# autoapi_dirs = ['../src/dagma/']
+autoapi_dirs = ['../src/dagma/']
 # autoapi_root = 'api'
 # autoapi_options = [ 'members', 'undoc-members', 'private-members', 'show-inheritance', 'show-module-summary', 'special-members', ]
 # autoapi_keep_files = True
