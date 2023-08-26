@@ -10,15 +10,8 @@ Module Contents
 Classes
 ~~~~~~~
 
-.. toctree::
-   :titlesonly:
-   :maxdepth: 1
-   :hidden:
-
-   DagmaMLP/index.rst
-   DagmaNonlinear/index.rst
-
 .. autoapisummary::
+   :toctree: 
 
    dagma.nonlinear.DagmaMLP
    dagma.nonlinear.DagmaNonlinear

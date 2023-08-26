@@ -30,17 +30,9 @@
    Methods
    ~~~~~~~
 
-   .. toctree::
-      :titlesonly:
-      :maxdepth: 1
-      :hidden:
-
-      reset_parameters.rst
-      forward.rst
-      extra_repr.rst
-
    .. autoapisummary::
-
+      :toctree:
+      
       dagma.locally_connected.LocallyConnected.reset_parameters
       dagma.locally_connected.LocallyConnected.forward
       dagma.locally_connected.LocallyConnected.extra_repr

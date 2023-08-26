@@ -60,17 +60,9 @@
    Methods
    ~~~~~~~
 
-   .. toctree::
-      :titlesonly:
-      :maxdepth: 1
-      :hidden:
-
-    {% for method in visible_methods %}
-      {{ method.short_name }}.rst
-    {% endfor %}
-
    .. autoapisummary::
-
+      :toctree:
+      
     {% for method in visible_methods %}
       {{ method.id }}
     {% endfor %}

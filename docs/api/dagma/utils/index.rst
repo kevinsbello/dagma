@@ -11,21 +11,9 @@ Module Contents
 Functions
 ~~~~~~~~~
 
-.. toctree::
-   :titlesonly:
-   :maxdepth: 1
-   :hidden:
-
-   set_random_seed.rst
-   is_dag.rst
-   simulate_dag.rst
-   simulate_parameter.rst
-   simulate_linear_sem.rst
-   simulate_nonlinear_sem.rst
-   count_accuracy.rst
-
 .. autoapisummary::
-
+   :toctree:
+   
    dagma.utils.set_random_seed
    dagma.utils.is_dag
    dagma.utils.simulate_dag

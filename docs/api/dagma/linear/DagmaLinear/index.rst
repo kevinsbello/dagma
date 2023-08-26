@@ -19,20 +19,9 @@
    Methods
    ~~~~~~~
 
-   .. toctree::
-      :titlesonly:
-      :maxdepth: 1
-      :hidden:
-
-      _score.rst
-      _h.rst
-      _func.rst
-      _adam_update.rst
-      minimize.rst
-      fit.rst
-
    .. autoapisummary::
-
+      :toctree:
+      
       dagma.linear.DagmaLinear._score
       dagma.linear.DagmaLinear._h
       dagma.linear.DagmaLinear._func
