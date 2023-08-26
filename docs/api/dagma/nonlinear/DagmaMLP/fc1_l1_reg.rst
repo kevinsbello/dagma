@@ -1,0 +1,4 @@
+.. py:method:: fc1_l1_reg()
+
+   Take l1 norm of fc1 weight
+

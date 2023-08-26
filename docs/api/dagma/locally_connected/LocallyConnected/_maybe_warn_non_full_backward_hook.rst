@@ -1,0 +1,2 @@
+.. py:method:: _maybe_warn_non_full_backward_hook(inputs, result, grad_fn)
+
