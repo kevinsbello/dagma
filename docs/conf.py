@@ -46,8 +46,9 @@ extensions = [
 
 autoapi_dirs = ['../src/dagma/']
 autoapi_root = 'api'
-# autoapi_options = [ 'members', 'undoc-members', 'private-members', 'show-inheritance', 'show-module-summary', 'special-members',  ]
+autoapi_options = [ 'members', 'undoc-members', 'private-members', 'show-inheritance', 'show-module-summary', 'special-members', ]
 autoapi_keep_files = True
+autoapi_python_class_content = "both"
 # autoapi_template_dir = '_autoapi_templates'
 
 

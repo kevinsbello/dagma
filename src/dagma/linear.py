@@ -14,14 +14,18 @@ class DagmaLinear:
     def __init__(self, loss_type: str, verbose: bool = False, dtype: type = np.float64) -> None:
         r"""
         Initializes the class by defining the score function.
-        
-        Args:
-            loss_type (str): One of ["l2", "logistic"]. `l2` refers to the least squares loss, while `logistic`
-            refers to the logistic loss. For continuous data: use `l2`. For discrete 0/1 data: use `logistic`.
-            verbose (bool, optional): If true, the loss/score and h values will print to stdout every `checkpoint` iterations,
-            as defined in :py:obj:`fit`. Defaults to `False`.
-            dtype (type, optional): Defines the float precision, for large number of nodes it is recommened to use `np.float64`. 
-            Defaults to np.float64.
+
+        Parameters
+        ----------
+        loss_type : str
+            One of ["l2", "logistic"]. ``l2`` refers to the least squares loss, while ``logistic``
+            refers to the logistic loss. For continuous data: use ``l2``. For discrete 0/1 data: use ``logistic``.
+        verbose : bool, optional
+            If true, the loss/score and h values will print to stdout every ``checkpoint`` iterations,
+            as defined in :py:obj:`fit`. Defaults to ``False``.
+        dtype : type, optional
+           Defines the float precision, for large number of nodes it is recommened to use ``np.float64``. 
+            Defaults to ``np.float64``.
         """
         super().__init__()
         losses = ['l2', 'logistic']
@@ -31,13 +35,18 @@ class DagmaLinear:
         self.vprint = print if verbose else lambda *a, **k: None
             
     def _score(self, W: np.ndarray) -> typing.Tuple[float, np.ndarray]:
-        r"""Evaluate value and gradient of the score function.
+        r"""
+        Evaluate value and gradient of the score function.
 
-        Args:
-            W (np.ndarray): :math:`(d,d)` adjacency matrix
+        Parameters
+        ----------
+        W : np.ndarray
+            :math:`(d,d)` adjacency matrix
 
-        Returns:
-            typing.Tuple[float, np.ndarray]: loss value, and gradient of the loss function
+        Returns
+        -------
+        typing.Tuple[float, np.ndarray]
+            loss value, and gradient of the loss function
         """
         if self.loss_type == 'l2':
             dif = self.Id - W 
@@ -51,14 +60,20 @@ class DagmaLinear:
         return loss, G_loss
 
     def _h(self, W: np.ndarray, s: float = 1.0) -> typing.Tuple[float, np.ndarray]:
-        r"""Evaluate value and gradient of the logdet acyclicity constraint.
+        r"""
+        Evaluate value and gradient of the logdet acyclicity constraint.
 
-        Args:
-            W (np.ndarray): :math:`(d,d)` adjacency matrix
-            s (float, optional): Controls the domain of M-matrices. Defaults to 1.0.
+        Parameters
+        ----------
+        W : np.ndarray
+            :math:`(d,d)` adjacency matrix
+        s : float, optional
+            Controls the domain of M-matrices. Defaults to 1.0.
 
-        Returns:
-            typing.Tuple[float, np.ndarray]: h value, and gradient of h
+        Returns
+        -------
+        typing.Tuple[float, np.ndarray]
+            h value, and gradient of h
         """
         M = s * self.Id - W * W
         h = - la.slogdet(M)[1] + self.d * np.log(s)
@@ -66,15 +81,22 @@ class DagmaLinear:
         return h, G_h
 
     def _func(self, W: np.ndarray, mu: float, s: float = 1.0) -> typing.Tuple[float, np.ndarray]:
-        """Evaluate value of the penalized objective function.
+        r"""
+        Evaluate value of the penalized objective function.
 
-        Args:
-            W (np.ndarray): :math:`(d,d)` adjacency matrix
-            mu (float): Weight of the score function.
-            s (float, optional): Controls the domain of M-matrices. Defaults to 1.0.
+        Parameters
+        ----------
+        W : np.ndarray
+            :math:`(d,d)` adjacency matrix
+        mu : float
+            Weight of the score function.
+        s : float, optional
+            Controls the domain of M-matrices. Defaults to 1.0.
 
-        Returns:
-            typing.Tuple[float, np.ndarray]: objective value, and gradient of the objective
+        Returns
+        -------
+        typing.Tuple[float, np.ndarray]
+            Objective value, and gradient of the objective
         """
         score, _ = self._score(W)
         h, _ = self._h(W, s)
@@ -82,16 +104,24 @@ class DagmaLinear:
         return obj, score, h
     
     def _adam_update(self, grad: np.ndarray, iter: int, beta_1: float, beta_2: float) -> np.ndarray:
-        """Performs one update of Adam.
+        r"""
+        Performs one update of Adam.
 
-        Args:
-            grad (np.ndarray): Current gradient of the objective.
-            iter (int): Current iteration number.
-            beta_1 (float): Adam hyperparameter.
-            beta_2 (float): Adam hyperparameter.
+        Parameters
+        ----------
+        grad : np.ndarray
+            Current gradient of the objective.
+        iter : int
+            Current iteration number.
+        beta_1 : float
+            Adam hyperparameter.
+        beta_2 : float
+            Adam hyperparameter.
 
-        Returns:
-            np.ndarray: Updates the gradient by the Adam method.
+        Returns
+        -------
+        np.ndarray
+            Updates the gradient by the Adam method.
         """
         self.opt_m = self.opt_m * beta_1 + (1 - beta_1) * grad
         self.opt_v = self.opt_v * beta_2 + (1 - beta_2) * (grad ** 2)
@@ -117,20 +147,32 @@ class DagmaLinear:
                 \arg\min_{W \in \mathbb{W}^s} \mu \cdot Q(W; \mathbf{X}) + h(W),
         where :math:`Q` is the score function. This problem is solved via (sub)gradient descent, where the initial
         point is `W`.
-                
-        Args:
-            W (np.ndarray): Initial point of (sub)gradient descent.
-            mu (float): Weights the score function.
-            max_iter (int): Maximum number of (sub)gradient iterations.
-            s (float): Number that controls the domain of M-matrices.
-            lr (float): Learning rate.
-            tol (float, optional): Tolerance to admit convergence. Defaults to 1e-6.
-            beta_1 (float, optional): Hyperparamter for Adam. Defaults to 0.99.
-            beta_2 (float, optional): Hyperparameter for Adam. Defaults to 0.999.
-            pbar (typing.Optional[tqdm.asyncio.tqdm_asyncio], optional): tqdm object to control bar progress. Defaults to None.
 
-        Returns:
-            typing.Tuple[np.ndarray, bool]: Returns an adjacency matrix until convergence or `max_iter` is reached.
+        Parameters
+        ----------
+        W : np.ndarray
+            Initial point of (sub)gradient descent.
+        mu : float
+            Weights the score function.
+        max_iter : int
+            Maximum number of (sub)gradient iterations.
+        s : float
+            Number that controls the domain of M-matrices.
+        lr : float
+            Learning rate.
+        tol : float, optional
+            Tolerance to admit convergence. Defaults to 1e-6.
+        beta_1 : float, optional
+            Hyperparamter for Adam. Defaults to 0.99.
+        beta_2 : float, optional
+            Hyperparamter for Adam. Defaults to 0.999.
+        pbar : typing.Optional[tqdm.asyncio.tqdm_asyncio], optional
+            tqdm object to control bar progress. Defaults to ``None``.
+
+        Returns
+        -------
+        typing.Tuple[np.ndarray, bool]
+            Returns an adjacency matrix until convergence or `max_iter` is reached.
             A boolean flag is returned to point success of the optimization. This can be False when at any iteration, the current
             W point went outside of the domain of M-matrices.
         """
@@ -203,40 +245,58 @@ class DagmaLinear:
             exclude_edges: typing.Optional[typing.List[typing.Tuple[int, int]]] = None, 
             include_edges: typing.Optional[typing.List[typing.Tuple[int, int]]] = None,
         ) -> np.ndarray :
-        r"""Runs the DAGMA algorithm and returns a weighted adjacency matrix.
+        r"""
+        Runs the DAGMA algorithm and returns a weighted adjacency matrix.
 
-        Args:
-            X (np.ndarray): :math:`(n,d)` dataset
-            lambda1 (float): Coefficient of the L1 penalty
-            w_threshold (float, optional): Removes edges with weight value less than the given threshold. Defaults to 0.3.
-            T (int, optional): Number of DAGMA iterations. Defaults to 5.
-            
-            .. important::
+        Parameters
+        ----------
+        X : np.ndarray
+            :math:`(n,d)` dataset
+        lambda1 : float
+            Coefficient of the L1 penalty
+        w_threshold : float, optional
+            Removes edges with weight value less than the given threshold. Defaults to 0.3.
+        T : int, optional
+            Number of DAGMA iterations. Defaults to 5.
+        
+        mu_init : float, optional
+            Initial value of :math:`\mu`. Defaults to 1.0.
+        mu_factor : float, optional
+            Decay factor for :math:`\mu`. Defaults to 0.1.
+        s : typing.List[float], optional
+            Controls the domain of M-matrices. Defaults to [1.0, .9, .8, .7, .6].
+        warm_iter : int, optional
+            Number of iterations for :py:obj:`minimize` for :math:`t < T`. Defaults to 3e4.
+        max_iter : int, optional
+            Number of iterations for :py:obj:`minimize` for :math:`t = T`. Defaults to 6e4.
+        lr : float, optional
+            Learning rate. Defaults to 0.0003.
+        checkpoint : int, optional
+            If `verbose` is `True`, then prints to stdout every `checkpoint` iterations. Defaults to 1000.
+        beta_1 : float, optional
+            Adam hyperparameter. Defaults to 0.99.
+        beta_2 : float, optional
+            Adam hyperparameter. Defaults to 0.999.
+        exclude_edges : typing.Optional[typing.List[typing.Tuple[int, int]]], optional
+            Tuple of edges that should be excluded from the DAG solution, e.g., ``((1,3), (2,4), (5,1))``. Defaults to None.
+        include_edges : typing.Optional[typing.List[typing.Tuple[int, int]]], optional
+            Tuple of edges that should be included from the DAG solution, e.g., ``((1,3), (2,4), (5,1))``. Defaults to None.
+
+        Returns
+        -------
+        np.ndarray
+            Estimated DAG from data.
+        
+        
+        .. important::
 
                 If the output of :py:obj:`fit` is not a DAG, then the user should try larger value of `T` before raising an issue.
-            
-            mu_init (float, optional): Initial value of :math:`\mu`. Defaults to 1.0.
-            mu_factor (float, optional): Decay factor for :math:`\mu`. Defaults to 0.1.
-            s (typing.List[float], optional): Controls the domain of M-matrices. Defaults to [1.0, .9, .8, .7, .6].
-            warm_iter (int, optional): Number of iterations for :py:obj:`minimize` for :math:`t < T`. Defaults to 3e4.
-            max_iter (int, optional):  Number of iterations for :py:obj:`minimize` for :math:`t = T`. Defaults to 6e4.
-            lr (float, optional): Learning rate. Defaults to 0.0003.
-            checkpoint (int, optional): If `verbose` is `True`, then prints to stdout every `checkpoint` iterations. Defaults to 1000.
-            beta_1 (float, optional): Adam hyperparameter. Defaults to 0.99.
-            beta_2 (float, optional): Adam hyperparameter. Defaults to 0.999.
-            exclude_edges (typing.Optional[typing.List[typing.Tuple[int, int]]], optional): Tuple of edges that should be excluded 
-            from the DAG solution, e.g, `((1,3), (2,4), (5,1))`. Defaults to None.
-            include_edges (typing.Optional[typing.List[typing.Tuple[int, int]]], optional): Tuple of edges that should be included 
-            from the DAG solution, e.g, `((1,3), (2,4), (5,1))`. Defaults to None.
-            
-            .. warning::
+        
+        .. warning::
             
                 While DAGMA ensures to exclude such edges in `exclude_edges`, the method does not guarantees that all edges
                 will be included from `included edges`.
-
-        Returns:
-            np.ndarray: Estimated DAG from data.
-        """
+        """ 
         
         ## INITALIZING VARIABLES 
         self.X, self.lambda1, self.checkpoint = X, lambda1, checkpoint
