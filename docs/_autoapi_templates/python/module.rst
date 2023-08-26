@@ -37,7 +37,7 @@ Submodules
 ----------
 .. toctree::
    :titlesonly:
-   :maxdepth: 1
+   :maxdepth: 2
 
 {% for submodule in visible_submodules %}
    {{ submodule.short_name }}/index.rst
@@ -68,12 +68,12 @@ Classes
 ~~~~~~~
 
 .. autoapisummary::
-    :toctree: 
-    
+    :toctree:                           
+    :template: _autoapi_templates/python/class.rst
+
 {% for klass in visible_classes %}
    {{ klass.id }}
 {% endfor %}
-
 
 {% endif %}
 {% endblock %}
