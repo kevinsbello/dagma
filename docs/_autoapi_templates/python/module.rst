@@ -67,9 +67,10 @@ Submodules
 Classes
 ~~~~~~~
 
-.. autosummary::
-    :toctree:                           
-    :template: _autoapi_templates/python/class.rst
+.. autoapisummary::
+   :toctree:
+   :template: class.rst
+   :recursive:
 
 {% for klass in visible_classes %}
    {{ klass.id }}
@@ -83,7 +84,9 @@ Classes
 Functions
 ~~~~~~~~~
 
-.. autosummary::
+.. autoapisummary::
+   :toctree:
+   :recursive:
 
 {% for function in visible_functions %}
    {{ function.id }}
@@ -98,7 +101,7 @@ Functions
 Attributes
 ~~~~~~~~~~
 
-.. autosummary::
+.. autoapisummary::
 
 {% for attribute in visible_attributes %}
    {{ attribute.id }}

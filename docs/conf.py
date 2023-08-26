@@ -38,7 +38,7 @@ extensions = [
     "sphinx.ext.intersphinx",
     "sphinx.ext.napoleon",
     "sphinx_immaterial",
-    "sphinx_immaterial.apidoc.python.apigen",
+    # "sphinx_immaterial.apidoc.python.apigen",
     # "myst_parser",
     "sphinx_design",
     'autoapi.extension',
@@ -51,7 +51,7 @@ autoapi_keep_files = True
 autoapi_template_dir = '_autoapi_templates'
 
 
-# autosummary_generate = True
+autosummary_generate = True
 master_doc = "index"
 
 
@@ -65,7 +65,7 @@ intersphinx_mapping = {
 
 intersphinx_disabled_domains = ["std"]
 
-# templates_path = ["_templates"]
+templates_path = ["_templates"]
 
 # -- Options for EPUB output
 epub_show_urls = "footnote"
