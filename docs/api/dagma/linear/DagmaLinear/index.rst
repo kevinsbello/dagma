@@ -20,11 +20,22 @@
    ~~~~~~~
 
    .. autoapisummary::
-      :toctree:
-      
+
       dagma.linear.DagmaLinear._score
       dagma.linear.DagmaLinear._h
       dagma.linear.DagmaLinear._func
       dagma.linear.DagmaLinear._adam_update
       dagma.linear.DagmaLinear.minimize
       dagma.linear.DagmaLinear.fit
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+   _score.rst
+   _h.rst
+   _func.rst
+   _adam_update.rst
+   minimize.rst
+   fit.rst

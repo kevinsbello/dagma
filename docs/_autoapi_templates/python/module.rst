@@ -67,8 +67,16 @@ Submodules
 Classes
 ~~~~~~~
 
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+{% for klass in visible_classes %}
+   {{ klass.short_name }}/index.rst
+{% endfor %}
+
 .. autoapisummary::
-   :toctree: 
 
 {% for klass in visible_classes %}
    {{ klass.id }}
@@ -83,9 +91,17 @@ Classes
 Functions
 ~~~~~~~~~
 
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+{% for function in visible_functions %}
+   {{ function.short_name }}.rst
+{% endfor %}
+
 .. autoapisummary::
-   :toctree:
-   
+
 {% for function in visible_functions %}
    {{ function.id }}
 {% endfor %}

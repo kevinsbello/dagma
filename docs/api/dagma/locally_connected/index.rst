@@ -10,8 +10,14 @@ Module Contents
 Classes
 ~~~~~~~
 
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+   LocallyConnected/index.rst
+
 .. autoapisummary::
-   :toctree: 
 
    dagma.locally_connected.LocallyConnected
 

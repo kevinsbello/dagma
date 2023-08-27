@@ -8,8 +8,16 @@
    ~~~~~~~
 
    .. autoapisummary::
-      :toctree:
-      
+
       dagma.nonlinear.DagmaNonlinear.log_mse_loss
       dagma.nonlinear.DagmaNonlinear.minimize
       dagma.nonlinear.DagmaNonlinear.fit
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+   log_mse_loss.rst
+   minimize.rst
+   fit.rst

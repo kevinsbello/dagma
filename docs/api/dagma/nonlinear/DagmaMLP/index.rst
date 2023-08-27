@@ -19,9 +19,18 @@
    ~~~~~~~
 
    .. autoapisummary::
-      :toctree:
-      
+
       dagma.nonlinear.DagmaMLP.forward
       dagma.nonlinear.DagmaMLP.h_func
       dagma.nonlinear.DagmaMLP.fc1_l1_reg
       dagma.nonlinear.DagmaMLP.fc1_to_adj
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+   forward.rst
+   h_func.rst
+   fc1_l1_reg.rst
+   fc1_to_adj.rst
