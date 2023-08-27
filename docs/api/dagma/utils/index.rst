@@ -11,7 +11,7 @@ Module Contents
 Functions
 ~~~~~~~~~
 
-.. autoapisummary::
+.. autosummary::
 
    dagma.utils.set_random_seed
    dagma.utils.is_dag

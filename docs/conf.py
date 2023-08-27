@@ -54,7 +54,7 @@ autoapi_generate_api_docs = False
 # autoapi_template_dir = '_autoapi_templates'
 
 
-# autosummary_generate = True
+autosummary_generate = True
 master_doc = "index"
 
 

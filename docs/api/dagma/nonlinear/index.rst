@@ -10,7 +10,7 @@ Module Contents
 Classes
 ~~~~~~~
 
-.. autoapisummary::
+.. autosummary::
 
    dagma.nonlinear.DagmaMLP
    dagma.nonlinear.DagmaNonlinear
