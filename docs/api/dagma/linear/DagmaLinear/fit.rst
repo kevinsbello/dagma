@@ -1,5 +1,5 @@
-:py:mod:`dagma.linear.DagmaLinear.fit`
-======================================
+fit
+===
 .. py:method:: fit(X: numpy.ndarray, lambda1: float, w_threshold: float = 0.3, T: int = 5, mu_init: float = 1.0, mu_factor: float = 0.1, s: List[float] = [1.0, 0.9, 0.8, 0.7, 0.6], warm_iter: int = 30000.0, max_iter: int = 60000.0, lr: float = 0.0003, checkpoint: int = 1000, beta_1: float = 0.99, beta_2: float = 0.999, exclude_edges: Optional[List[Tuple[int, int]]] = None, include_edges: Optional[List[Tuple[int, int]]] = None) -> numpy.ndarray
 
    Runs the DAGMA algorithm and returns a weighted adjacency matrix.

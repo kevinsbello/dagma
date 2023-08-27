@@ -1,5 +1,5 @@
-:py:mod:`dagma.nonlinear.DagmaMLP.ipu`
-======================================
+ipu
+===
 .. py:method:: ipu(device: Optional[Union[int, Module.ipu.device]] = None) -> T
 
    Moves all model parameters and buffers to the IPU.

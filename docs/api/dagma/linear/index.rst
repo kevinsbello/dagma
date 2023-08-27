@@ -10,17 +10,19 @@ Module Contents
 Classes
 ~~~~~~~
 
+.. autoapisummary::
+
+   dagma.linear.DagmaLinear
+
+
+
+
+
 .. toctree::
    :titlesonly:
    :maxdepth: 1
    :hidden:
 
    DagmaLinear/index.rst
-
-.. autoapisummary::
-
-   dagma.linear.DagmaLinear
-
-
 
 

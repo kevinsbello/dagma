@@ -1,5 +1,5 @@
-:py:mod:`dagma.utils.simulate_parameter`
-========================================
+simulate_parameter
+==================
 .. py:function:: simulate_parameter(B, w_ranges=((-2.0, -0.5), (0.5, 2.0)))
 
    Simulate SEM parameters for a DAG.

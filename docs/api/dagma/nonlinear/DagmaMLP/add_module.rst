@@ -1,5 +1,5 @@
-:py:mod:`dagma.nonlinear.DagmaMLP.add_module`
-=============================================
+add_module
+==========
 .. py:method:: add_module(name: str, module: Optional[Module]) -> None
 
    Adds a child module to the current module.

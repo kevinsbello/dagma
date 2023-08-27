@@ -1,5 +1,5 @@
-:py:mod:`dagma.locally_connected.LocallyConnected._get_backward_hooks`
-======================================================================
+_get_backward_hooks
+===================
 .. py:method:: _get_backward_hooks()
 
    Returns the backward hooks for use in the call function.

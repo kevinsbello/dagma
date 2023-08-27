@@ -1,5 +1,5 @@
-:py:mod:`dagma.nonlinear.DagmaMLP.modules`
-==========================================
+modules
+=======
 .. py:method:: modules() -> Iterator[Module]
 
    Returns an iterator over all modules in the network.

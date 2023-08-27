@@ -1,5 +1,5 @@
-:py:mod:`dagma.nonlinear.DagmaMLP.register_backward_hook`
-=========================================================
+register_backward_hook
+======================
 .. py:method:: register_backward_hook(hook: Callable[[Module, _grad_t, _grad_t], Union[None, _grad_t]]) -> torch.utils.hooks.RemovableHandle
 
    Registers a backward hook on the module.

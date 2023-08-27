@@ -1,5 +1,5 @@
-:py:mod:`dagma.locally_connected.LocallyConnected.double`
-=========================================================
+double
+======
 .. py:method:: double() -> T
 
    Casts all floating point parameters and buffers to ``double`` datatype.

@@ -1,4 +1,4 @@
-:py:mod:`dagma.nonlinear.DagmaMLP._apply`
-=========================================
+_apply
+======
 .. py:method:: _apply(fn)
 

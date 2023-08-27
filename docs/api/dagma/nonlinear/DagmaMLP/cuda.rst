@@ -1,5 +1,5 @@
-:py:mod:`dagma.nonlinear.DagmaMLP.cuda`
-=======================================
+cuda
+====
 .. py:method:: cuda(device: Optional[Union[int, Module.cuda.device]] = None) -> T
 
    Moves all model parameters and buffers to the GPU.

@@ -1,5 +1,5 @@
-:py:mod:`dagma.nonlinear.DagmaMLP._load_from_state_dict`
-========================================================
+_load_from_state_dict
+=====================
 .. py:method:: _load_from_state_dict(state_dict, prefix, local_metadata, strict, missing_keys, unexpected_keys, error_msgs)
 
    Copies parameters and buffers from :attr:`state_dict` into only

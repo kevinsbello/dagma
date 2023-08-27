@@ -1,5 +1,5 @@
-:py:mod:`dagma.nonlinear.DagmaMLP.train`
-========================================
+train
+=====
 .. py:method:: train(mode: bool = True) -> T
 
    Sets the module in training mode.

@@ -1,5 +1,5 @@
-:py:mod:`dagma.nonlinear.DagmaMLP.get_buffer`
-=============================================
+get_buffer
+==========
 .. py:method:: get_buffer(target: str) -> torch.Tensor
 
    Returns the buffer given by ``target`` if it exists,

@@ -1,4 +1,4 @@
-:py:mod:`dagma.utils.is_dag`
-============================
+is_dag
+======
 .. py:function:: is_dag(W)
 

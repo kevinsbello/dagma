@@ -1,5 +1,5 @@
-:py:mod:`dagma.linear.DagmaLinear`
-==================================
+DagmaLinear
+===========
 
 .. py:class:: DagmaLinear(loss_type: str, verbose: bool = False, dtype: type = np.float64)
 

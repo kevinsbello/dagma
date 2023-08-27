@@ -1,6 +1,6 @@
 {% if obj.display %}
-:py:mod:`{{ obj.id }}`
-=========={{ "=" * obj.id|length }}
+{{ obj.short_name }}
+{{ "=" * obj.short_name|length }}
 .. py:method:: {{ obj.short_name }}({{ obj.args }}){% if obj.return_annotation is not none %} -> {{ obj.return_annotation }}{% endif %}
 
 {% for (args, return_annotation) in obj.overloads %}

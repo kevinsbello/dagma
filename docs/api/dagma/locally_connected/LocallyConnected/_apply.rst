@@ -1,4 +1,4 @@
-:py:mod:`dagma.locally_connected.LocallyConnected._apply`
-=========================================================
+_apply
+======
 .. py:method:: _apply(fn)
 

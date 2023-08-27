@@ -1,5 +1,5 @@
-:py:mod:`dagma.locally_connected.LocallyConnected.apply`
-========================================================
+apply
+=====
 .. py:method:: apply(fn: Callable[[Module], None]) -> T
 
    Applies ``fn`` recursively to every submodule (as returned by ``.children()``)

@@ -1,5 +1,5 @@
-:py:mod:`dagma.locally_connected.LocallyConnected.eval`
-=======================================================
+eval
+====
 .. py:method:: eval() -> T
 
    Sets the module in evaluation mode.

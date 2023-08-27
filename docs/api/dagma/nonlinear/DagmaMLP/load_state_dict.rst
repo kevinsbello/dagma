@@ -1,5 +1,5 @@
-:py:mod:`dagma.nonlinear.DagmaMLP.load_state_dict`
-==================================================
+load_state_dict
+===============
 .. py:method:: load_state_dict(state_dict: Mapping[str, Any], strict: bool = True)
 
    Copies parameters and buffers from :attr:`state_dict` into

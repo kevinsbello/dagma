@@ -1,4 +1,4 @@
-:py:mod:`dagma.locally_connected.LocallyConnected.forward`
-==========================================================
+forward
+=======
 .. py:method:: forward(input: torch.Tensor)
 

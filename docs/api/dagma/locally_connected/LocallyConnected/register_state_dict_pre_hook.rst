@@ -1,5 +1,5 @@
-:py:mod:`dagma.locally_connected.LocallyConnected.register_state_dict_pre_hook`
-===============================================================================
+register_state_dict_pre_hook
+============================
 .. py:method:: register_state_dict_pre_hook(hook)
 
    These hooks will be called with arguments: ``self``, ``prefix``,

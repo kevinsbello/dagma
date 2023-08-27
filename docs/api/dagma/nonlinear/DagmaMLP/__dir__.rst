@@ -1,5 +1,5 @@
-:py:mod:`dagma.nonlinear.DagmaMLP.__dir__`
-==========================================
+__dir__
+=======
 .. py:method:: __dir__()
 
    Default dir() implementation.

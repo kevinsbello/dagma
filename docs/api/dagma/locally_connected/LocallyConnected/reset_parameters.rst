@@ -1,4 +1,4 @@
-:py:mod:`dagma.locally_connected.LocallyConnected.reset_parameters`
-===================================================================
+reset_parameters
+================
 .. py:method:: reset_parameters()
 

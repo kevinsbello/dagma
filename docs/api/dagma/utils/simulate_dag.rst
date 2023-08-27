@@ -1,5 +1,5 @@
-:py:mod:`dagma.utils.simulate_dag`
-==================================
+simulate_dag
+============
 .. py:function:: simulate_dag(d, s0, graph_type)
 
    Simulate random DAG with some expected number of edges.

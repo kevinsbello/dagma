@@ -1,6 +1,6 @@
 {% if obj.display %}
-:py:mod:`{{ obj.id }}`
-=========={{ "=" * obj.id|length }}
+{{ obj.short_name }}
+{{ "=" * obj.short_name|length }}
 
 .. py:{{ obj.type }}:: {{ obj.short_name }}{% if obj.args %}({{ obj.args }}){% endif %}
 

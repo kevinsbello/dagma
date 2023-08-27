@@ -1,5 +1,5 @@
-:py:mod:`dagma.nonlinear.DagmaMLP.register_load_state_dict_post_hook`
-=====================================================================
+register_load_state_dict_post_hook
+==================================
 .. py:method:: register_load_state_dict_post_hook(hook)
 
    Registers a post hook to be run after module's ``load_state_dict``

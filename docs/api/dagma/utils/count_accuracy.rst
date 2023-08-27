@@ -1,5 +1,5 @@
-:py:mod:`dagma.utils.count_accuracy`
-====================================
+count_accuracy
+==============
 .. py:function:: count_accuracy(B_true, B_est)
 
    Compute various accuracy metrics for B_est.

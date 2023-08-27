@@ -1,4 +1,4 @@
-:py:mod:`dagma.nonlinear.DagmaMLP.forward`
-==========================================
+forward
+=======
 .. py:method:: forward(x)
 
