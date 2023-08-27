@@ -70,7 +70,7 @@ Classes
 .. autosummary::
 
 {% for klass in visible_classes %}
-   {{ klass.id }}
+   {{ klass.short_name }}
 {% endfor %}
 
 
@@ -85,7 +85,7 @@ Functions
 .. autosummary::
 
 {% for function in visible_functions %}
-   {{ function.id }}
+   {{ function.short_name }}
 {% endfor %}
 
 
@@ -100,7 +100,7 @@ Attributes
 .. autosummary::
 
 {% for attribute in visible_attributes %}
-   {{ attribute.id }}
+   {{ attribute.short_name }}
 {% endfor %}
 
 

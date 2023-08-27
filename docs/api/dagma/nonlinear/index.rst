@@ -12,8 +12,8 @@ Classes
 
 .. autosummary::
 
-   dagma.nonlinear.DagmaMLP
-   dagma.nonlinear.DagmaNonlinear
+   DagmaMLP
+   DagmaNonlinear
 
 
 

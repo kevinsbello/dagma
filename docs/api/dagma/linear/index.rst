@@ -12,7 +12,7 @@ Classes
 
 .. autosummary::
 
-   dagma.linear.DagmaLinear
+   DagmaLinear
 
 
 

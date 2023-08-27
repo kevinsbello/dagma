@@ -13,13 +13,13 @@ Functions
 
 .. autosummary::
 
-   dagma.utils.set_random_seed
-   dagma.utils.is_dag
-   dagma.utils.simulate_dag
-   dagma.utils.simulate_parameter
-   dagma.utils.simulate_linear_sem
-   dagma.utils.simulate_nonlinear_sem
-   dagma.utils.count_accuracy
+   set_random_seed
+   is_dag
+   simulate_dag
+   simulate_parameter
+   simulate_linear_sem
+   simulate_nonlinear_sem
+   count_accuracy
 
 
 

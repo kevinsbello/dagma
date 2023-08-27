@@ -12,7 +12,7 @@ Classes
 
 .. autosummary::
 
-   dagma.locally_connected.LocallyConnected
+   LocallyConnected
 
 
 
