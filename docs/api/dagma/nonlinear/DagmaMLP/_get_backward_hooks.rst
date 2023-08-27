@@ -1,5 +1,5 @@
-_get_backward_hooks
-===================
+:py:mod:`dagma.nonlinear.DagmaMLP._get_backward_hooks`
+======================================================
 .. py:method:: _get_backward_hooks()
 
    Returns the backward hooks for use in the call function.

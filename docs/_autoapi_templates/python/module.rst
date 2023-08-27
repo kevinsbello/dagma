@@ -114,7 +114,7 @@ Attributes
    :hidden:
 
 {% for klass in visible_classes %}
-   {{ klass.short_name }}/index.rst
+   {{ klass.short_name }}<{{ klass.short_name }}/index>
 {% endfor %}
 {% endif %}
 
@@ -125,7 +125,7 @@ Attributes
    :hidden:
 
 {% for function in visible_functions %}
-   {{ function.short_name }}.rst
+   {{ function.short_name }}<{{ function.short_name }}>
 {% endfor %}
 {% endif %}
 

@@ -1,5 +1,5 @@
-extra_repr
-==========
+:py:mod:`dagma.locally_connected.LocallyConnected.extra_repr`
+=============================================================
 .. py:method:: extra_repr()
 
    Set the extra representation of the module

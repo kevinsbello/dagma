@@ -1,5 +1,5 @@
-DagmaLinear
-===========
+:py:mod:`dagma.linear.DagmaLinear`
+==================================
 
 .. py:class:: DagmaLinear(loss_type: str, verbose: bool = False, dtype: type = np.float64)
 
@@ -33,9 +33,9 @@ DagmaLinear
    :maxdepth: 1
    :hidden:
 
-   _score.rst
-   _h.rst
-   _func.rst
-   _adam_update.rst
-   minimize.rst
-   fit.rst
+   _score<_score>
+   _h<_h>
+   _func<_func>
+   _adam_update<_adam_update>
+   minimize<minimize>
+   fit<fit>

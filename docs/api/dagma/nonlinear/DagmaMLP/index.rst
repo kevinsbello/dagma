@@ -1,5 +1,5 @@
-DagmaMLP
-========
+:py:mod:`dagma.nonlinear.DagmaMLP`
+==================================
 
 .. py:class:: DagmaMLP(dims: List[int], bias: bool = True, dtype: torch.dtype = torch.double)
 
@@ -30,7 +30,7 @@ DagmaMLP
    :maxdepth: 1
    :hidden:
 
-   forward.rst
-   h_func.rst
-   fc1_l1_reg.rst
-   fc1_to_adj.rst
+   forward<forward>
+   h_func<h_func>
+   fc1_l1_reg<fc1_l1_reg>
+   fc1_to_adj<fc1_to_adj>

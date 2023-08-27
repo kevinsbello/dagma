@@ -1,5 +1,5 @@
-DagmaNonlinear
-==============
+:py:mod:`dagma.nonlinear.DagmaNonlinear`
+========================================
 
 .. py:class:: DagmaNonlinear(model: torch.nn.Module, verbose=False, dtype=torch.double)
 
@@ -18,6 +18,6 @@ DagmaNonlinear
    :maxdepth: 1
    :hidden:
 
-   log_mse_loss.rst
-   minimize.rst
-   fit.rst
+   log_mse_loss<log_mse_loss>
+   minimize<minimize>
+   fit<fit>

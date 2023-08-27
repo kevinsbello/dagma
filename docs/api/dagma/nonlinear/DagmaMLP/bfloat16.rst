@@ -1,5 +1,5 @@
-bfloat16
-========
+:py:mod:`dagma.nonlinear.DagmaMLP.bfloat16`
+===========================================
 .. py:method:: bfloat16() -> T
 
    Casts all floating point parameters and buffers to ``bfloat16`` datatype.

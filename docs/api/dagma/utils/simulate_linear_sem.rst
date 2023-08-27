@@ -1,5 +1,5 @@
-simulate_linear_sem
-===================
+:py:mod:`dagma.utils.simulate_linear_sem`
+=========================================
 .. py:function:: simulate_linear_sem(W, n, sem_type, noise_scale=None)
 
    Simulate samples from linear SEM with specified type of noise.

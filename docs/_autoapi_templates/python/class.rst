@@ -1,6 +1,6 @@
 {% if obj.display %}
-{{ obj.short_name }}
-{{ "=" * obj.short_name|length }}
+:py:mod:`{{ obj.id }}`
+=========={{ "=" * obj.id|length }}
 
 .. py:{{ obj.type }}:: {{ obj.short_name }}{% if obj.args %}({{ obj.args }}){% endif %}
 
@@ -72,6 +72,6 @@
    :hidden:
 
 {% for method in visible_methods %}
-   {{ method.short_name }}.rst
+   {{ method.short_name }}<{{ method.short_name }}>
 {% endfor %}
 {% endif %}

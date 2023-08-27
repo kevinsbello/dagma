@@ -1,5 +1,5 @@
-parameters
-==========
+:py:mod:`dagma.locally_connected.LocallyConnected.parameters`
+=============================================================
 .. py:method:: parameters(recurse: bool = True) -> Iterator[torch.nn.parameter.Parameter]
 
    Returns an iterator over module parameters.

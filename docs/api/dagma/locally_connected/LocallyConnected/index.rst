@@ -1,5 +1,5 @@
-LocallyConnected
-================
+:py:mod:`dagma.locally_connected.LocallyConnected`
+==================================================
 
 .. py:class:: LocallyConnected(num_linear, input_features, output_features, bias=True)
 
@@ -41,6 +41,6 @@ LocallyConnected
    :maxdepth: 1
    :hidden:
 
-   reset_parameters.rst
-   forward.rst
-   extra_repr.rst
+   reset_parameters<reset_parameters>
+   forward<forward>
+   extra_repr<extra_repr>

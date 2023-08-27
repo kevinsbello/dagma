@@ -1,5 +1,5 @@
-zero_grad
-=========
+:py:mod:`dagma.nonlinear.DagmaMLP.zero_grad`
+============================================
 .. py:method:: zero_grad(set_to_none: bool = True) -> None
 
    Sets gradients of all model parameters to zero. See similar function

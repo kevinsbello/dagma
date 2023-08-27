@@ -23,6 +23,6 @@ Classes
    :maxdepth: 1
    :hidden:
 
-   LocallyConnected/index.rst
+   LocallyConnected<LocallyConnected/index>
 
 

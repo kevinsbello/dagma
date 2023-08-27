@@ -1,5 +1,5 @@
-get_parameter
-=============
+:py:mod:`dagma.nonlinear.DagmaMLP.get_parameter`
+================================================
 .. py:method:: get_parameter(target: str) -> torch.nn.parameter.Parameter
 
    Returns the parameter given by ``target`` if it exists,

@@ -1,5 +1,5 @@
-extra_repr
-==========
+:py:mod:`dagma.nonlinear.DagmaMLP.extra_repr`
+=============================================
 .. py:method:: extra_repr() -> str
 
    Set the extra representation of the module

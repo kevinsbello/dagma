@@ -24,7 +24,7 @@ Classes
    :maxdepth: 1
    :hidden:
 
-   DagmaMLP/index.rst
-   DagmaNonlinear/index.rst
+   DagmaMLP<DagmaMLP/index>
+   DagmaNonlinear<DagmaNonlinear/index>
 
 

@@ -1,5 +1,5 @@
-cpu
-===
+:py:mod:`dagma.nonlinear.DagmaMLP.cpu`
+======================================
 .. py:method:: cpu() -> T
 
    Moves all model parameters and buffers to the CPU.

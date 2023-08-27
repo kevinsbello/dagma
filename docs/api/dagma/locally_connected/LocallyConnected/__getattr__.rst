@@ -1,4 +1,4 @@
-__getattr__
-===========
+:py:mod:`dagma.locally_connected.LocallyConnected.__getattr__`
+==============================================================
 .. py:method:: __getattr__(name: str) -> Union[torch.Tensor, Module]
 

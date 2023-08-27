@@ -1,5 +1,5 @@
-__repr__
-========
+:py:mod:`dagma.locally_connected.LocallyConnected.__repr__`
+===========================================================
 .. py:method:: __repr__()
 
    Return repr(self).

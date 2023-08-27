@@ -1,5 +1,5 @@
-_register_state_dict_hook
-=========================
+:py:mod:`dagma.nonlinear.DagmaMLP._register_state_dict_hook`
+============================================================
 .. py:method:: _register_state_dict_hook(hook)
 
    These hooks will be called with arguments: `self`, `state_dict`,

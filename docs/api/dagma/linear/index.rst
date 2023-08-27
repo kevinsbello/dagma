@@ -23,6 +23,6 @@ Classes
    :maxdepth: 1
    :hidden:
 
-   DagmaLinear/index.rst
+   DagmaLinear<DagmaLinear/index>
 
 

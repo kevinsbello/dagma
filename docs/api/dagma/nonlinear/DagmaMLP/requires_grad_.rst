@@ -1,5 +1,5 @@
-requires_grad_
-==============
+:py:mod:`dagma.nonlinear.DagmaMLP.requires_grad_`
+=================================================
 .. py:method:: requires_grad_(requires_grad: bool = True) -> T
 
    Change if autograd should record operations on parameters in this
