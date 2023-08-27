@@ -10,9 +10,9 @@ Module Contents
 Classes
 ~~~~~~~
 
-.. autosummary::
+.. autoapisummary::
 
-   LocallyConnected
+   dagma.locally_connected.LocallyConnected
 
 
 

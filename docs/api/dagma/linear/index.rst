@@ -10,9 +10,9 @@ Module Contents
 Classes
 ~~~~~~~
 
-.. autosummary::
+.. autoapisummary::
 
-   DagmaLinear
+   dagma.linear.DagmaLinear
 
 
 

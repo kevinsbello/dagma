@@ -67,10 +67,10 @@ Submodules
 Classes
 ~~~~~~~
 
-.. autosummary::
+.. autoapisummary::
 
 {% for klass in visible_classes %}
-   {{ klass.short_name }}
+   {{ klass.id }}
 {% endfor %}
 
 
@@ -82,10 +82,10 @@ Classes
 Functions
 ~~~~~~~~~
 
-.. autosummary::
+.. autoapisummary::
 
 {% for function in visible_functions %}
-   {{ function.short_name }}
+   {{ function.id }}
 {% endfor %}
 
 
@@ -97,10 +97,10 @@ Functions
 Attributes
 ~~~~~~~~~~
 
-.. autosummary::
+.. autoapisummary::
 
 {% for attribute in visible_attributes %}
-   {{ attribute.short_name }}
+   {{ attribute.id }}
 {% endfor %}
 
 
