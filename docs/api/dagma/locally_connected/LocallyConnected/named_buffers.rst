@@ -1,4 +1,4 @@
-:py:mod:`dagma.locally_connected.LocallyConnected.named_buffers`
+:py:method:`dagma.locally_connected.LocallyConnected.named_buffers`
 ================================================================
 .. py:method:: named_buffers(prefix: str = '', recurse: bool = True, remove_duplicate: bool = True) -> Iterator[Tuple[str, torch.Tensor]]
 

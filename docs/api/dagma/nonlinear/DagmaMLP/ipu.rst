@@ -1,4 +1,4 @@
-:py:mod:`dagma.nonlinear.DagmaMLP.ipu`
+:py:method:`dagma.nonlinear.DagmaMLP.ipu`
 ======================================
 .. py:method:: ipu(device: Optional[Union[int, Module.ipu.device]] = None) -> T
 

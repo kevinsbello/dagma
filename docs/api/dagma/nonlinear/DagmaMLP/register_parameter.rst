@@ -1,4 +1,4 @@
-:py:mod:`dagma.nonlinear.DagmaMLP.register_parameter`
+:py:method:`dagma.nonlinear.DagmaMLP.register_parameter`
 =====================================================
 .. py:method:: register_parameter(name: str, param: Optional[torch.nn.parameter.Parameter]) -> None
 

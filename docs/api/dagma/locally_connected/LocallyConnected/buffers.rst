@@ -1,4 +1,4 @@
-:py:mod:`dagma.locally_connected.LocallyConnected.buffers`
+:py:method:`dagma.locally_connected.LocallyConnected.buffers`
 ==========================================================
 .. py:method:: buffers(recurse: bool = True) -> Iterator[torch.Tensor]
 

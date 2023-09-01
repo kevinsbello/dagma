@@ -1,4 +1,4 @@
-:py:mod:`dagma.locally_connected.LocallyConnected.__setattr__`
+:py:method:`dagma.locally_connected.LocallyConnected.__setattr__`
 ==============================================================
 .. py:method:: __setattr__(name: str, value: Union[torch.Tensor, Module]) -> None
 

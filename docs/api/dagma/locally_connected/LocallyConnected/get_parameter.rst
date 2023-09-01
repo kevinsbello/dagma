@@ -1,4 +1,4 @@
-:py:mod:`dagma.locally_connected.LocallyConnected.get_parameter`
+:py:method:`dagma.locally_connected.LocallyConnected.get_parameter`
 ================================================================
 .. py:method:: get_parameter(target: str) -> torch.nn.parameter.Parameter
 

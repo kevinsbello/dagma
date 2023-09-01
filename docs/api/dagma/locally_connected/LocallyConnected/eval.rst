@@ -1,4 +1,4 @@
-:py:mod:`dagma.locally_connected.LocallyConnected.eval`
+:py:method:`dagma.locally_connected.LocallyConnected.eval`
 =======================================================
 .. py:method:: eval() -> T
 

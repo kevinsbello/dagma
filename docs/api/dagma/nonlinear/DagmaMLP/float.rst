@@ -1,4 +1,4 @@
-:py:mod:`dagma.nonlinear.DagmaMLP.float`
+:py:method:`dagma.nonlinear.DagmaMLP.float`
 ========================================
 .. py:method:: float() -> T
 

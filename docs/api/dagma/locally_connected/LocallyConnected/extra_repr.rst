@@ -1,4 +1,4 @@
-:py:mod:`dagma.locally_connected.LocallyConnected.extra_repr`
+:py:method:`dagma.locally_connected.LocallyConnected.extra_repr`
 =============================================================
 .. py:method:: extra_repr()
 

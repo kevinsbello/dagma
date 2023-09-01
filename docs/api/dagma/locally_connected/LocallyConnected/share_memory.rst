@@ -1,4 +1,4 @@
-:py:mod:`dagma.locally_connected.LocallyConnected.share_memory`
+:py:method:`dagma.locally_connected.LocallyConnected.share_memory`
 ===============================================================
 .. py:method:: share_memory() -> T
 

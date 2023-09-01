@@ -1,4 +1,4 @@
-:py:mod:`dagma.locally_connected.LocallyConnected.ipu`
+:py:method:`dagma.locally_connected.LocallyConnected.ipu`
 ======================================================
 .. py:method:: ipu(device: Optional[Union[int, Module.ipu.device]] = None) -> T
 

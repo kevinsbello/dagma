@@ -1,4 +1,4 @@
-:py:mod:`dagma.nonlinear.DagmaMLP.__dir__`
+:py:method:`dagma.nonlinear.DagmaMLP.__dir__`
 ==========================================
 .. py:method:: __dir__()
 

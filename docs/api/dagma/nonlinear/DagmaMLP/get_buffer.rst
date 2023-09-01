@@ -1,4 +1,4 @@
-:py:mod:`dagma.nonlinear.DagmaMLP.get_buffer`
+:py:method:`dagma.nonlinear.DagmaMLP.get_buffer`
 =============================================
 .. py:method:: get_buffer(target: str) -> torch.Tensor
 

@@ -1,4 +1,4 @@
-:py:mod:`dagma.locally_connected.LocallyConnected.double`
+:py:method:`dagma.locally_connected.LocallyConnected.double`
 =========================================================
 .. py:method:: double() -> T
 

@@ -1,4 +1,4 @@
-:py:mod:`dagma.nonlinear.DagmaMLP.share_memory`
+:py:method:`dagma.nonlinear.DagmaMLP.share_memory`
 ===============================================
 .. py:method:: share_memory() -> T
 

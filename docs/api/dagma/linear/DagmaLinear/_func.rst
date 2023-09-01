@@ -1,4 +1,4 @@
-:py:mod:`dagma.linear.DagmaLinear._func`
+:py:method:`dagma.linear.DagmaLinear._func`
 ========================================
 .. py:method:: _func(W: numpy.ndarray, mu: float, s: float = 1.0) -> Tuple[float, numpy.ndarray]
 

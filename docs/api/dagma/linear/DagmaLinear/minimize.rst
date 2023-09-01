@@ -1,6 +1,6 @@
-:py:mod:`dagma.linear.DagmaLinear.minimize`
+:py:method:`dagma.linear.DagmaLinear.minimize`
 ===========================================
-.. py:method:: minimize(W: numpy.ndarray, mu: float, max_iter: int, s: float, lr: float, tol: float = 1e-06, beta_1: float = 0.99, beta_2: float = 0.999, pbar: Optional[tqdm.auto.tqdm.asyncio.tqdm_asyncio] = None) -> Tuple[numpy.ndarray, bool]
+.. py:method:: minimize(W: numpy.ndarray, mu: float, max_iter: int, s: float, lr: float, tol: float = 1e-06, beta_1: float = 0.99, beta_2: float = 0.999, pbar: tqdm.auto.tqdm = tqdm()) -> Tuple[numpy.ndarray, bool]
 
    Solves the optimization problem:
        .. math::
@@ -24,8 +24,8 @@
    :type beta_1: float, optional
    :param beta_2: Hyperparamter for Adam. Defaults to 0.999.
    :type beta_2: float, optional
-   :param pbar: tqdm object to control bar progress. Defaults to ``None``.
-   :type pbar: typing.Optional[tqdm.asyncio.tqdm_asyncio], optional
+   :param pbar: Controls bar progress. Defaults to ``tqdm()``.
+   :type pbar: tqdm, optional
 
    :returns: Returns an adjacency matrix until convergence or `max_iter` is reached.
              A boolean flag is returned to point success of the optimization. This can be False when at any iteration, the current

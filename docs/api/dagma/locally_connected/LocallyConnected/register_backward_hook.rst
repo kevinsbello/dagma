@@ -1,4 +1,4 @@
-:py:mod:`dagma.locally_connected.LocallyConnected.register_backward_hook`
+:py:method:`dagma.locally_connected.LocallyConnected.register_backward_hook`
 =========================================================================
 .. py:method:: register_backward_hook(hook: Callable[[Module, _grad_t, _grad_t], Union[None, _grad_t]]) -> torch.utils.hooks.RemovableHandle
 

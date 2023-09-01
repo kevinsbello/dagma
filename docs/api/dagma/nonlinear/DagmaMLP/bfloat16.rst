@@ -1,4 +1,4 @@
-:py:mod:`dagma.nonlinear.DagmaMLP.bfloat16`
+:py:method:`dagma.nonlinear.DagmaMLP.bfloat16`
 ===========================================
 .. py:method:: bfloat16() -> T
 

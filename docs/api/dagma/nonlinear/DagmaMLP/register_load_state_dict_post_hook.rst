@@ -1,4 +1,4 @@
-:py:mod:`dagma.nonlinear.DagmaMLP.register_load_state_dict_post_hook`
+:py:method:`dagma.nonlinear.DagmaMLP.register_load_state_dict_post_hook`
 =====================================================================
 .. py:method:: register_load_state_dict_post_hook(hook)
 

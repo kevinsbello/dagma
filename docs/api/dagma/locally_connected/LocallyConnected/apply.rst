@@ -1,4 +1,4 @@
-:py:mod:`dagma.locally_connected.LocallyConnected.apply`
+:py:method:`dagma.locally_connected.LocallyConnected.apply`
 ========================================================
 .. py:method:: apply(fn: Callable[[Module], None]) -> T
 

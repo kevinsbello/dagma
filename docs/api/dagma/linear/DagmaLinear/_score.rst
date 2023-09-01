@@ -1,4 +1,4 @@
-:py:mod:`dagma.linear.DagmaLinear._score`
+:py:method:`dagma.linear.DagmaLinear._score`
 =========================================
 .. py:method:: _score(W: numpy.ndarray) -> Tuple[float, numpy.ndarray]
 

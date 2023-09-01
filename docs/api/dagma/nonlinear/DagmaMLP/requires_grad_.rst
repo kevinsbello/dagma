@@ -1,4 +1,4 @@
-:py:mod:`dagma.nonlinear.DagmaMLP.requires_grad_`
+:py:method:`dagma.nonlinear.DagmaMLP.requires_grad_`
 =================================================
 .. py:method:: requires_grad_(requires_grad: bool = True) -> T
 

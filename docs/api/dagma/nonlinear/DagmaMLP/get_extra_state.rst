@@ -1,4 +1,4 @@
-:py:mod:`dagma.nonlinear.DagmaMLP.get_extra_state`
+:py:method:`dagma.nonlinear.DagmaMLP.get_extra_state`
 ==================================================
 .. py:method:: get_extra_state() -> Any
 

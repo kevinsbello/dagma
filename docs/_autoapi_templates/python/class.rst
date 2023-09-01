@@ -1,5 +1,5 @@
 {% if obj.display %}
-:py:mod:`{{ obj.id }}`
+:py:class:`{{ obj.id }}`
 =========={{ "=" * obj.id|length }}
 
 .. py:{{ obj.type }}:: {{ obj.short_name }}{% if obj.args %}({{ obj.args }}){% endif %}

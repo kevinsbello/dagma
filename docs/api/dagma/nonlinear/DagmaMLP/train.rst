@@ -1,4 +1,4 @@
-:py:mod:`dagma.nonlinear.DagmaMLP.train`
+:py:method:`dagma.nonlinear.DagmaMLP.train`
 ========================================
 .. py:method:: train(mode: bool = True) -> T
 

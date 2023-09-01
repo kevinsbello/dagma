@@ -1,4 +1,4 @@
-:py:mod:`dagma.locally_connected.LocallyConnected.get_buffer`
+:py:method:`dagma.locally_connected.LocallyConnected.get_buffer`
 =============================================================
 .. py:method:: get_buffer(target: str) -> torch.Tensor
 

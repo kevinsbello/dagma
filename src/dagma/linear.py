@@ -22,7 +22,7 @@ class DagmaLinear:
             refers to the logistic loss. For continuous data: use ``l2``. For discrete 0/1 data: use ``logistic``.
         verbose : bool, optional
             If true, the loss/score and h values will print to stdout every ``checkpoint`` iterations,
-            as defined in :py:obj:`fit`. Defaults to ``False``.
+            as defined in :py:method:`~dagma.linear.DagmaLinear.fit`. Defaults to ``False``.
         dtype : type, optional
            Defines the float precision, for large number of nodes it is recommened to use ``np.float64``. 
            Defaults to ``np.float64``.
@@ -139,7 +139,7 @@ class DagmaLinear:
                  tol: float = 1e-6, 
                  beta_1: float = 0.99, 
                  beta_2: float = 0.999, 
-                 pbar: typing.Optional[tqdm.asyncio.tqdm_asyncio] = None,
+                 pbar: tqdm = tqdm(),
                  ) -> typing.Tuple[np.ndarray, bool]:        
         r"""
         Solves the optimization problem: 
@@ -166,8 +166,8 @@ class DagmaLinear:
             Hyperparamter for Adam. Defaults to 0.99.
         beta_2 : float, optional
             Hyperparamter for Adam. Defaults to 0.999.
-        pbar : typing.Optional[tqdm.asyncio.tqdm_asyncio], optional
-            tqdm object to control bar progress. Defaults to ``None``.
+        pbar : tqdm, optional
+            Controls bar progress. Defaults to ``tqdm()``.
 
         Returns
         -------
@@ -230,12 +230,12 @@ class DagmaLinear:
     
     def fit(self, 
             X: np.ndarray,
-            lambda1: float, 
+            lambda1: float = 0.03, 
             w_threshold: float = 0.3, 
             T: int = 5,
             mu_init: float = 1.0, 
             mu_factor: float = 0.1, 
-            s: typing.List[float] = [1.0, .9, .8, .7, .6], 
+            s: typing.Union[typing.List[float], float] = [1.0, .9, .8, .7, .6], 
             warm_iter: int = 3e4, 
             max_iter: int = 6e4, 
             lr: float = 0.0003, 
@@ -251,28 +251,27 @@ class DagmaLinear:
         Parameters
         ----------
         X : np.ndarray
-            :math:`(n,d)` dataset
+            :math:`(n,d)` dataset.
         lambda1 : float
-            Coefficient of the L1 penalty
+            Coefficient of the L1 penalty. Defaults to 0.03.
         w_threshold : float, optional
             Removes edges with weight value less than the given threshold. Defaults to 0.3.
         T : int, optional
             Number of DAGMA iterations. Defaults to 5.
-        
         mu_init : float, optional
             Initial value of :math:`\mu`. Defaults to 1.0.
         mu_factor : float, optional
             Decay factor for :math:`\mu`. Defaults to 0.1.
-        s : typing.List[float], optional
+        s : typing.Union[typing.List[float], float], optional
             Controls the domain of M-matrices. Defaults to [1.0, .9, .8, .7, .6].
         warm_iter : int, optional
-            Number of iterations for :py:obj:`minimize` for :math:`t < T`. Defaults to 3e4.
+            Number of iterations for :py:method:`~dagma.linear.DagmaLinear.minimize` for :math:`t < T`. Defaults to 3e4.
         max_iter : int, optional
-            Number of iterations for :py:obj:`minimize` for :math:`t = T`. Defaults to 6e4.
+            Number of iterations for :py:method:`~dagma.linear.DagmaLinear.minimize` for :math:`t = T`. Defaults to 6e4.
         lr : float, optional
             Learning rate. Defaults to 0.0003.
         checkpoint : int, optional
-            If `verbose` is `True`, then prints to stdout every `checkpoint` iterations. Defaults to 1000.
+            If ``verbose`` is ``True``, then prints to stdout every ``checkpoint`` iterations. Defaults to 1000.
         beta_1 : float, optional
             Adam hyperparameter. Defaults to 0.99.
         beta_2 : float, optional
@@ -287,15 +286,15 @@ class DagmaLinear:
         np.ndarray
             Estimated DAG from data.
         
-        
         .. important::
 
-                If the output of :py:obj:`fit` is not a DAG, then the user should try larger value of `T` before raising an issue.
+            If the output of :py:method:`~dagma.linear.DagmaLinear.fit` is not a DAG, then the user should try larger values of ``T`` (e.g., 6, 7, or 8) 
+            before raising an issue in github.
         
         .. warning::
             
-                While DAGMA ensures to exclude such edges in `exclude_edges`, the method does not guarantees that all edges
-                will be included from `included edges`.
+            While DAGMA ensures to exclude the edges given in ``exclude_edges``, the current implementation does not guarantee that all edges
+            in ``included edges`` will be part of the final DAG.
         """ 
         
         ## INITALIZING VARIABLES 

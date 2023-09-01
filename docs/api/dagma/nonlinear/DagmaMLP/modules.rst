@@ -1,4 +1,4 @@
-:py:mod:`dagma.nonlinear.DagmaMLP.modules`
+:py:method:`dagma.nonlinear.DagmaMLP.modules`
 ==========================================
 .. py:method:: modules() -> Iterator[Module]
 

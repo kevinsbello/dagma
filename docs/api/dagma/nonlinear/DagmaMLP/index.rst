@@ -1,4 +1,4 @@
-:py:mod:`dagma.nonlinear.DagmaMLP`
+:py:class:`dagma.nonlinear.DagmaMLP`
 ==================================
 
 .. py:class:: DagmaMLP(dims: List[int], bias: bool = True, dtype: torch.dtype = torch.double)
@@ -6,7 +6,7 @@
 
    Bases: :py:obj:`torch.nn.Module`
 
-   Python class that models the structural equations for the causal graph.
+   Class that models the structural equations for the causal graph using MLPs.
 
    :param dims: Number of neurons in hidden layers of each MLP representing each structural equation.
    :type dims: typing.List[int]

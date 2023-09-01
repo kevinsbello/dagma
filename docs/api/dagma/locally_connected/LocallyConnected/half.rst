@@ -1,4 +1,4 @@
-:py:mod:`dagma.locally_connected.LocallyConnected.half`
+:py:method:`dagma.locally_connected.LocallyConnected.half`
 =======================================================
 .. py:method:: half() -> T
 

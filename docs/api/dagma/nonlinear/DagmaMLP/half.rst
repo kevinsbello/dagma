@@ -1,4 +1,4 @@
-:py:mod:`dagma.nonlinear.DagmaMLP.half`
+:py:method:`dagma.nonlinear.DagmaMLP.half`
 =======================================
 .. py:method:: half() -> T
 

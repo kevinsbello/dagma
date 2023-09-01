@@ -1,4 +1,4 @@
-:py:mod:`dagma.nonlinear.DagmaMLP.__repr__`
+:py:method:`dagma.nonlinear.DagmaMLP.__repr__`
 ===========================================
 .. py:method:: __repr__()
 

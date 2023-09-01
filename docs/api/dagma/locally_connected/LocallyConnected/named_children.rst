@@ -1,4 +1,4 @@
-:py:mod:`dagma.locally_connected.LocallyConnected.named_children`
+:py:method:`dagma.locally_connected.LocallyConnected.named_children`
 =================================================================
 .. py:method:: named_children() -> Iterator[Tuple[str, Module]]
 

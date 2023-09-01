@@ -1,4 +1,4 @@
-:py:mod:`dagma.locally_connected.LocallyConnected.__dir__`
+:py:method:`dagma.locally_connected.LocallyConnected.__dir__`
 ==========================================================
 .. py:method:: __dir__()
 

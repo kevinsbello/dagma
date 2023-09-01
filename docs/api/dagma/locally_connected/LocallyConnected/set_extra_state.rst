@@ -1,4 +1,4 @@
-:py:mod:`dagma.locally_connected.LocallyConnected.set_extra_state`
+:py:method:`dagma.locally_connected.LocallyConnected.set_extra_state`
 ==================================================================
 .. py:method:: set_extra_state(state: Any)
 

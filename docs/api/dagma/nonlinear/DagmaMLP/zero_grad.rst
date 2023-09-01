@@ -1,4 +1,4 @@
-:py:mod:`dagma.nonlinear.DagmaMLP.zero_grad`
+:py:method:`dagma.nonlinear.DagmaMLP.zero_grad`
 ============================================
 .. py:method:: zero_grad(set_to_none: bool = True) -> None
 

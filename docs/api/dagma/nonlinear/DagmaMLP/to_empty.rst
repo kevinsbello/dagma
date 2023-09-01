@@ -1,4 +1,4 @@
-:py:mod:`dagma.nonlinear.DagmaMLP.to_empty`
+:py:method:`dagma.nonlinear.DagmaMLP.to_empty`
 ===========================================
 .. py:method:: to_empty(*, device: Union[str, Module.to_empty.device]) -> T
 

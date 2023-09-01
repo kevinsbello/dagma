@@ -1,4 +1,4 @@
-:py:mod:`dagma.nonlinear.DagmaMLP.eval`
+:py:method:`dagma.nonlinear.DagmaMLP.eval`
 =======================================
 .. py:method:: eval() -> T
 

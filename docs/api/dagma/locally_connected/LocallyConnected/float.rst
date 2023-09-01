@@ -1,4 +1,4 @@
-:py:mod:`dagma.locally_connected.LocallyConnected.float`
+:py:method:`dagma.locally_connected.LocallyConnected.float`
 ========================================================
 .. py:method:: float() -> T
 

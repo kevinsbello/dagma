@@ -1,4 +1,4 @@
-:py:mod:`dagma.nonlinear.DagmaMLP.cuda`
+:py:method:`dagma.nonlinear.DagmaMLP.cuda`
 =======================================
 .. py:method:: cuda(device: Optional[Union[int, Module.cuda.device]] = None) -> T
 

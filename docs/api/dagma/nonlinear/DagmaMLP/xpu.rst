@@ -1,4 +1,4 @@
-:py:mod:`dagma.nonlinear.DagmaMLP.xpu`
+:py:method:`dagma.nonlinear.DagmaMLP.xpu`
 ======================================
 .. py:method:: xpu(device: Optional[Union[int, Module.xpu.device]] = None) -> T
 

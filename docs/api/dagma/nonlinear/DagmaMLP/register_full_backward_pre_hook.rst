@@ -1,4 +1,4 @@
-:py:mod:`dagma.nonlinear.DagmaMLP.register_full_backward_pre_hook`
+:py:method:`dagma.nonlinear.DagmaMLP.register_full_backward_pre_hook`
 ==================================================================
 .. py:method:: register_full_backward_pre_hook(hook: Callable[[Module, _grad_t], Union[None, _grad_t]], prepend: bool = False) -> torch.utils.hooks.RemovableHandle
 

@@ -1,4 +1,4 @@
-:py:mod:`dagma.locally_connected.LocallyConnected.cpu`
+:py:method:`dagma.locally_connected.LocallyConnected.cpu`
 ======================================================
 .. py:method:: cpu() -> T
 

@@ -1,4 +1,4 @@
-:py:mod:`dagma.linear.DagmaLinear._adam_update`
+:py:method:`dagma.linear.DagmaLinear._adam_update`
 ===============================================
 .. py:method:: _adam_update(grad: numpy.ndarray, iter: int, beta_1: float, beta_2: float) -> numpy.ndarray
 

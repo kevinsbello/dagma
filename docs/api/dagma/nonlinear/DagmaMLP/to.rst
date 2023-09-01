@@ -1,4 +1,4 @@
-:py:mod:`dagma.nonlinear.DagmaMLP.to`
+:py:method:`dagma.nonlinear.DagmaMLP.to`
 =====================================
 .. py:method:: to(device: Optional[Union[int, Module.to.device]] = ..., dtype: Optional[Union[Module.to.dtype, str]] = ..., non_blocking: bool = ...) -> T
                to(dtype: Union[Module.to.dtype, str], non_blocking: bool = ...) -> T

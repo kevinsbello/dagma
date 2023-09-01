@@ -1,4 +1,4 @@
-:py:mod:`dagma.nonlinear.DagmaMLP.cpu`
+:py:method:`dagma.nonlinear.DagmaMLP.cpu`
 ======================================
 .. py:method:: cpu() -> T
 

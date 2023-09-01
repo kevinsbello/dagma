@@ -1,4 +1,4 @@
-:py:mod:`dagma.nonlinear.DagmaMLP.double`
+:py:method:`dagma.nonlinear.DagmaMLP.double`
 =========================================
 .. py:method:: double() -> T
 

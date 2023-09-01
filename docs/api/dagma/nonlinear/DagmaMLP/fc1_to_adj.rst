@@ -1,6 +1,10 @@
-:py:mod:`dagma.nonlinear.DagmaMLP.fc1_to_adj`
+:py:method:`dagma.nonlinear.DagmaMLP.fc1_to_adj`
 =============================================
 .. py:method:: fc1_to_adj() -> numpy.ndarray
 
-   Get W from fc1 weights, take 2-norm over m1 dim
+   Computes the induced weighted adjacency matrix W from the first FC weights.
+   Intuitively each edge weight :math:`(i,j)` is the *L2 norm of the functional influence of variable i to variable j*.
+
+   :returns: :math:`(d,d)` weighted adjacency matrix
+   :rtype: np.ndarray
 

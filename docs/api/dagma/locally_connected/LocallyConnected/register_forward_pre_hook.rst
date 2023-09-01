@@ -1,4 +1,4 @@
-:py:mod:`dagma.locally_connected.LocallyConnected.register_forward_pre_hook`
+:py:method:`dagma.locally_connected.LocallyConnected.register_forward_pre_hook`
 ============================================================================
 .. py:method:: register_forward_pre_hook(hook: Union[Callable[[T, Tuple[Any, Ellipsis]], Optional[Any]], Callable[[T, Tuple[Any, Ellipsis], Dict[str, Any]], Optional[Tuple[Any, Dict[str, Any]]]]], *, prepend: bool = False, with_kwargs: bool = False) -> torch.utils.hooks.RemovableHandle
 

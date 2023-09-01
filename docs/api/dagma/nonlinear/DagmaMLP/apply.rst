@@ -1,4 +1,4 @@
-:py:mod:`dagma.nonlinear.DagmaMLP.apply`
+:py:method:`dagma.nonlinear.DagmaMLP.apply`
 ========================================
 .. py:method:: apply(fn: Callable[[Module], None]) -> T
 

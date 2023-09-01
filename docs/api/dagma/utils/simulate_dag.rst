@@ -1,4 +1,4 @@
-:py:mod:`dagma.utils.simulate_dag`
+:py:function:`dagma.utils.simulate_dag`
 ==================================
 .. py:function:: simulate_dag(d, s0, graph_type)
 

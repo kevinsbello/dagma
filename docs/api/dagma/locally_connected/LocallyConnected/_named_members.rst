@@ -1,4 +1,4 @@
-:py:mod:`dagma.locally_connected.LocallyConnected._named_members`
+:py:method:`dagma.locally_connected.LocallyConnected._named_members`
 =================================================================
 .. py:method:: _named_members(get_members_fn, prefix='', recurse=True, remove_duplicate: bool = True)
 

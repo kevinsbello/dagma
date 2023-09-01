@@ -1,4 +1,4 @@
-:py:mod:`dagma.nonlinear.DagmaMLP._save_to_state_dict`
+:py:method:`dagma.nonlinear.DagmaMLP._save_to_state_dict`
 ======================================================
 .. py:method:: _save_to_state_dict(destination, prefix, keep_vars)
 

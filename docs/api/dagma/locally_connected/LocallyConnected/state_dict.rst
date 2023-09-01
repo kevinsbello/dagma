@@ -1,4 +1,4 @@
-:py:mod:`dagma.locally_connected.LocallyConnected.state_dict`
+:py:method:`dagma.locally_connected.LocallyConnected.state_dict`
 =============================================================
 .. py:method:: state_dict(*, destination: T_destination, prefix: str = ..., keep_vars: bool = ...) -> T_destination
                state_dict(*, prefix: str = ..., keep_vars: bool = ...) -> Dict[str, Any]

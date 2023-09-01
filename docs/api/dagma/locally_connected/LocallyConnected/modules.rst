@@ -1,4 +1,4 @@
-:py:mod:`dagma.locally_connected.LocallyConnected.modules`
+:py:method:`dagma.locally_connected.LocallyConnected.modules`
 ==========================================================
 .. py:method:: modules() -> Iterator[Module]
 

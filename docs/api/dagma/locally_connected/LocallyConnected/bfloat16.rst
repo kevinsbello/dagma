@@ -1,4 +1,4 @@
-:py:mod:`dagma.locally_connected.LocallyConnected.bfloat16`
+:py:method:`dagma.locally_connected.LocallyConnected.bfloat16`
 ===========================================================
 .. py:method:: bfloat16() -> T
 
