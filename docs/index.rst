@@ -56,7 +56,7 @@ Features
    :caption: API Reference
    :hidden:
    :maxdepth: 2
-   :titlesonly:
+   .. :titlesonly:
 
    api/dagma/index
 
