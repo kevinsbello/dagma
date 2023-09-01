@@ -5,7 +5,7 @@
 
    Solves the optimization problem:
        .. math::
-           \arg\min_{\Theta \in \mathbb{W}(\Theta)^s} \mu \cdot Q(\Theta; \mathbf{X}) + h(W(\Theta)),
+           \arg\min_{W(\Theta) \in \mathbb{W}^s} \mu \cdot Q(\Theta; \mathbf{X}) + h(W(\Theta)),
    where :math:`Q` is the score function, and :math:`W(\Theta)` is the induced weighted adjacency matrix
    from the model parameters.
    This problem is solved via (sub)gradient descent using adam acceleration.

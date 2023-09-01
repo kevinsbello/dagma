@@ -70,7 +70,7 @@
 
 .. toctree::
    :titlesonly:
-   :maxdepth: 1
+   :maxdepth: 2
    :hidden:
 
 {% for method in visible_methods %}
