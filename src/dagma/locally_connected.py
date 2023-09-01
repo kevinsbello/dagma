@@ -4,24 +4,32 @@ import math
 
 
 class LocallyConnected(nn.Module):
-    """Local linear layer, i.e. Conv1dLocal() with filter size 1.
 
-    Args:
-        num_linear: num of local linear layers, i.e.
-        input_features: m1
-        output_features: m2
-        bias: whether to include bias or not
+    def __init__(self, num_linear: int, input_features: int, output_features: int, bias: bool = True):
+        r"""
+        Local linear layer, i.e. Conv1dLocal() with filter size 1.
 
-    Shape:
-        - Input: [n, d, m1]
-        - Output: [n, d, m2]
+        Parameters
+        ----------
+        num_linear : int
+            num of local linear layers, i.e.
+        input_features : int
+            m1
+        output_features : int
+            m2
+        bias : bool, optional
+            Whether to include bias or not. Default: ``True``.
+        
+        Shape
+        -----
+        input : [n, d, m1]
+        output : [n, d, m2]
 
-    Attributes:
+        Attributes
+        ----------
         weight: [d, m1, m2]
         bias: [d, m2]
-    """
-
-    def __init__(self, num_linear, input_features, output_features, bias=True):
+        """
         super(LocallyConnected, self).__init__()
         self.num_linear = num_linear
         self.input_features = input_features

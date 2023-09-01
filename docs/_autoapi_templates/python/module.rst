@@ -110,7 +110,7 @@ Attributes
 {% if visible_classes %}
 .. toctree::
    :titlesonly:
-   :maxdepth: 1
+   :maxdepth: 2
    :hidden:
 
 {% for klass in visible_classes %}
@@ -121,7 +121,7 @@ Attributes
 {% if visible_functions %}
 .. toctree::
    :titlesonly:
-   :maxdepth: 1
+   :maxdepth: 2
    :hidden:
 
 {% for function in visible_functions %}
