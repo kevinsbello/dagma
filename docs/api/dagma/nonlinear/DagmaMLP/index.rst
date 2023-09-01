@@ -28,7 +28,6 @@
       dagma.nonlinear.DagmaMLP.fc1_to_adj
 
 .. toctree::
-   :titlesonly:
    :maxdepth: 2
    :hidden:
 

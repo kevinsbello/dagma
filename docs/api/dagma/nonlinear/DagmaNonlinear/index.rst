@@ -26,7 +26,6 @@
       dagma.nonlinear.DagmaNonlinear.fit
 
 .. toctree::
-   :titlesonly:
    :maxdepth: 2
    :hidden:
 

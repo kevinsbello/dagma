@@ -2,28 +2,39 @@ import numpy as np
 from scipy.special import expit as sigmoid
 import igraph as ig
 import random
+import typing
 
 
-def set_random_seed(seed):
+def set_random_seed(seed: int):
     random.seed(seed)
     np.random.seed(seed)
 
 
-def is_dag(W):
+def is_dag(W: np.ndarray) -> bool:
+    """
+    Returns ``True`` if ``W`` is a DAG, ``False`` otherwise.
+    """
     G = ig.Graph.Weighted_Adjacency(W.tolist())
     return G.is_dag()
 
 
-def simulate_dag(d, s0, graph_type):
-    """Simulate random DAG with some expected number of edges.
+def simulate_dag(d: int, s0: int, graph_type: str) -> np.ndarray:
+    r"""
+    Simulate random DAG with some expected number of edges.
 
-    Args:
-        d (int): num of nodes
-        s0 (int): expected num of edges
-        graph_type (str): ER, SF, BP
-
-    Returns:
-        B (np.ndarray): [d, d] binary adj matrix of DAG
+    Parameters
+    ----------
+    d : int
+        num of nodes
+    s0 : int
+        expected num of edges
+    graph_type : str
+        One of ``["ER", "SF", "BP"]``
+    
+    Returns
+    -------
+    numpy.ndarray
+        :math:`(d, d)` binary adj matrix of DAG
     """
     def _random_permutation(M):
         # np.random.permutation permutes first axis only
@@ -59,15 +70,23 @@ def simulate_dag(d, s0, graph_type):
     return B_perm
 
 
-def simulate_parameter(B, w_ranges=((-2.0, -0.5), (0.5, 2.0))):
-    """Simulate SEM parameters for a DAG.
+def simulate_parameter(B: np.ndarray, 
+                       w_ranges: typing.List[typing.Tuple[float,float]]=((-2.0, -0.5), (0.5, 2.0)),
+                       ) -> np.ndarray:
+    r"""
+    Simulate SEM parameters for a DAG.
 
-    Args:
-        B (np.ndarray): [d, d] binary adj matrix of DAG
-        w_ranges (tuple): disjoint weight ranges
+    Parameters
+    ----------
+    B : np.ndarray
+        :math:`[d, d]` binary adj matrix of DAG.
+    w_ranges : typing.List[typing.Tuple[float,float]], optional
+        disjoint weight ranges, by default :math:`((-2.0, -0.5), (0.5, 2.0))`.
 
-    Returns:
-        W (np.ndarray): [d, d] weighted adj matrix of DAG
+    Returns
+    -------
+    np.ndarray
+        :math:`[d, d]` weighted adj matrix of DAG.
     """
     W = np.zeros(B.shape)
     S = np.random.randint(len(w_ranges), size=B.shape)  # which range
@@ -77,19 +96,30 @@ def simulate_parameter(B, w_ranges=((-2.0, -0.5), (0.5, 2.0))):
     return W
 
 
-def simulate_linear_sem(W, n, sem_type, noise_scale=None):
-    """Simulate samples from linear SEM with specified type of noise.
+def simulate_linear_sem(W: np.ndarray, 
+                        n: int, 
+                        sem_type: str, 
+                        noise_scale: typing.Optional[typing.Union[float,typing.List[float]]] = None,
+                        ) -> np.ndarray:
+    r"""
+    Simulate samples from linear SEM with specified type of noise.
+    For ``uniform``, noise :math:`z \sim \mathrm{uniform}(-a, a)`, where :math:`a` is the ``noise_scale``.
+    
+    Parameters
+    ----------
+    W : np.ndarray
+        :math:`[d, d]` weighted adj matrix of DAG.
+    n : int
+        num of samples. When ``n=inf`` mimics the population risk, only for Gaussian noise.
+    sem_type : str
+        ``gauss``, ``exp``, ``gumbel``, ``uniform``, ``logistic``, ``poisson``
+    noise_scale : typing.Optional[typing.Union[float,typing.List[float]]], optional
+        scale parameter of the additive noises. If ``None``, all noises have scale 1. Default: ``None``.
 
-    For uniform, noise z ~ uniform(-a, a), where a = noise_scale.
-
-    Args:
-        W (np.ndarray): [d, d] weighted adj matrix of DAG
-        n (int): num of samples, n=inf mimics population risk
-        sem_type (str): gauss, exp, gumbel, uniform, logistic, poisson
-        noise_scale (np.ndarray): scale parameter of additive noise, default all ones
-
-    Returns:
-        X (np.ndarray): [n, d] sample matrix, [d, d] if n=inf
+    Returns
+    -------
+    np.ndarray
+        :math:`[n, d]` sample matrix, :math:`[d, d]` if ``n=inf``.
     """
     def _simulate_single_equation(X, w, scale):
         """X: [n, num of parents], w: [num of parents], x: [n]"""
@@ -120,7 +150,7 @@ def simulate_linear_sem(W, n, sem_type, noise_scale=None):
         scale_vec = noise_scale * np.ones(d)
     else:
         if len(noise_scale) != d:
-            raise ValueError('noise scale must be a scalar or has length d')
+            raise ValueError('noise scale must be a scalar or have length d')
         scale_vec = noise_scale
     if not is_dag(W):
         raise ValueError('W must be a DAG')
@@ -142,17 +172,29 @@ def simulate_linear_sem(W, n, sem_type, noise_scale=None):
     return X
 
 
-def simulate_nonlinear_sem(B, n, sem_type, noise_scale=None):
-    """Simulate samples from nonlinear SEM.
+def simulate_nonlinear_sem(B:np.ndarray, 
+                           n: int, 
+                           sem_type: str, 
+                           noise_scale: typing.Optional[typing.Union[float,typing.List[float]]] = None,
+                           ) -> np.ndarray:
+    r"""
+    Simulate samples from nonlinear SEM.
 
-    Args:
-        B (np.ndarray): [d, d] binary adj matrix of DAG
-        n (int): num of samples
-        sem_type (str): mlp, mim, gp, gp-add
-        noise_scale (np.ndarray): scale parameter of additive noise, default all ones
+    Parameters
+    ----------
+    B : np.ndarray
+        :math:`[d, d]` binary adj matrix of DAG.
+    n : int
+        num of samples
+    sem_type : str
+        ``mlp``, ``mim``, ``gp``, ``gp-add``
+    noise_scale : typing.Optional[typing.Union[float,typing.List[float]]], optional
+        scale parameter of the additive noises. If ``None``, all noises have scale 1. Default: ``None``.
 
-    Returns:
-        X (np.ndarray): [n, d] sample matrix
+    Returns
+    -------
+    np.ndarray
+        :math:`[n, d]` sample matrix.
     """
     def _simulate_single_equation(X, scale):
         """X: [n, num of parents], x: [n]"""
@@ -200,23 +242,29 @@ def simulate_nonlinear_sem(B, n, sem_type, noise_scale=None):
     return X
 
 
-def count_accuracy(B_true, B_est):
-    """Compute various accuracy metrics for B_est.
+def count_accuracy(B_true: np.ndarray, B_est: np.ndarray) -> dict:
+    r"""
+    Compute various accuracy metrics for B_est.
 
-    true positive = predicted association exists in condition in correct direction
-    reverse = predicted association exists in condition in opposite direction
-    false positive = predicted association does not exist in condition
+    | true positive = predicted association exists in condition in correct direction
+    | reverse = predicted association exists in condition in opposite direction
+    | false positive = predicted association does not exist in condition
+    
+    Parameters
+    ----------
+    B_true : np.ndarray
+        :math:`[d, d]` ground truth graph, :math:`\{0, 1\}`.
+    B_est : np.ndarray
+        :math:`[d, d]` estimate, :math:`\{0, 1, -1\}`, -1 is undirected edge in CPDAG.
 
-    Args:
-        B_true (np.ndarray): [d, d] ground truth graph, {0, 1}
-        B_est (np.ndarray): [d, d] estimate, {0, 1, -1}, -1 is undirected edge in CPDAG
-
-    Returns:
-        fdr: (reverse + false positive) / prediction positive
-        tpr: (true positive) / condition positive
-        fpr: (reverse + false positive) / condition negative
-        shd: undirected extra + undirected missing + reverse
-        nnz: prediction positive
+    Returns
+    -------
+    dict
+        | fdr: (reverse + false positive) / prediction positive
+        | tpr: (true positive) / condition positive
+        | fpr: (reverse + false positive) / condition negative
+        | shd: undirected extra + undirected missing + reverse
+        | nnz: prediction positive
     """
     if (B_est == -1).any():  # cpdag
         if not ((B_est == 0) | (B_est == 1) | (B_est == -1)).all():

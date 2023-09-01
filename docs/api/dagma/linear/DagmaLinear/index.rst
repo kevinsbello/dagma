@@ -31,7 +31,6 @@
       dagma.linear.DagmaLinear.fit
 
 .. toctree::
-   :titlesonly:
    :maxdepth: 2
    :hidden:
 

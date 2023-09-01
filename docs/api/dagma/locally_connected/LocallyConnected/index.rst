@@ -41,7 +41,6 @@
       dagma.locally_connected.LocallyConnected.extra_repr
 
 .. toctree::
-   :titlesonly:
    :maxdepth: 2
    :hidden:
 
