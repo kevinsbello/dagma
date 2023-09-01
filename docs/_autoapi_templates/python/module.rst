@@ -37,7 +37,7 @@ Submodules
 ----------
 .. toctree::
    :titlesonly:
-   :maxdepth: 1
+   :maxdepth: 2
 
 {% for submodule in visible_submodules %}
    {{ submodule.short_name }}/index.rst

@@ -1,13 +1,9 @@
 :py:meth:`dagma.locally_connected.LocallyConnected.extra_repr <dagma.locally_connected.LocallyConnected.extra_repr>`
 ====================================================================================================================
 .. _dagma.locally_connected.LocallyConnected.extra_repr:
-.. py:method:: dagma.locally_connected.LocallyConnected.extra_repr()
+.. py:method:: dagma.locally_connected.LocallyConnected.extra_repr() -> str
 
-   Set the extra representation of the module
-
-   To print customized extra information, you should re-implement
-   this method in your own modules. Both single-line and multi-line
-   strings are acceptable.
+   Returns a string with extra information from the layer.
 
 
 
