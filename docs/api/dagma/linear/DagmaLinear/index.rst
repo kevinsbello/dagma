@@ -3,7 +3,7 @@
 
 .. _dagma.linear.DagmaLinear:
 
-.. py:class:: DagmaLinear(loss_type: str, verbose: bool = False, dtype: type = np.float64)
+.. py:class:: dagma.linear.DagmaLinear(loss_type: str, verbose: bool = False, dtype: type = np.float64)
 
 
    A Python object that contains the implementation of DAGMA for linear models using numpy and scipy.
@@ -41,3 +41,4 @@
    _adam_update<_adam_update>
    minimize<minimize>
    fit<fit>
+

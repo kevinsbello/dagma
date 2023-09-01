@@ -1,9 +1,9 @@
 :py:meth:`dagma.locally_connected.LocallyConnected.to <dagma.locally_connected.LocallyConnected.to>`
 ====================================================================================================
 .. _dagma.locally_connected.LocallyConnected.to:
-.. py:method:: to(device: Optional[Union[int, Module.to.device]] = ..., dtype: Optional[Union[Module.to.dtype, str]] = ..., non_blocking: bool = ...) -> T
-               to(dtype: Union[Module.to.dtype, str], non_blocking: bool = ...) -> T
-               to(tensor: torch.Tensor, non_blocking: bool = ...) -> T
+.. py:method:: dagma.locally_connected.LocallyConnected.to(device: Optional[Union[int, Module.to.device]] = ..., dtype: Optional[Union[Module.to.dtype, str]] = ..., non_blocking: bool = ...) -> T
+               dagma.locally_connected.LocallyConnected.to(dtype: Union[Module.to.dtype, str], non_blocking: bool = ...) -> T
+               dagma.locally_connected.LocallyConnected.to(tensor: torch.Tensor, non_blocking: bool = ...) -> T
 
    Moves and/or casts the parameters and buffers.
 
@@ -91,5 +91,7 @@
        tensor([[0.6122+0.j, 0.1150+0.j],
                [0.6122+0.j, 0.1150+0.j],
                [0.6122+0.j, 0.1150+0.j]], dtype=torch.complex128)
+
+
 
 

@@ -1,7 +1,7 @@
 :py:meth:`dagma.nonlinear.DagmaMLP.double <dagma.nonlinear.DagmaMLP.double>`
 ============================================================================
 .. _dagma.nonlinear.DagmaMLP.double:
-.. py:method:: double() -> T
+.. py:method:: dagma.nonlinear.DagmaMLP.double() -> T
 
    Casts all floating point parameters and buffers to ``double`` datatype.
 
@@ -10,4 +10,6 @@
 
    :returns: self
    :rtype: Module
+
+
 

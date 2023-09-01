@@ -1,7 +1,7 @@
 :py:meth:`dagma.nonlinear.DagmaMLP.modules <dagma.nonlinear.DagmaMLP.modules>`
 ==============================================================================
 .. _dagma.nonlinear.DagmaMLP.modules:
-.. py:method:: modules() -> Iterator[Module]
+.. py:method:: dagma.nonlinear.DagmaMLP.modules() -> Iterator[Module]
 
    Returns an iterator over all modules in the network.
 
@@ -24,5 +24,7 @@
          (1): Linear(in_features=2, out_features=2, bias=True)
        )
        1 -> Linear(in_features=2, out_features=2, bias=True)
+
+
 
 

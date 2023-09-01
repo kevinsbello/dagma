@@ -1,7 +1,7 @@
 :py:meth:`dagma.locally_connected.LocallyConnected.apply <dagma.locally_connected.LocallyConnected.apply>`
 ==========================================================================================================
 .. _dagma.locally_connected.LocallyConnected.apply:
-.. py:method:: apply(fn: Callable[[Module], None]) -> T
+.. py:method:: dagma.locally_connected.LocallyConnected.apply(fn: Callable[[Module], None]) -> T
 
    Applies ``fn`` recursively to every submodule (as returned by ``.children()``)
    as well as self. Typical use includes initializing the parameters of a model
@@ -35,5 +35,7 @@
          (0): Linear(in_features=2, out_features=2, bias=True)
          (1): Linear(in_features=2, out_features=2, bias=True)
        )
+
+
 
 

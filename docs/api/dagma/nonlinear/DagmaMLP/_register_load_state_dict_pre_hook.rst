@@ -1,7 +1,7 @@
 :py:meth:`dagma.nonlinear.DagmaMLP._register_load_state_dict_pre_hook <dagma.nonlinear.DagmaMLP._register_load_state_dict_pre_hook>`
 ====================================================================================================================================
 .. _dagma.nonlinear.DagmaMLP._register_load_state_dict_pre_hook:
-.. py:method:: _register_load_state_dict_pre_hook(hook, with_module=False)
+.. py:method:: dagma.nonlinear.DagmaMLP._register_load_state_dict_pre_hook(hook, with_module=False)
 
    These hooks will be called with arguments: `state_dict`, `prefix`,
    `local_metadata`, `strict`, `missing_keys`, `unexpected_keys`,
@@ -17,4 +17,6 @@
    :param with_module: Whether or not to pass the module
                        instance to the hook as the first parameter.
    :type with_module: bool, optional
+
+
 

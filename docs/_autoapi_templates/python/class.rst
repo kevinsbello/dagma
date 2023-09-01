@@ -4,10 +4,10 @@
 
 .. _{{ obj.id }}:
 
-.. py:{{ obj.type }}:: {{ obj.short_name }}{% if obj.args %}({{ obj.args }}){% endif %}
+.. py:{{ obj.type }}:: {{ obj.id }}{% if obj.args %}({{ obj.args }}){% endif %}
 
 {% for (args, return_annotation) in obj.overloads %}
-      {{ " " * (obj.type | length) }}   {{ obj.short_name }}{% if args %}({{ args }}){% endif %}
+      {{ " " * (obj.type | length) }}   {{ obj.id }}{% if args %}({{ args }}){% endif %}
 
 {% endfor %}
 
@@ -76,4 +76,5 @@
 {% for method in visible_methods %}
    {{ method.short_name }}<{{ method.short_name }}>
 {% endfor %}
+
 {% endif %}

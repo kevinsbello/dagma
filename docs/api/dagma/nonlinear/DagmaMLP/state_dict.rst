@@ -1,8 +1,8 @@
 :py:meth:`dagma.nonlinear.DagmaMLP.state_dict <dagma.nonlinear.DagmaMLP.state_dict>`
 ====================================================================================
 .. _dagma.nonlinear.DagmaMLP.state_dict:
-.. py:method:: state_dict(*, destination: T_destination, prefix: str = ..., keep_vars: bool = ...) -> T_destination
-               state_dict(*, prefix: str = ..., keep_vars: bool = ...) -> Dict[str, Any]
+.. py:method:: dagma.nonlinear.DagmaMLP.state_dict(*, destination: T_destination, prefix: str = ..., keep_vars: bool = ...) -> T_destination
+               dagma.nonlinear.DagmaMLP.state_dict(*, prefix: str = ..., keep_vars: bool = ...) -> Dict[str, Any]
 
    Returns a dictionary containing references to the whole state of the module.
 
@@ -46,5 +46,7 @@
        >>> # xdoctest: +SKIP("undefined vars")
        >>> module.state_dict().keys()
        ['bias', 'weight']
+
+
 
 

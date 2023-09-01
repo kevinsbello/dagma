@@ -1,7 +1,7 @@
 :py:meth:`dagma.locally_connected.LocallyConnected.half <dagma.locally_connected.LocallyConnected.half>`
 ========================================================================================================
 .. _dagma.locally_connected.LocallyConnected.half:
-.. py:method:: half() -> T
+.. py:method:: dagma.locally_connected.LocallyConnected.half() -> T
 
    Casts all floating point parameters and buffers to ``half`` datatype.
 
@@ -10,4 +10,6 @@
 
    :returns: self
    :rtype: Module
+
+
 

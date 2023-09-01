@@ -1,7 +1,7 @@
 :py:meth:`dagma.nonlinear.DagmaMLP.get_extra_state <dagma.nonlinear.DagmaMLP.get_extra_state>`
 ==============================================================================================
 .. _dagma.nonlinear.DagmaMLP.get_extra_state:
-.. py:method:: get_extra_state() -> Any
+.. py:method:: dagma.nonlinear.DagmaMLP.get_extra_state() -> Any
 
    Returns any extra state to include in the module's state_dict.
    Implement this and a corresponding :func:`set_extra_state` for your module
@@ -15,4 +15,6 @@
 
    :returns: Any extra state to store in the module's state_dict
    :rtype: object
+
+
 

@@ -1,7 +1,7 @@
 :py:func:`dagma.utils.simulate_linear_sem <dagma.utils.simulate_linear_sem>`
 ============================================================================
 .. _dagma.utils.simulate_linear_sem:
-.. py:function:: simulate_linear_sem(W, n, sem_type, noise_scale=None)
+.. py:function:: dagma.utils.simulate_linear_sem(W, n, sem_type, noise_scale=None)
 
    Simulate samples from linear SEM with specified type of noise.
 
@@ -18,4 +18,6 @@
 
    :returns: [n, d] sample matrix, [d, d] if n=inf
    :rtype: X (np.ndarray)
+
+
 

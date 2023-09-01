@@ -1,7 +1,7 @@
 :py:meth:`dagma.nonlinear.DagmaNonlinear.minimize <dagma.nonlinear.DagmaNonlinear.minimize>`
 ============================================================================================
 .. _dagma.nonlinear.DagmaNonlinear.minimize:
-.. py:method:: minimize(max_iter: float, lr: float, lambda1: float, lambda2: float, mu: float, s: float, lr_decay: float = False, tol: float = 1e-06, pbar: tqdm.auto.tqdm = tqdm()) -> bool
+.. py:method:: dagma.nonlinear.DagmaNonlinear.minimize(max_iter: float, lr: float, lambda1: float, lambda2: float, mu: float, s: float, lr_decay: float = False, tol: float = 1e-06, pbar: tqdm.auto.tqdm = tqdm()) -> bool
 
    Solves the optimization problem:
        .. math::
@@ -32,4 +32,6 @@
    :returns: ``True`` if the optimization succeded. This can be ``False`` when at any iteration, the model's adjacency matrix
              got outside of the domain of M-matrices.
    :rtype: bool
+
+
 

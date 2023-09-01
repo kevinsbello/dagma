@@ -1,7 +1,7 @@
 :py:meth:`dagma.locally_connected.LocallyConnected.get_parameter <dagma.locally_connected.LocallyConnected.get_parameter>`
 ==========================================================================================================================
 .. _dagma.locally_connected.LocallyConnected.get_parameter:
-.. py:method:: get_parameter(target: str) -> torch.nn.parameter.Parameter
+.. py:method:: dagma.locally_connected.LocallyConnected.get_parameter(target: str) -> torch.nn.parameter.Parameter
 
    Returns the parameter given by ``target`` if it exists,
    otherwise throws an error.
@@ -20,4 +20,6 @@
    :raises AttributeError: If the target string references an invalid
        path or resolves to something that is not an
        ``nn.Parameter``
+
+
 

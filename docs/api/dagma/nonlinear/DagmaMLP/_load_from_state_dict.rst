@@ -1,7 +1,7 @@
 :py:meth:`dagma.nonlinear.DagmaMLP._load_from_state_dict <dagma.nonlinear.DagmaMLP._load_from_state_dict>`
 ==========================================================================================================
 .. _dagma.nonlinear.DagmaMLP._load_from_state_dict:
-.. py:method:: _load_from_state_dict(state_dict, prefix, local_metadata, strict, missing_keys, unexpected_keys, error_msgs)
+.. py:method:: dagma.nonlinear.DagmaMLP._load_from_state_dict(state_dict, prefix, local_metadata, strict, missing_keys, unexpected_keys, error_msgs)
 
    Copies parameters and buffers from :attr:`state_dict` into only
    this module, but not its descendants. This is called on every submodule
@@ -39,4 +39,6 @@
                       list, and will be reported together in
                       :meth:`~torch.nn.Module.load_state_dict`
    :type error_msgs: list of str
+
+
 

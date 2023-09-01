@@ -1,7 +1,7 @@
 :py:func:`dagma.utils.count_accuracy <dagma.utils.count_accuracy>`
 ==================================================================
 .. _dagma.utils.count_accuracy:
-.. py:function:: count_accuracy(B_true, B_est)
+.. py:function:: dagma.utils.count_accuracy(B_true, B_est)
 
    Compute various accuracy metrics for B_est.
 
@@ -20,4 +20,6 @@
              shd: undirected extra + undirected missing + reverse
              nnz: prediction positive
    :rtype: fdr
+
+
 

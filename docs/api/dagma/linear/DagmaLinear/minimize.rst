@@ -1,7 +1,7 @@
 :py:meth:`dagma.linear.DagmaLinear.minimize <dagma.linear.DagmaLinear.minimize>`
 ================================================================================
 .. _dagma.linear.DagmaLinear.minimize:
-.. py:method:: minimize(W: numpy.ndarray, mu: float, max_iter: int, s: float, lr: float, tol: float = 1e-06, beta_1: float = 0.99, beta_2: float = 0.999, pbar: tqdm.auto.tqdm = tqdm()) -> Tuple[numpy.ndarray, bool]
+.. py:method:: dagma.linear.DagmaLinear.minimize(W: numpy.ndarray, mu: float, max_iter: int, s: float, lr: float, tol: float = 1e-06, beta_1: float = 0.99, beta_2: float = 0.999, pbar: tqdm.auto.tqdm = tqdm()) -> Tuple[numpy.ndarray, bool]
 
    Solves the optimization problem:
        .. math::
@@ -32,4 +32,6 @@
              A boolean flag is returned to point success of the optimization. This can be False when at any iteration, the current
              W point went outside of the domain of M-matrices.
    :rtype: typing.Tuple[np.ndarray, bool]
+
+
 

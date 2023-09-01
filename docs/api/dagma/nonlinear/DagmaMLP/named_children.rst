@@ -1,7 +1,7 @@
 :py:meth:`dagma.nonlinear.DagmaMLP.named_children <dagma.nonlinear.DagmaMLP.named_children>`
 ============================================================================================
 .. _dagma.nonlinear.DagmaMLP.named_children:
-.. py:method:: named_children() -> Iterator[Tuple[str, Module]]
+.. py:method:: dagma.nonlinear.DagmaMLP.named_children() -> Iterator[Tuple[str, Module]]
 
    Returns an iterator over immediate children modules, yielding both
    the name of the module as well as the module itself.
@@ -14,5 +14,7 @@
        >>> for name, module in model.named_children():
        >>>     if name in ['conv4', 'conv5']:
        >>>         print(module)
+
+
 
 

@@ -1,7 +1,7 @@
 :py:meth:`dagma.nonlinear.DagmaMLP.get_parameter <dagma.nonlinear.DagmaMLP.get_parameter>`
 ==========================================================================================
 .. _dagma.nonlinear.DagmaMLP.get_parameter:
-.. py:method:: get_parameter(target: str) -> torch.nn.parameter.Parameter
+.. py:method:: dagma.nonlinear.DagmaMLP.get_parameter(target: str) -> torch.nn.parameter.Parameter
 
    Returns the parameter given by ``target`` if it exists,
    otherwise throws an error.
@@ -20,4 +20,6 @@
    :raises AttributeError: If the target string references an invalid
        path or resolves to something that is not an
        ``nn.Parameter``
+
+
 

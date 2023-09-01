@@ -1,7 +1,7 @@
 :py:meth:`dagma.nonlinear.DagmaMLP.register_forward_hook <dagma.nonlinear.DagmaMLP.register_forward_hook>`
 ==========================================================================================================
 .. _dagma.nonlinear.DagmaMLP.register_forward_hook:
-.. py:method:: register_forward_hook(hook: Union[Callable[[T, Tuple[Any, Ellipsis], Any], Optional[Any]], Callable[[T, Tuple[Any, Ellipsis], Dict[str, Any], Any], Optional[Any]]], *, prepend: bool = False, with_kwargs: bool = False) -> torch.utils.hooks.RemovableHandle
+.. py:method:: dagma.nonlinear.DagmaMLP.register_forward_hook(hook: Union[Callable[[T, Tuple[Any, Ellipsis], Any], Optional[Any]], Callable[[T, Tuple[Any, Ellipsis], Dict[str, Any], Any], Optional[Any]]], *, prepend: bool = False, with_kwargs: bool = False) -> torch.utils.hooks.RemovableHandle
 
    Registers a forward hook on the module.
 
@@ -42,4 +42,6 @@
    :returns:     a handle that can be used to remove the added hook by calling
                  ``handle.remove()``
    :rtype: :class:`torch.utils.hooks.RemovableHandle`
+
+
 

@@ -3,7 +3,7 @@
 
 .. _dagma.nonlinear.DagmaNonlinear:
 
-.. py:class:: DagmaNonlinear(model: torch.nn.Module, verbose: bool = False, dtype: torch.dtype = torch.double)
+.. py:class:: dagma.nonlinear.DagmaNonlinear(model: torch.nn.Module, verbose: bool = False, dtype: torch.dtype = torch.double)
 
 
    Class that implements the DAGMA algorithm
@@ -33,3 +33,4 @@
    log_mse_loss<log_mse_loss>
    minimize<minimize>
    fit<fit>
+

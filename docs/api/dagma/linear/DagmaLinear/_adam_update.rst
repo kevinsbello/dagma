@@ -1,7 +1,7 @@
 :py:meth:`dagma.linear.DagmaLinear._adam_update <dagma.linear.DagmaLinear._adam_update>`
 ========================================================================================
 .. _dagma.linear.DagmaLinear._adam_update:
-.. py:method:: _adam_update(grad: numpy.ndarray, iter: int, beta_1: float, beta_2: float) -> numpy.ndarray
+.. py:method:: dagma.linear.DagmaLinear._adam_update(grad: numpy.ndarray, iter: int, beta_1: float, beta_2: float) -> numpy.ndarray
 
    Performs one update of Adam.
 
@@ -16,4 +16,6 @@
 
    :returns: Updates the gradient by the Adam method.
    :rtype: np.ndarray
+
+
 

@@ -3,7 +3,7 @@
 
 .. _dagma.nonlinear.DagmaMLP:
 
-.. py:class:: DagmaMLP(dims: List[int], bias: bool = True, dtype: torch.dtype = torch.double)
+.. py:class:: dagma.nonlinear.DagmaMLP(dims: List[int], bias: bool = True, dtype: torch.dtype = torch.double)
 
 
    Bases: :py:obj:`torch.nn.Module`
@@ -36,3 +36,4 @@
    h_func<h_func>
    fc1_l1_reg<fc1_l1_reg>
    fc1_to_adj<fc1_to_adj>
+

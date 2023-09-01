@@ -1,7 +1,7 @@
 :py:meth:`dagma.locally_connected.LocallyConnected._save_to_state_dict <dagma.locally_connected.LocallyConnected._save_to_state_dict>`
 ======================================================================================================================================
 .. _dagma.locally_connected.LocallyConnected._save_to_state_dict:
-.. py:method:: _save_to_state_dict(destination, prefix, keep_vars)
+.. py:method:: dagma.locally_connected.LocallyConnected._save_to_state_dict(destination, prefix, keep_vars)
 
    Saves module state to `destination` dictionary, containing a state
    of the module, but not its descendants. This is called on every
@@ -15,4 +15,6 @@
    :param prefix: the prefix for parameters and buffers used in this
                   module
    :type prefix: str
+
+
 

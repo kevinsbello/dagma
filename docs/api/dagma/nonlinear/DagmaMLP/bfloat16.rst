@@ -1,7 +1,7 @@
 :py:meth:`dagma.nonlinear.DagmaMLP.bfloat16 <dagma.nonlinear.DagmaMLP.bfloat16>`
 ================================================================================
 .. _dagma.nonlinear.DagmaMLP.bfloat16:
-.. py:method:: bfloat16() -> T
+.. py:method:: dagma.nonlinear.DagmaMLP.bfloat16() -> T
 
    Casts all floating point parameters and buffers to ``bfloat16`` datatype.
 
@@ -10,4 +10,6 @@
 
    :returns: self
    :rtype: Module
+
+
 

@@ -1,7 +1,7 @@
 :py:meth:`dagma.nonlinear.DagmaMLP.requires_grad_ <dagma.nonlinear.DagmaMLP.requires_grad_>`
 ============================================================================================
 .. _dagma.nonlinear.DagmaMLP.requires_grad_:
-.. py:method:: requires_grad_(requires_grad: bool = True) -> T
+.. py:method:: dagma.nonlinear.DagmaMLP.requires_grad_(requires_grad: bool = True) -> T
 
    Change if autograd should record operations on parameters in this
    module.
@@ -21,4 +21,6 @@
 
    :returns: self
    :rtype: Module
+
+
 

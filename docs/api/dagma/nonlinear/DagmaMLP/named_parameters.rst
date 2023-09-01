@@ -1,7 +1,7 @@
 :py:meth:`dagma.nonlinear.DagmaMLP.named_parameters <dagma.nonlinear.DagmaMLP.named_parameters>`
 ================================================================================================
 .. _dagma.nonlinear.DagmaMLP.named_parameters:
-.. py:method:: named_parameters(prefix: str = '', recurse: bool = True, remove_duplicate: bool = True) -> Iterator[Tuple[str, torch.nn.parameter.Parameter]]
+.. py:method:: dagma.nonlinear.DagmaMLP.named_parameters(prefix: str = '', recurse: bool = True, remove_duplicate: bool = True) -> Iterator[Tuple[str, torch.nn.parameter.Parameter]]
 
    Returns an iterator over module parameters, yielding both the
    name of the parameter as well as the parameter itself.
@@ -24,5 +24,7 @@
        >>> for name, param in self.named_parameters():
        >>>     if name in ['bias']:
        >>>         print(param.size())
+
+
 
 

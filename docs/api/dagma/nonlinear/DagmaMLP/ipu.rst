@@ -1,7 +1,7 @@
 :py:meth:`dagma.nonlinear.DagmaMLP.ipu <dagma.nonlinear.DagmaMLP.ipu>`
 ======================================================================
 .. _dagma.nonlinear.DagmaMLP.ipu:
-.. py:method:: ipu(device: Optional[Union[int, Module.ipu.device]] = None) -> T
+.. py:method:: dagma.nonlinear.DagmaMLP.ipu(device: Optional[Union[int, Module.ipu.device]] = None) -> T
 
    Moves all model parameters and buffers to the IPU.
 
@@ -18,4 +18,6 @@
 
    :returns: self
    :rtype: Module
+
+
 

@@ -1,7 +1,7 @@
 :py:meth:`dagma.nonlinear.DagmaMLP.to_empty <dagma.nonlinear.DagmaMLP.to_empty>`
 ================================================================================
 .. _dagma.nonlinear.DagmaMLP.to_empty:
-.. py:method:: to_empty(*, device: Union[str, Module.to_empty.device]) -> T
+.. py:method:: dagma.nonlinear.DagmaMLP.to_empty(*, device: Union[str, Module.to_empty.device]) -> T
 
    Moves the parameters and buffers to the specified device without copying storage.
 
@@ -11,4 +11,6 @@
 
    :returns: self
    :rtype: Module
+
+
 

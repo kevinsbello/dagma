@@ -1,7 +1,7 @@
 :py:meth:`dagma.nonlinear.DagmaMLP.xpu <dagma.nonlinear.DagmaMLP.xpu>`
 ======================================================================
 .. _dagma.nonlinear.DagmaMLP.xpu:
-.. py:method:: xpu(device: Optional[Union[int, Module.xpu.device]] = None) -> T
+.. py:method:: dagma.nonlinear.DagmaMLP.xpu(device: Optional[Union[int, Module.xpu.device]] = None) -> T
 
    Moves all model parameters and buffers to the XPU.
 
@@ -18,4 +18,6 @@
 
    :returns: self
    :rtype: Module
+
+
 

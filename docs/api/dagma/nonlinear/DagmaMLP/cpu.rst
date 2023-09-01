@@ -1,7 +1,7 @@
 :py:meth:`dagma.nonlinear.DagmaMLP.cpu <dagma.nonlinear.DagmaMLP.cpu>`
 ======================================================================
 .. _dagma.nonlinear.DagmaMLP.cpu:
-.. py:method:: cpu() -> T
+.. py:method:: dagma.nonlinear.DagmaMLP.cpu() -> T
 
    Moves all model parameters and buffers to the CPU.
 
@@ -10,4 +10,6 @@
 
    :returns: self
    :rtype: Module
+
+
 

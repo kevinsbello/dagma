@@ -1,7 +1,7 @@
 :py:meth:`dagma.locally_connected.LocallyConnected.set_extra_state <dagma.locally_connected.LocallyConnected.set_extra_state>`
 ==============================================================================================================================
 .. _dagma.locally_connected.LocallyConnected.set_extra_state:
-.. py:method:: set_extra_state(state: Any)
+.. py:method:: dagma.locally_connected.LocallyConnected.set_extra_state(state: Any)
 
    This function is called from :func:`load_state_dict` to handle any extra state
    found within the `state_dict`. Implement this function and a corresponding
@@ -10,4 +10,6 @@
 
    :param state: Extra state from the `state_dict`
    :type state: dict
+
+
 

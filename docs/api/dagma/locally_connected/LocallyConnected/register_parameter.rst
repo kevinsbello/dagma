@@ -1,7 +1,7 @@
 :py:meth:`dagma.locally_connected.LocallyConnected.register_parameter <dagma.locally_connected.LocallyConnected.register_parameter>`
 ====================================================================================================================================
 .. _dagma.locally_connected.LocallyConnected.register_parameter:
-.. py:method:: register_parameter(name: str, param: Optional[torch.nn.parameter.Parameter]) -> None
+.. py:method:: dagma.locally_connected.LocallyConnected.register_parameter(name: str, param: Optional[torch.nn.parameter.Parameter]) -> None
 
    Adds a parameter to the module.
 
@@ -15,4 +15,6 @@
                  are ignored. If ``None``, the parameter is **not** included in the
                  module's :attr:`state_dict`.
    :type param: Parameter or None
+
+
 

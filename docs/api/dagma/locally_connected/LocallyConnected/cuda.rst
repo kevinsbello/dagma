@@ -1,7 +1,7 @@
 :py:meth:`dagma.locally_connected.LocallyConnected.cuda <dagma.locally_connected.LocallyConnected.cuda>`
 ========================================================================================================
 .. _dagma.locally_connected.LocallyConnected.cuda:
-.. py:method:: cuda(device: Optional[Union[int, Module.cuda.device]] = None) -> T
+.. py:method:: dagma.locally_connected.LocallyConnected.cuda(device: Optional[Union[int, Module.cuda.device]] = None) -> T
 
    Moves all model parameters and buffers to the GPU.
 
@@ -18,4 +18,6 @@
 
    :returns: self
    :rtype: Module
+
+
 

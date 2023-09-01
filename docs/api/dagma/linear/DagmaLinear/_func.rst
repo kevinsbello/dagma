@@ -1,7 +1,7 @@
 :py:meth:`dagma.linear.DagmaLinear._func <dagma.linear.DagmaLinear._func>`
 ==========================================================================
 .. _dagma.linear.DagmaLinear._func:
-.. py:method:: _func(W: numpy.ndarray, mu: float, s: float = 1.0) -> Tuple[float, numpy.ndarray]
+.. py:method:: dagma.linear.DagmaLinear._func(W: numpy.ndarray, mu: float, s: float = 1.0) -> Tuple[float, numpy.ndarray]
 
    Evaluate value of the penalized objective function.
 
@@ -14,4 +14,6 @@
 
    :returns: Objective value, and gradient of the objective
    :rtype: typing.Tuple[float, np.ndarray]
+
+
 

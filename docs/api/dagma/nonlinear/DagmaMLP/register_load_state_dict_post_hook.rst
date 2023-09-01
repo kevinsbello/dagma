@@ -1,7 +1,7 @@
 :py:meth:`dagma.nonlinear.DagmaMLP.register_load_state_dict_post_hook <dagma.nonlinear.DagmaMLP.register_load_state_dict_post_hook>`
 ====================================================================================================================================
 .. _dagma.nonlinear.DagmaMLP.register_load_state_dict_post_hook:
-.. py:method:: register_load_state_dict_post_hook(hook)
+.. py:method:: dagma.nonlinear.DagmaMLP.register_load_state_dict_post_hook(hook)
 
    Registers a post hook to be run after module's ``load_state_dict``
    is called.
@@ -26,4 +26,6 @@
    :returns:     a handle that can be used to remove the added hook by calling
                  ``handle.remove()``
    :rtype: :class:`torch.utils.hooks.RemovableHandle`
+
+
 

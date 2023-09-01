@@ -1,7 +1,7 @@
 :py:meth:`dagma.nonlinear.DagmaMLP.parameters <dagma.nonlinear.DagmaMLP.parameters>`
 ====================================================================================
 .. _dagma.nonlinear.DagmaMLP.parameters:
-.. py:method:: parameters(recurse: bool = True) -> Iterator[torch.nn.parameter.Parameter]
+.. py:method:: dagma.nonlinear.DagmaMLP.parameters(recurse: bool = True) -> Iterator[torch.nn.parameter.Parameter]
 
    Returns an iterator over module parameters.
 
@@ -21,5 +21,7 @@
        >>>     print(type(param), param.size())
        <class 'torch.Tensor'> (20L,)
        <class 'torch.Tensor'> (20L, 1L, 5L, 5L)
+
+
 
 

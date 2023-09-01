@@ -1,7 +1,7 @@
 :py:meth:`dagma.locally_connected.LocallyConnected.parameters <dagma.locally_connected.LocallyConnected.parameters>`
 ====================================================================================================================
 .. _dagma.locally_connected.LocallyConnected.parameters:
-.. py:method:: parameters(recurse: bool = True) -> Iterator[torch.nn.parameter.Parameter]
+.. py:method:: dagma.locally_connected.LocallyConnected.parameters(recurse: bool = True) -> Iterator[torch.nn.parameter.Parameter]
 
    Returns an iterator over module parameters.
 
@@ -21,5 +21,7 @@
        >>>     print(type(param), param.size())
        <class 'torch.Tensor'> (20L,)
        <class 'torch.Tensor'> (20L, 1L, 5L, 5L)
+
+
 
 

@@ -1,7 +1,7 @@
 :py:meth:`dagma.locally_connected.LocallyConnected.named_modules <dagma.locally_connected.LocallyConnected.named_modules>`
 ==========================================================================================================================
 .. _dagma.locally_connected.LocallyConnected.named_modules:
-.. py:method:: named_modules(memo: Optional[Set[Module]] = None, prefix: str = '', remove_duplicate: bool = True)
+.. py:method:: dagma.locally_connected.LocallyConnected.named_modules(memo: Optional[Set[Module]] = None, prefix: str = '', remove_duplicate: bool = True)
 
    Returns an iterator over all modules in the network, yielding
    both the name of the module as well as the module itself.
@@ -30,5 +30,7 @@
          (1): Linear(in_features=2, out_features=2, bias=True)
        ))
        1 -> ('0', Linear(in_features=2, out_features=2, bias=True))
+
+
 
 

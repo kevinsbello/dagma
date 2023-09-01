@@ -1,7 +1,7 @@
 :py:meth:`dagma.nonlinear.DagmaNonlinear.fit <dagma.nonlinear.DagmaNonlinear.fit>`
 ==================================================================================
 .. _dagma.nonlinear.DagmaNonlinear.fit:
-.. py:method:: fit(X: Union[torch.Tensor, numpy.ndarray], lambda1: float = 0.02, lambda2: float = 0.005, T: int = 4, mu_init: float = 0.1, mu_factor: float = 0.1, s: float = 1.0, warm_iter: int = 50000.0, max_iter: int = 80000.0, lr: float = 0.0002, w_threshold: float = 0.3, checkpoint: int = 1000) -> numpy.ndarray
+.. py:method:: dagma.nonlinear.DagmaNonlinear.fit(X: Union[torch.Tensor, numpy.ndarray], lambda1: float = 0.02, lambda2: float = 0.005, T: int = 4, mu_init: float = 0.1, mu_factor: float = 0.1, s: float = 1.0, warm_iter: int = 50000.0, max_iter: int = 80000.0, lr: float = 0.0002, w_threshold: float = 0.3, checkpoint: int = 1000) -> numpy.ndarray
 
    Runs the DAGMA algorithm and fits the model to the dataset.
 
@@ -37,4 +37,6 @@
 
        If the output of :py:meth:`~dagma.nonlinear.DagmaNonlinear.fit` is not a DAG, then the user should try larger values of ``T`` (e.g., 6, 7, or 8)
        before raising an issue in github.
+
+
 

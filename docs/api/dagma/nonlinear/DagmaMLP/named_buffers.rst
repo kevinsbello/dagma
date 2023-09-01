@@ -1,7 +1,7 @@
 :py:meth:`dagma.nonlinear.DagmaMLP.named_buffers <dagma.nonlinear.DagmaMLP.named_buffers>`
 ==========================================================================================
 .. _dagma.nonlinear.DagmaMLP.named_buffers:
-.. py:method:: named_buffers(prefix: str = '', recurse: bool = True, remove_duplicate: bool = True) -> Iterator[Tuple[str, torch.Tensor]]
+.. py:method:: dagma.nonlinear.DagmaMLP.named_buffers(prefix: str = '', recurse: bool = True, remove_duplicate: bool = True) -> Iterator[Tuple[str, torch.Tensor]]
 
    Returns an iterator over module buffers, yielding both the
    name of the buffer as well as the buffer itself.
@@ -23,5 +23,7 @@
        >>> for name, buf in self.named_buffers():
        >>>     if name in ['running_var']:
        >>>         print(buf.size())
+
+
 
 

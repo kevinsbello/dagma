@@ -1,7 +1,7 @@
 :py:meth:`dagma.locally_connected.LocallyConnected.modules <dagma.locally_connected.LocallyConnected.modules>`
 ==============================================================================================================
 .. _dagma.locally_connected.LocallyConnected.modules:
-.. py:method:: modules() -> Iterator[Module]
+.. py:method:: dagma.locally_connected.LocallyConnected.modules() -> Iterator[Module]
 
    Returns an iterator over all modules in the network.
 
@@ -24,5 +24,7 @@
          (1): Linear(in_features=2, out_features=2, bias=True)
        )
        1 -> Linear(in_features=2, out_features=2, bias=True)
+
+
 
 

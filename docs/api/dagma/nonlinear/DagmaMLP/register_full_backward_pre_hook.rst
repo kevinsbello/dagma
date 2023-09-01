@@ -1,7 +1,7 @@
 :py:meth:`dagma.nonlinear.DagmaMLP.register_full_backward_pre_hook <dagma.nonlinear.DagmaMLP.register_full_backward_pre_hook>`
 ==============================================================================================================================
 .. _dagma.nonlinear.DagmaMLP.register_full_backward_pre_hook:
-.. py:method:: register_full_backward_pre_hook(hook: Callable[[Module, _grad_t], Union[None, _grad_t]], prepend: bool = False) -> torch.utils.hooks.RemovableHandle
+.. py:method:: dagma.nonlinear.DagmaMLP.register_full_backward_pre_hook(hook: Callable[[Module, _grad_t], Union[None, _grad_t]], prepend: bool = False) -> torch.utils.hooks.RemovableHandle
 
    Registers a backward pre-hook on the module.
 
@@ -39,4 +39,6 @@
    :returns:     a handle that can be used to remove the added hook by calling
                  ``handle.remove()``
    :rtype: :class:`torch.utils.hooks.RemovableHandle`
+
+
 

@@ -1,7 +1,7 @@
 :py:meth:`dagma.nonlinear.DagmaMLP.train <dagma.nonlinear.DagmaMLP.train>`
 ==========================================================================
 .. _dagma.nonlinear.DagmaMLP.train:
-.. py:method:: train(mode: bool = True) -> T
+.. py:method:: dagma.nonlinear.DagmaMLP.train(mode: bool = True) -> T
 
    Sets the module in training mode.
 
@@ -16,4 +16,6 @@
 
    :returns: self
    :rtype: Module
+
+
 

@@ -1,7 +1,7 @@
 :py:meth:`dagma.nonlinear.DagmaMLP.get_submodule <dagma.nonlinear.DagmaMLP.get_submodule>`
 ==========================================================================================
 .. _dagma.nonlinear.DagmaMLP.get_submodule:
-.. py:method:: get_submodule(target: str) -> Module
+.. py:method:: dagma.nonlinear.DagmaMLP.get_submodule(target: str) -> Module
 
    Returns the submodule given by ``target`` if it exists,
    otherwise throws an error.
@@ -46,4 +46,6 @@
    :raises AttributeError: If the target string references an invalid
        path or resolves to something that is not an
        ``nn.Module``
+
+
 
