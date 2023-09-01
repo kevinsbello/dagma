@@ -1,5 +1,6 @@
 :py:function:`dagma.utils.simulate_nonlinear_sem`
 ============================================
+.. _dagma.utils.simulate_nonlinear_sem:
 .. py:function:: simulate_nonlinear_sem(B, n, sem_type, noise_scale=None)
 
    Simulate samples from nonlinear SEM.

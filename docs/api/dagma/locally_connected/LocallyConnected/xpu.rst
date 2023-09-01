@@ -1,5 +1,6 @@
 :py:method:`dagma.locally_connected.LocallyConnected.xpu`
 ======================================================
+.. _dagma.locally_connected.LocallyConnected.xpu:
 .. py:method:: xpu(device: Optional[Union[int, Module.xpu.device]] = None) -> T
 
    Moves all model parameters and buffers to the XPU.

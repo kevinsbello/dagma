@@ -1,5 +1,6 @@
 :py:method:`dagma.locally_connected.LocallyConnected.get_buffer`
 =============================================================
+.. _dagma.locally_connected.LocallyConnected.get_buffer:
 .. py:method:: get_buffer(target: str) -> torch.Tensor
 
    Returns the buffer given by ``target`` if it exists,

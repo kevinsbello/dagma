@@ -1,6 +1,8 @@
 :py:class:`dagma.nonlinear.DagmaNonlinear`
 ========================================
 
+.. _dagma.nonlinear.DagmaNonlinear:
+
 .. py:class:: DagmaNonlinear(model: torch.nn.Module, verbose: bool = False, dtype: torch.dtype = torch.double)
 
 

@@ -1,5 +1,6 @@
 :py:method:`dagma.locally_connected.LocallyConnected.get_extra_state`
 ==================================================================
+.. _dagma.locally_connected.LocallyConnected.get_extra_state:
 .. py:method:: get_extra_state() -> Any
 
    Returns any extra state to include in the module's state_dict.

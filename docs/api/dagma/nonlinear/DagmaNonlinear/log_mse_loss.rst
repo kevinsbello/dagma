@@ -1,5 +1,6 @@
 :py:method:`dagma.nonlinear.DagmaNonlinear.log_mse_loss`
 =====================================================
+.. _dagma.nonlinear.DagmaNonlinear.log_mse_loss:
 .. py:method:: log_mse_loss(output: torch.Tensor, target: torch.Tensor) -> torch.Tensor
 
    Computes the logarithm of the MSE loss:

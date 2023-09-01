@@ -1,5 +1,6 @@
 :py:method:`dagma.locally_connected.LocallyConnected._register_load_state_dict_pre_hook`
 =====================================================================================
+.. _dagma.locally_connected.LocallyConnected._register_load_state_dict_pre_hook:
 .. py:method:: _register_load_state_dict_pre_hook(hook, with_module=False)
 
    These hooks will be called with arguments: `state_dict`, `prefix`,

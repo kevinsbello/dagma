@@ -1,5 +1,6 @@
 :py:method:`dagma.nonlinear.DagmaMLP.fc1_to_adj`
 =============================================
+.. _dagma.nonlinear.DagmaMLP.fc1_to_adj:
 .. py:method:: fc1_to_adj() -> numpy.ndarray
 
    Computes the induced weighted adjacency matrix W from the first FC weights.

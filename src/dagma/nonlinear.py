@@ -285,6 +285,7 @@ class DagmaNonlinear:
         np.ndarray
             Estimated DAG from data.
         
+        
         .. important::
 
             If the output of :py:method:`~dagma.nonlinear.DagmaNonlinear.fit` is not a DAG, then the user should try larger values of ``T`` (e.g., 6, 7, or 8) 

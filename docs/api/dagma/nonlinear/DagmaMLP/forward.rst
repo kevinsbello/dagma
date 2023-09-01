@@ -1,5 +1,6 @@
 :py:method:`dagma.nonlinear.DagmaMLP.forward`
 ==========================================
+.. _dagma.nonlinear.DagmaMLP.forward:
 .. py:method:: forward(x: torch.Tensor) -> torch.Tensor
 
    Applies the current states of the structural equations to the dataset X

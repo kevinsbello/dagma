@@ -1,5 +1,6 @@
 :py:method:`dagma.nonlinear.DagmaMLP.named_buffers`
 ================================================
+.. _dagma.nonlinear.DagmaMLP.named_buffers:
 .. py:method:: named_buffers(prefix: str = '', recurse: bool = True, remove_duplicate: bool = True) -> Iterator[Tuple[str, torch.Tensor]]
 
    Returns an iterator over module buffers, yielding both the

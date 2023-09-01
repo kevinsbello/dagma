@@ -1,5 +1,6 @@
 :py:method:`dagma.nonlinear.DagmaMLP.half`
 =======================================
+.. _dagma.nonlinear.DagmaMLP.half:
 .. py:method:: half() -> T
 
    Casts all floating point parameters and buffers to ``half`` datatype.

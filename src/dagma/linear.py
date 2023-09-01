@@ -286,6 +286,7 @@ class DagmaLinear:
         np.ndarray
             Estimated DAG from data.
         
+        
         .. important::
 
             If the output of :py:method:`~dagma.linear.DagmaLinear.fit` is not a DAG, then the user should try larger values of ``T`` (e.g., 6, 7, or 8) 

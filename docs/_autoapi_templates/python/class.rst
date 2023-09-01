@@ -2,6 +2,8 @@
 :py:class:`{{ obj.id }}`
 =========={{ "=" * obj.id|length }}
 
+.. _{{ obj.id }}:
+
 .. py:{{ obj.type }}:: {{ obj.short_name }}{% if obj.args %}({{ obj.args }}){% endif %}
 
 {% for (args, return_annotation) in obj.overloads %}

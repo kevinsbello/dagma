@@ -1,6 +1,7 @@
 {% if obj.display %}
 :py:function:`{{ obj.id }}`
 =========={{ "=" * obj.id|length }}
+.. _{{ obj.id }}:
 .. py:function:: {{ obj.short_name }}({{ obj.args }}){% if obj.return_annotation is not none %} -> {{ obj.return_annotation }}{% endif %}
 
 {% for (args, return_annotation) in obj.overloads %}

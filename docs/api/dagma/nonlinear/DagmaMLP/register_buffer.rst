@@ -1,5 +1,6 @@
 :py:method:`dagma.nonlinear.DagmaMLP.register_buffer`
 ==================================================
+.. _dagma.nonlinear.DagmaMLP.register_buffer:
 .. py:method:: register_buffer(name: str, tensor: Optional[torch.Tensor], persistent: bool = True) -> None
 
    Adds a buffer to the module.

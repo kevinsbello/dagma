@@ -1,5 +1,6 @@
 :py:method:`dagma.locally_connected.LocallyConnected.modules`
 ==========================================================
+.. _dagma.locally_connected.LocallyConnected.modules:
 .. py:method:: modules() -> Iterator[Module]
 
    Returns an iterator over all modules in the network.

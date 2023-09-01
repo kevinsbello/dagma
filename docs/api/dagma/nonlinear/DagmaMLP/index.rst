@@ -1,6 +1,8 @@
 :py:class:`dagma.nonlinear.DagmaMLP`
 ==================================
 
+.. _dagma.nonlinear.DagmaMLP:
+
 .. py:class:: DagmaMLP(dims: List[int], bias: bool = True, dtype: torch.dtype = torch.double)
 
 

@@ -1,5 +1,6 @@
 :py:method:`dagma.linear.DagmaLinear._score`
 =========================================
+.. _dagma.linear.DagmaLinear._score:
 .. py:method:: _score(W: numpy.ndarray) -> Tuple[float, numpy.ndarray]
 
    Evaluate value and gradient of the score function.

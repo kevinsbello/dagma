@@ -1,5 +1,6 @@
 :py:method:`dagma.nonlinear.DagmaMLP.state_dict`
 =============================================
+.. _dagma.nonlinear.DagmaMLP.state_dict:
 .. py:method:: state_dict(*, destination: T_destination, prefix: str = ..., keep_vars: bool = ...) -> T_destination
                state_dict(*, prefix: str = ..., keep_vars: bool = ...) -> Dict[str, Any]
 

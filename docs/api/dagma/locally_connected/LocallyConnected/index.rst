@@ -1,6 +1,8 @@
 :py:class:`dagma.locally_connected.LocallyConnected`
 ==================================================
 
+.. _dagma.locally_connected.LocallyConnected:
+
 .. py:class:: LocallyConnected(num_linear, input_features, output_features, bias=True)
 
 

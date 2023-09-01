@@ -1,5 +1,6 @@
 :py:method:`dagma.locally_connected.LocallyConnected.register_parameter`
 =====================================================================
+.. _dagma.locally_connected.LocallyConnected.register_parameter:
 .. py:method:: register_parameter(name: str, param: Optional[torch.nn.parameter.Parameter]) -> None
 
    Adds a parameter to the module.

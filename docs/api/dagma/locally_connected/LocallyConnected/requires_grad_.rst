@@ -1,5 +1,6 @@
 :py:method:`dagma.locally_connected.LocallyConnected.requires_grad_`
 =================================================================
+.. _dagma.locally_connected.LocallyConnected.requires_grad_:
 .. py:method:: requires_grad_(requires_grad: bool = True) -> T
 
    Change if autograd should record operations on parameters in this

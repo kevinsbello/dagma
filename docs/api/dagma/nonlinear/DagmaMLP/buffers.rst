@@ -1,5 +1,6 @@
 :py:method:`dagma.nonlinear.DagmaMLP.buffers`
 ==========================================
+.. _dagma.nonlinear.DagmaMLP.buffers:
 .. py:method:: buffers(recurse: bool = True) -> Iterator[torch.Tensor]
 
    Returns an iterator over module buffers.

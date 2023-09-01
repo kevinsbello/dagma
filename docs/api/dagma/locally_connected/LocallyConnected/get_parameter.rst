@@ -1,5 +1,6 @@
 :py:method:`dagma.locally_connected.LocallyConnected.get_parameter`
 ================================================================
+.. _dagma.locally_connected.LocallyConnected.get_parameter:
 .. py:method:: get_parameter(target: str) -> torch.nn.parameter.Parameter
 
    Returns the parameter given by ``target`` if it exists,

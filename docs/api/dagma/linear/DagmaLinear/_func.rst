@@ -1,5 +1,6 @@
 :py:method:`dagma.linear.DagmaLinear._func`
 ========================================
+.. _dagma.linear.DagmaLinear._func:
 .. py:method:: _func(W: numpy.ndarray, mu: float, s: float = 1.0) -> Tuple[float, numpy.ndarray]
 
    Evaluate value of the penalized objective function.

@@ -1,5 +1,6 @@
 :py:method:`dagma.locally_connected.LocallyConnected.type`
 =======================================================
+.. _dagma.locally_connected.LocallyConnected.type:
 .. py:method:: type(dst_type: Union[torch.dtype, str]) -> T
 
    Casts all parameters and buffers to :attr:`dst_type`.
