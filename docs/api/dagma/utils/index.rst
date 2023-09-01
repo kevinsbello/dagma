@@ -26,7 +26,7 @@ Functions
 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :hidden:
 
    set_random_seed<set_random_seed>

@@ -66,15 +66,17 @@ A path-following approach
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Given the exact differentiable characterization of a DAG, we are interested in solving the following optimization problem:
-.. math::
-   \begin{array}{cl}
-   \min _{W \in \mathbb{R}^{d \times d}} & Q(W;\mathbf{X}) \\
-   \text { subject to } & h^{s}(W) = 0,
-   \end{array}
+   .. math::
+
+      \begin{array}{cl}
+      \min _{W \in \mathbb{R}^{d \times d}} & Q(W;\mathbf{X}) \\
+      \text { subject to } & h^{s}(W) = 0,
+      \end{array}
 where :math:`Q` is a given score function (e.g., square loss) that depends on :math:`W` and the dataset :math:`\mathbf{X}`. 
 To solve the above constrained problem, we propose a path-following approach where we solve a few of the following unconstrained problems:
-.. math::
-   \hat{W}^{(t+1)} = \arg\min_{W}\; \mu^{(t)} Q(W;\mathbf{X}) + h(W),
+   .. math::
+      
+      \hat{W}^{(t+1)} = \arg\min_{W}\; \mu^{(t)} Q(W;\mathbf{X}) + h(W),
 where :math:`\mu^{(t)} \to 0` as :math:`t` increases. 
 Leveraging the properties of :math:`h`, we show that, at the limit, the solution is a DAG. 
 The trick to make this work is to **use the previous solution as a starting point when solving the current unconstrained problem**, 
