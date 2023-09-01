@@ -79,7 +79,7 @@ class LocallyConnected(nn.Module):
         Returns a string with extra information from the layer.
         """
         return 'num_linear={}, in_features={}, out_features={}, bias={}'.format(
-            self.num_linear, self.in_features, self.out_features,
+            self.num_linear, self.input_features, self.output_features,
             self.bias is not None
         )
 

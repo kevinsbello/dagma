@@ -139,7 +139,7 @@ class DagmaLinear:
                  tol: float = 1e-6, 
                  beta_1: float = 0.99, 
                  beta_2: float = 0.999, 
-                 pbar: tqdm = tqdm(),
+                 pbar: typing.Optional[tqdm] = None,
                  ) -> typing.Tuple[np.ndarray, bool]:        
         r"""
         Solves the optimization problem: 
@@ -354,8 +354,7 @@ class DagmaLinear:
         self.W_est[np.abs(self.W_est) < w_threshold] = 0
         return self.W_est
 
-
-if __name__ == '__main__':
+def test():
     import utils
     from timeit import default_timer as timer
     utils.set_random_seed(1)
@@ -375,10 +374,8 @@ if __name__ == '__main__':
     print(acc)
     print(f'time: {end-start:.4f}s')
     
-    # Store outputs and ground-truth
-    np.savetxt('W_true.csv', W_true, delimiter=',')
-    np.savetxt('W_est.csv', W_est, delimiter=',')
-    np.savetxt('X.csv', X, delimiter=',')
+if __name__ == '__main__':
+    test()
 
     
 

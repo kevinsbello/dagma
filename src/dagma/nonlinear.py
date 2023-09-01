@@ -78,7 +78,6 @@ class DagmaMLP(nn.Module):
         -------
         torch.Tensor
             A scalar value of the log-det acyclicity function :math:`h(\Theta)`.
-            
         """
         fc1_weight = self.fc1.weight
         fc1_weight = fc1_weight.view(self.d, -1, self.d)
@@ -168,7 +167,7 @@ class DagmaNonlinear:
                  s: float,
                  lr_decay: float = False, 
                  tol: float = 1e-6, 
-                 pbar: tqdm = tqdm(),
+                 pbar: typing.Optional[tqdm] = None,
         ) -> bool:
         r"""
         Solves the optimization problem: 
@@ -250,7 +249,7 @@ class DagmaNonlinear:
             w_threshold: float = 0.3, 
             checkpoint: int = 1000,
         ) -> np.ndarray:
-        """
+        r"""
         Runs the DAGMA algorithm and fits the model to the dataset.
 
         Parameters
@@ -332,7 +331,7 @@ class DagmaNonlinear:
         return W_est
 
 
-if __name__ == '__main__':
+def test():
     from timeit import default_timer as timer
     import utils
     
@@ -348,3 +347,7 @@ if __name__ == '__main__':
     W_est = model.fit(X, lambda1=0.02, lambda2=0.005)
     acc = utils.count_accuracy(B_true, W_est != 0)
     print(acc)
+    
+    
+if __name__ == '__main__':
+    test()
