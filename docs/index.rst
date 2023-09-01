@@ -54,9 +54,10 @@ The log-det acyclicity characterization
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Let :math:`W \in \mathbb{R}^{d\times d}` be a weighted adjacency matrix  of a graph of :math:`d` nodes, the log-det function takes the following form:
-.. math::
+   .. math::
 
-   h^{s}(W) = -\log \det (sI - W \circ W) + d \log s,
+      h^{s}(W) = -\log \det (sI - W \circ W) + d \log s,
+      
 where :math:`I`` is the identity matrix, :math:`s` is a given scalar (e.g., 1), and :math:`\circ` denotes the element-wise Hadamard product. 
 Of particular interest, we have that :math:`h(W) = 0` *if and only if* :math:`W` represents a DAG, and when the domain of 
 :math:`h` is the set of M-matrices then :math:`h` is well-defined and non-negative. 
@@ -67,17 +68,19 @@ A path-following approach
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Given the exact differentiable characterization of a DAG, we are interested in solving the following optimization problem:
-.. math::
+   .. math::
 
-   \begin{array}{cl}
-   \min _{W \in \mathbb{R}^{d \times d}} & Q(W;\mathbf{X}) \\
-   \text { subject to } & h^{s}(W) = 0,
-   \end{array}
+      \begin{array}{cl}
+      \min _{W \in \mathbb{R}^{d \times d}} & Q(W;\mathbf{X}) \\
+      \text { subject to } & h^{s}(W) = 0,
+      \end{array}
+
 where :math:`Q` is a given score function (e.g., square loss) that depends on :math:`W` and the dataset :math:`\mathbf{X}`. 
 To solve the above constrained problem, we propose a path-following approach where we solve a few of the following unconstrained problems:
-.. math::
+   .. math::
 
-   \hat{W}^{(t+1)} = \arg\min_{W}\; \mu^{(t)} Q(W;\mathbf{X}) + h(W),
+      \hat{W}^{(t+1)} = \arg\min_{W}\; \mu^{(t)} Q(W;\mathbf{X}) + h(W),
+
 where :math:`\mu^{(t)} \to 0` as :math:`t` increases. 
 Leveraging the properties of :math:`h`, we show that, at the limit, the solution is a DAG. 
 The trick to make this work is to **use the previous solution as a starting point when solving the current unconstrained problem**, 
@@ -112,6 +115,6 @@ and we can observe how the solution at the final iteration (bottom-right plot) i
    :hidden:
    :maxdepth: 2
    :titlesonly:
-   
+
    api/dagma/index
 
