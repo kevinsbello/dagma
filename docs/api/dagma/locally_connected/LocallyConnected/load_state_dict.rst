@@ -1,5 +1,5 @@
-:py:method:`dagma.locally_connected.LocallyConnected.load_state_dict`
-==================================================================
+:py:meth:`dagma.locally_connected.LocallyConnected.load_state_dict <dagma.locally_connected.LocallyConnected.load_state_dict>`
+==============================================================================================================================
 .. _dagma.locally_connected.LocallyConnected.load_state_dict:
 .. py:method:: load_state_dict(state_dict: Mapping[str, Any], strict: bool = True)
 

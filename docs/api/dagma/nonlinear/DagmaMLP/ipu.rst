@@ -1,5 +1,5 @@
-:py:method:`dagma.nonlinear.DagmaMLP.ipu`
-======================================
+:py:meth:`dagma.nonlinear.DagmaMLP.ipu <dagma.nonlinear.DagmaMLP.ipu>`
+======================================================================
 .. _dagma.nonlinear.DagmaMLP.ipu:
 .. py:method:: ipu(device: Optional[Union[int, Module.ipu.device]] = None) -> T
 

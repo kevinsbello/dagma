@@ -1,5 +1,5 @@
-:py:class:`dagma.nonlinear.DagmaMLP`
-==================================
+:py:class:`dagma.nonlinear.DagmaMLP <dagma.nonlinear.DagmaMLP>`
+===============================================================
 
 .. _dagma.nonlinear.DagmaMLP:
 

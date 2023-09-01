@@ -1,5 +1,5 @@
-:py:method:`dagma.locally_connected.LocallyConnected.parameters`
-=============================================================
+:py:meth:`dagma.locally_connected.LocallyConnected.parameters <dagma.locally_connected.LocallyConnected.parameters>`
+====================================================================================================================
 .. _dagma.locally_connected.LocallyConnected.parameters:
 .. py:method:: parameters(recurse: bool = True) -> Iterator[torch.nn.parameter.Parameter]
 

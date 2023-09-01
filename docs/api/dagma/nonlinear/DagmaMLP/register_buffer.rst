@@ -1,5 +1,5 @@
-:py:method:`dagma.nonlinear.DagmaMLP.register_buffer`
-==================================================
+:py:meth:`dagma.nonlinear.DagmaMLP.register_buffer <dagma.nonlinear.DagmaMLP.register_buffer>`
+==============================================================================================
 .. _dagma.nonlinear.DagmaMLP.register_buffer:
 .. py:method:: register_buffer(name: str, tensor: Optional[torch.Tensor], persistent: bool = True) -> None
 

@@ -1,5 +1,5 @@
-:py:method:`dagma.nonlinear.DagmaMLP.xpu`
-======================================
+:py:meth:`dagma.nonlinear.DagmaMLP.xpu <dagma.nonlinear.DagmaMLP.xpu>`
+======================================================================
 .. _dagma.nonlinear.DagmaMLP.xpu:
 .. py:method:: xpu(device: Optional[Union[int, Module.xpu.device]] = None) -> T
 

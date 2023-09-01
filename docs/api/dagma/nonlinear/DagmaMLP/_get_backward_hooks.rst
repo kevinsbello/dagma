@@ -1,5 +1,5 @@
-:py:method:`dagma.nonlinear.DagmaMLP._get_backward_hooks`
-======================================================
+:py:meth:`dagma.nonlinear.DagmaMLP._get_backward_hooks <dagma.nonlinear.DagmaMLP._get_backward_hooks>`
+======================================================================================================
 .. _dagma.nonlinear.DagmaMLP._get_backward_hooks:
 .. py:method:: _get_backward_hooks()
 

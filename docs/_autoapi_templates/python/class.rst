@@ -1,6 +1,6 @@
 {% if obj.display %}
-:py:class:`{{ obj.id }}`
-=========={{ "=" * obj.id|length }}
+:py:class:`{{ obj.id }} <{{ obj.id }}>`
+==========={{ "=" * 2 * (obj.id|length + 2) }}
 
 .. _{{ obj.id }}:
 

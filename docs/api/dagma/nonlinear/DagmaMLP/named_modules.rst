@@ -1,5 +1,5 @@
-:py:method:`dagma.nonlinear.DagmaMLP.named_modules`
-================================================
+:py:meth:`dagma.nonlinear.DagmaMLP.named_modules <dagma.nonlinear.DagmaMLP.named_modules>`
+==========================================================================================
 .. _dagma.nonlinear.DagmaMLP.named_modules:
 .. py:method:: named_modules(memo: Optional[Set[Module]] = None, prefix: str = '', remove_duplicate: bool = True)
 

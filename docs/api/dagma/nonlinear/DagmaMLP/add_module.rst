@@ -1,5 +1,5 @@
-:py:method:`dagma.nonlinear.DagmaMLP.add_module`
-=============================================
+:py:meth:`dagma.nonlinear.DagmaMLP.add_module <dagma.nonlinear.DagmaMLP.add_module>`
+====================================================================================
 .. _dagma.nonlinear.DagmaMLP.add_module:
 .. py:method:: add_module(name: str, module: Optional[Module]) -> None
 

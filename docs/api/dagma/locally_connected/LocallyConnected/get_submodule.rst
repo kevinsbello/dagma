@@ -1,5 +1,5 @@
-:py:method:`dagma.locally_connected.LocallyConnected.get_submodule`
-================================================================
+:py:meth:`dagma.locally_connected.LocallyConnected.get_submodule <dagma.locally_connected.LocallyConnected.get_submodule>`
+==========================================================================================================================
 .. _dagma.locally_connected.LocallyConnected.get_submodule:
 .. py:method:: get_submodule(target: str) -> Module
 

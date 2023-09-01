@@ -1,5 +1,5 @@
-:py:method:`dagma.locally_connected.LocallyConnected.named_modules`
-================================================================
+:py:meth:`dagma.locally_connected.LocallyConnected.named_modules <dagma.locally_connected.LocallyConnected.named_modules>`
+==========================================================================================================================
 .. _dagma.locally_connected.LocallyConnected.named_modules:
 .. py:method:: named_modules(memo: Optional[Set[Module]] = None, prefix: str = '', remove_duplicate: bool = True)
 

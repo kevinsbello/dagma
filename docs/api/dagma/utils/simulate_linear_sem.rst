@@ -1,5 +1,5 @@
-:py:function:`dagma.utils.simulate_linear_sem`
-=========================================
+:py:func:`dagma.utils.simulate_linear_sem <dagma.utils.simulate_linear_sem>`
+============================================================================
 .. _dagma.utils.simulate_linear_sem:
 .. py:function:: simulate_linear_sem(W, n, sem_type, noise_scale=None)
 

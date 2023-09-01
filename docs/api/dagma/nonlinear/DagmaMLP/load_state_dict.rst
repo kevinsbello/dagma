@@ -1,5 +1,5 @@
-:py:method:`dagma.nonlinear.DagmaMLP.load_state_dict`
-==================================================
+:py:meth:`dagma.nonlinear.DagmaMLP.load_state_dict <dagma.nonlinear.DagmaMLP.load_state_dict>`
+==============================================================================================
 .. _dagma.nonlinear.DagmaMLP.load_state_dict:
 .. py:method:: load_state_dict(state_dict: Mapping[str, Any], strict: bool = True)
 

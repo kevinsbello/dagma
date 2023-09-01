@@ -1,5 +1,5 @@
-:py:method:`dagma.nonlinear.DagmaMLP.fc1_l1_reg`
-=============================================
+:py:meth:`dagma.nonlinear.DagmaMLP.fc1_l1_reg <dagma.nonlinear.DagmaMLP.fc1_l1_reg>`
+====================================================================================
 .. _dagma.nonlinear.DagmaMLP.fc1_l1_reg:
 .. py:method:: fc1_l1_reg() -> torch.Tensor
 

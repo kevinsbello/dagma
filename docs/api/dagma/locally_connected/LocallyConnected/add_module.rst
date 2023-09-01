@@ -1,5 +1,5 @@
-:py:method:`dagma.locally_connected.LocallyConnected.add_module`
-=============================================================
+:py:meth:`dagma.locally_connected.LocallyConnected.add_module <dagma.locally_connected.LocallyConnected.add_module>`
+====================================================================================================================
 .. _dagma.locally_connected.LocallyConnected.add_module:
 .. py:method:: add_module(name: str, module: Optional[Module]) -> None
 

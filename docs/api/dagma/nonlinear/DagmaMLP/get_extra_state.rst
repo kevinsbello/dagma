@@ -1,5 +1,5 @@
-:py:method:`dagma.nonlinear.DagmaMLP.get_extra_state`
-==================================================
+:py:meth:`dagma.nonlinear.DagmaMLP.get_extra_state <dagma.nonlinear.DagmaMLP.get_extra_state>`
+==============================================================================================
 .. _dagma.nonlinear.DagmaMLP.get_extra_state:
 .. py:method:: get_extra_state() -> Any
 

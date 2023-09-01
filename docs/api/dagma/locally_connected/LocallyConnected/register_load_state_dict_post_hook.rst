@@ -1,5 +1,5 @@
-:py:method:`dagma.locally_connected.LocallyConnected.register_load_state_dict_post_hook`
-=====================================================================================
+:py:meth:`dagma.locally_connected.LocallyConnected.register_load_state_dict_post_hook <dagma.locally_connected.LocallyConnected.register_load_state_dict_post_hook>`
+====================================================================================================================================================================
 .. _dagma.locally_connected.LocallyConnected.register_load_state_dict_post_hook:
 .. py:method:: register_load_state_dict_post_hook(hook)
 

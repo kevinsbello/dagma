@@ -1,5 +1,5 @@
-:py:method:`dagma.nonlinear.DagmaMLP.extra_repr`
-=============================================
+:py:meth:`dagma.nonlinear.DagmaMLP.extra_repr <dagma.nonlinear.DagmaMLP.extra_repr>`
+====================================================================================
 .. _dagma.nonlinear.DagmaMLP.extra_repr:
 .. py:method:: extra_repr() -> str
 

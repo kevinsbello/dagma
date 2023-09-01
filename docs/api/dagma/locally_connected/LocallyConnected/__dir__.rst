@@ -1,5 +1,5 @@
-:py:method:`dagma.locally_connected.LocallyConnected.__dir__`
-==========================================================
+:py:meth:`dagma.locally_connected.LocallyConnected.__dir__ <dagma.locally_connected.LocallyConnected.__dir__>`
+==============================================================================================================
 .. _dagma.locally_connected.LocallyConnected.__dir__:
 .. py:method:: __dir__()
 

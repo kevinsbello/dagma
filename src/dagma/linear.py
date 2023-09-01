@@ -22,7 +22,7 @@ class DagmaLinear:
             refers to the logistic loss. For continuous data: use ``l2``. For discrete 0/1 data: use ``logistic``.
         verbose : bool, optional
             If true, the loss/score and h values will print to stdout every ``checkpoint`` iterations,
-            as defined in :py:method:`~dagma.linear.DagmaLinear.fit`. Defaults to ``False``.
+            as defined in :py:meth:`~dagma.linear.DagmaLinear.fit`. Defaults to ``False``.
         dtype : type, optional
            Defines the float precision, for large number of nodes it is recommened to use ``np.float64``. 
            Defaults to ``np.float64``.
@@ -265,9 +265,9 @@ class DagmaLinear:
         s : typing.Union[typing.List[float], float], optional
             Controls the domain of M-matrices. Defaults to [1.0, .9, .8, .7, .6].
         warm_iter : int, optional
-            Number of iterations for :py:method:`~dagma.linear.DagmaLinear.minimize` for :math:`t < T`. Defaults to 3e4.
+            Number of iterations for :py:meth:`~dagma.linear.DagmaLinear.minimize` for :math:`t < T`. Defaults to 3e4.
         max_iter : int, optional
-            Number of iterations for :py:method:`~dagma.linear.DagmaLinear.minimize` for :math:`t = T`. Defaults to 6e4.
+            Number of iterations for :py:meth:`~dagma.linear.DagmaLinear.minimize` for :math:`t = T`. Defaults to 6e4.
         lr : float, optional
             Learning rate. Defaults to 0.0003.
         checkpoint : int, optional
@@ -289,7 +289,7 @@ class DagmaLinear:
         
         .. important::
 
-            If the output of :py:method:`~dagma.linear.DagmaLinear.fit` is not a DAG, then the user should try larger values of ``T`` (e.g., 6, 7, or 8) 
+            If the output of :py:meth:`~dagma.linear.DagmaLinear.fit` is not a DAG, then the user should try larger values of ``T`` (e.g., 6, 7, or 8) 
             before raising an issue in github.
         
         .. warning::

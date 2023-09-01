@@ -1,5 +1,5 @@
-:py:method:`dagma.locally_connected.LocallyConnected.ipu`
-======================================================
+:py:meth:`dagma.locally_connected.LocallyConnected.ipu <dagma.locally_connected.LocallyConnected.ipu>`
+======================================================================================================
 .. _dagma.locally_connected.LocallyConnected.ipu:
 .. py:method:: ipu(device: Optional[Union[int, Module.ipu.device]] = None) -> T
 

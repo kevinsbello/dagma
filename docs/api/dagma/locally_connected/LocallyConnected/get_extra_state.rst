@@ -1,5 +1,5 @@
-:py:method:`dagma.locally_connected.LocallyConnected.get_extra_state`
-==================================================================
+:py:meth:`dagma.locally_connected.LocallyConnected.get_extra_state <dagma.locally_connected.LocallyConnected.get_extra_state>`
+==============================================================================================================================
 .. _dagma.locally_connected.LocallyConnected.get_extra_state:
 .. py:method:: get_extra_state() -> Any
 

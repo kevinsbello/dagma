@@ -1,5 +1,5 @@
-:py:method:`dagma.locally_connected.LocallyConnected.type`
-=======================================================
+:py:meth:`dagma.locally_connected.LocallyConnected.type <dagma.locally_connected.LocallyConnected.type>`
+========================================================================================================
 .. _dagma.locally_connected.LocallyConnected.type:
 .. py:method:: type(dst_type: Union[torch.dtype, str]) -> T
 

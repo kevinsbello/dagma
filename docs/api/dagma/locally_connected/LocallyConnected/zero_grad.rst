@@ -1,5 +1,5 @@
-:py:method:`dagma.locally_connected.LocallyConnected.zero_grad`
-============================================================
+:py:meth:`dagma.locally_connected.LocallyConnected.zero_grad <dagma.locally_connected.LocallyConnected.zero_grad>`
+==================================================================================================================
 .. _dagma.locally_connected.LocallyConnected.zero_grad:
 .. py:method:: zero_grad(set_to_none: bool = True) -> None
 

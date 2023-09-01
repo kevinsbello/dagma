@@ -1,5 +1,5 @@
-:py:method:`dagma.locally_connected.LocallyConnected.apply`
-========================================================
+:py:meth:`dagma.locally_connected.LocallyConnected.apply <dagma.locally_connected.LocallyConnected.apply>`
+==========================================================================================================
 .. _dagma.locally_connected.LocallyConnected.apply:
 .. py:method:: apply(fn: Callable[[Module], None]) -> T
 

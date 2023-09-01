@@ -1,5 +1,5 @@
-:py:class:`dagma.locally_connected.LocallyConnected`
-==================================================
+:py:class:`dagma.locally_connected.LocallyConnected <dagma.locally_connected.LocallyConnected>`
+===============================================================================================
 
 .. _dagma.locally_connected.LocallyConnected:
 

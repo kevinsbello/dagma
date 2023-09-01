@@ -1,5 +1,5 @@
-:py:function:`dagma.utils.simulate_dag`
-==================================
+:py:func:`dagma.utils.simulate_dag <dagma.utils.simulate_dag>`
+==============================================================
 .. _dagma.utils.simulate_dag:
 .. py:function:: simulate_dag(d, s0, graph_type)
 

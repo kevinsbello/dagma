@@ -1,5 +1,5 @@
-:py:method:`dagma.locally_connected.LocallyConnected.register_full_backward_pre_hook`
-==================================================================================
+:py:meth:`dagma.locally_connected.LocallyConnected.register_full_backward_pre_hook <dagma.locally_connected.LocallyConnected.register_full_backward_pre_hook>`
+==============================================================================================================================================================
 .. _dagma.locally_connected.LocallyConnected.register_full_backward_pre_hook:
 .. py:method:: register_full_backward_pre_hook(hook: Callable[[Module, _grad_t], Union[None, _grad_t]], prepend: bool = False) -> torch.utils.hooks.RemovableHandle
 

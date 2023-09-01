@@ -1,5 +1,5 @@
-:py:method:`dagma.locally_connected.LocallyConnected.float`
-========================================================
+:py:meth:`dagma.locally_connected.LocallyConnected.float <dagma.locally_connected.LocallyConnected.float>`
+==========================================================================================================
 .. _dagma.locally_connected.LocallyConnected.float:
 .. py:method:: float() -> T
 

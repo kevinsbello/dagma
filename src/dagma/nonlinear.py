@@ -129,7 +129,7 @@ class DagmaNonlinear:
             Neural net that models the structural equations.
         verbose : bool, optional
             If true, the loss/score and h values will print to stdout every ``checkpoint`` iterations,
-            as defined in :py:method:`~dagma.nonlinear.DagmaNonlinear.fit`. Defaults to ``False``.
+            as defined in :py:meth:`~dagma.nonlinear.DagmaNonlinear.fit`. Defaults to ``False``.
         dtype : torch.dtype, optional
             float number precision, by default ``torch.double``.
         """
@@ -270,9 +270,9 @@ class DagmaNonlinear:
         s : float, optional
             Controls the domain of M-matrices, by default 1.0.
         warm_iter : int, optional
-            Number of iterations for :py:method:`~dagma.nonlinear.DagmaNonlinear.minimize` for :math:`t < T`, by default 5e4.
+            Number of iterations for :py:meth:`~dagma.nonlinear.DagmaNonlinear.minimize` for :math:`t < T`, by default 5e4.
         max_iter : int, optional
-            Number of iterations for :py:method:`~dagma.nonlinear.DagmaNonlinear.minimize` for :math:`t = T`, by default 8e4.
+            Number of iterations for :py:meth:`~dagma.nonlinear.DagmaNonlinear.minimize` for :math:`t = T`, by default 8e4.
         lr : float, optional
             Learning rate, by default .0002.
         w_threshold : float, optional
@@ -288,7 +288,7 @@ class DagmaNonlinear:
         
         .. important::
 
-            If the output of :py:method:`~dagma.nonlinear.DagmaNonlinear.fit` is not a DAG, then the user should try larger values of ``T`` (e.g., 6, 7, or 8) 
+            If the output of :py:meth:`~dagma.nonlinear.DagmaNonlinear.fit` is not a DAG, then the user should try larger values of ``T`` (e.g., 6, 7, or 8) 
             before raising an issue in github.
         """
         torch.set_default_dtype(self.dtype)

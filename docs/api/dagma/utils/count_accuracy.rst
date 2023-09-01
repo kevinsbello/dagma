@@ -1,5 +1,5 @@
-:py:function:`dagma.utils.count_accuracy`
-====================================
+:py:func:`dagma.utils.count_accuracy <dagma.utils.count_accuracy>`
+==================================================================
 .. _dagma.utils.count_accuracy:
 .. py:function:: count_accuracy(B_true, B_est)
 

@@ -1,5 +1,5 @@
-:py:method:`dagma.nonlinear.DagmaMLP.eval`
-=======================================
+:py:meth:`dagma.nonlinear.DagmaMLP.eval <dagma.nonlinear.DagmaMLP.eval>`
+========================================================================
 .. _dagma.nonlinear.DagmaMLP.eval:
 .. py:method:: eval() -> T
 

@@ -1,5 +1,5 @@
-:py:function:`dagma.utils.simulate_nonlinear_sem`
-============================================
+:py:func:`dagma.utils.simulate_nonlinear_sem <dagma.utils.simulate_nonlinear_sem>`
+==================================================================================
 .. _dagma.utils.simulate_nonlinear_sem:
 .. py:function:: simulate_nonlinear_sem(B, n, sem_type, noise_scale=None)
 

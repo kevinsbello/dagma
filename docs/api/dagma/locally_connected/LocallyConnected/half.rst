@@ -1,5 +1,5 @@
-:py:method:`dagma.locally_connected.LocallyConnected.half`
-=======================================================
+:py:meth:`dagma.locally_connected.LocallyConnected.half <dagma.locally_connected.LocallyConnected.half>`
+========================================================================================================
 .. _dagma.locally_connected.LocallyConnected.half:
 .. py:method:: half() -> T
 

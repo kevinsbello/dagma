@@ -1,5 +1,5 @@
-:py:class:`dagma.nonlinear.DagmaNonlinear`
-========================================
+:py:class:`dagma.nonlinear.DagmaNonlinear <dagma.nonlinear.DagmaNonlinear>`
+===========================================================================
 
 .. _dagma.nonlinear.DagmaNonlinear:
 
@@ -11,7 +11,7 @@
    :param model: Neural net that models the structural equations.
    :type model: nn.Module
    :param verbose: If true, the loss/score and h values will print to stdout every ``checkpoint`` iterations,
-                   as defined in :py:method:`~dagma.nonlinear.DagmaNonlinear.fit`. Defaults to ``False``.
+                   as defined in :py:meth:`~dagma.nonlinear.DagmaNonlinear.fit`. Defaults to ``False``.
    :type verbose: bool, optional
    :param dtype: float number precision, by default ``torch.double``.
    :type dtype: torch.dtype, optional

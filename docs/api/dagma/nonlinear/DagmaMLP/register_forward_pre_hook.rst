@@ -1,5 +1,5 @@
-:py:method:`dagma.nonlinear.DagmaMLP.register_forward_pre_hook`
-============================================================
+:py:meth:`dagma.nonlinear.DagmaMLP.register_forward_pre_hook <dagma.nonlinear.DagmaMLP.register_forward_pre_hook>`
+==================================================================================================================
 .. _dagma.nonlinear.DagmaMLP.register_forward_pre_hook:
 .. py:method:: register_forward_pre_hook(hook: Union[Callable[[T, Tuple[Any, Ellipsis]], Optional[Any]], Callable[[T, Tuple[Any, Ellipsis], Dict[str, Any]], Optional[Tuple[Any, Dict[str, Any]]]]], *, prepend: bool = False, with_kwargs: bool = False) -> torch.utils.hooks.RemovableHandle
 

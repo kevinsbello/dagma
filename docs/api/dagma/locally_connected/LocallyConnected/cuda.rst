@@ -1,5 +1,5 @@
-:py:method:`dagma.locally_connected.LocallyConnected.cuda`
-=======================================================
+:py:meth:`dagma.locally_connected.LocallyConnected.cuda <dagma.locally_connected.LocallyConnected.cuda>`
+========================================================================================================
 .. _dagma.locally_connected.LocallyConnected.cuda:
 .. py:method:: cuda(device: Optional[Union[int, Module.cuda.device]] = None) -> T
 

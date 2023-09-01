@@ -1,5 +1,5 @@
-:py:method:`dagma.nonlinear.DagmaMLP.__delattr__`
-==============================================
+:py:meth:`dagma.nonlinear.DagmaMLP.__delattr__ <dagma.nonlinear.DagmaMLP.__delattr__>`
+======================================================================================
 .. _dagma.nonlinear.DagmaMLP.__delattr__:
 .. py:method:: __delattr__(name)
 

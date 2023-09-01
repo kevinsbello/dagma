@@ -1,6 +1,6 @@
 {% if obj.display %}
-:py:method:`{{ obj.id }}`
-=========={{ "=" * obj.id|length }}
+:py:meth:`{{ obj.id }} <{{ obj.id }}>`
+=========={{ "=" * 2 * (obj.id|length + 2) }}
 .. _{{ obj.id }}:
 .. py:method:: {{ obj.short_name }}({{ obj.args }}){% if obj.return_annotation is not none %} -> {{ obj.return_annotation }}{% endif %}
 

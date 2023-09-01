@@ -1,5 +1,5 @@
-:py:class:`dagma.linear.DagmaLinear`
-==================================
+:py:class:`dagma.linear.DagmaLinear <dagma.linear.DagmaLinear>`
+===============================================================
 
 .. _dagma.linear.DagmaLinear:
 
@@ -12,7 +12,7 @@
                      refers to the logistic loss. For continuous data: use ``l2``. For discrete 0/1 data: use ``logistic``.
    :type loss_type: str
    :param verbose: If true, the loss/score and h values will print to stdout every ``checkpoint`` iterations,
-                   as defined in :py:method:`~dagma.linear.DagmaLinear.fit`. Defaults to ``False``.
+                   as defined in :py:meth:`~dagma.linear.DagmaLinear.fit`. Defaults to ``False``.
    :type verbose: bool, optional
    :param dtype: Defines the float precision, for large number of nodes it is recommened to use ``np.float64``.
                  Defaults to ``np.float64``.

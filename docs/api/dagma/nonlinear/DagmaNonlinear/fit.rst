@@ -1,5 +1,5 @@
-:py:method:`dagma.nonlinear.DagmaNonlinear.fit`
-============================================
+:py:meth:`dagma.nonlinear.DagmaNonlinear.fit <dagma.nonlinear.DagmaNonlinear.fit>`
+==================================================================================
 .. _dagma.nonlinear.DagmaNonlinear.fit:
 .. py:method:: fit(X: Union[torch.Tensor, numpy.ndarray], lambda1: float = 0.02, lambda2: float = 0.005, T: int = 4, mu_init: float = 0.1, mu_factor: float = 0.1, s: float = 1.0, warm_iter: int = 50000.0, max_iter: int = 80000.0, lr: float = 0.0002, w_threshold: float = 0.3, checkpoint: int = 1000) -> numpy.ndarray
 
@@ -19,9 +19,9 @@
    :type mu_factor: float, optional
    :param s: Controls the domain of M-matrices, by default 1.0.
    :type s: float, optional
-   :param warm_iter: Number of iterations for :py:method:`~dagma.nonlinear.DagmaNonlinear.minimize` for :math:`t < T`, by default 5e4.
+   :param warm_iter: Number of iterations for :py:meth:`~dagma.nonlinear.DagmaNonlinear.minimize` for :math:`t < T`, by default 5e4.
    :type warm_iter: int, optional
-   :param max_iter: Number of iterations for :py:method:`~dagma.nonlinear.DagmaNonlinear.minimize` for :math:`t = T`, by default 8e4.
+   :param max_iter: Number of iterations for :py:meth:`~dagma.nonlinear.DagmaNonlinear.minimize` for :math:`t = T`, by default 8e4.
    :type max_iter: int, optional
    :param lr: Learning rate, by default .0002.
    :type lr: float, optional
@@ -35,6 +35,6 @@
 
    .. important::
 
-       If the output of :py:method:`~dagma.nonlinear.DagmaNonlinear.fit` is not a DAG, then the user should try larger values of ``T`` (e.g., 6, 7, or 8)
+       If the output of :py:meth:`~dagma.nonlinear.DagmaNonlinear.fit` is not a DAG, then the user should try larger values of ``T`` (e.g., 6, 7, or 8)
        before raising an issue in github.
 

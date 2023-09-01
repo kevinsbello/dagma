@@ -1,5 +1,5 @@
-:py:method:`dagma.nonlinear.DagmaNonlinear.minimize`
-=================================================
+:py:meth:`dagma.nonlinear.DagmaNonlinear.minimize <dagma.nonlinear.DagmaNonlinear.minimize>`
+============================================================================================
 .. _dagma.nonlinear.DagmaNonlinear.minimize:
 .. py:method:: minimize(max_iter: float, lr: float, lambda1: float, lambda2: float, mu: float, s: float, lr_decay: float = False, tol: float = 1e-06, pbar: tqdm.auto.tqdm = tqdm()) -> bool
 

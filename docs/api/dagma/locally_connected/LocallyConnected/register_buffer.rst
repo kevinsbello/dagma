@@ -1,5 +1,5 @@
-:py:method:`dagma.locally_connected.LocallyConnected.register_buffer`
-==================================================================
+:py:meth:`dagma.locally_connected.LocallyConnected.register_buffer <dagma.locally_connected.LocallyConnected.register_buffer>`
+==============================================================================================================================
 .. _dagma.locally_connected.LocallyConnected.register_buffer:
 .. py:method:: register_buffer(name: str, tensor: Optional[torch.Tensor], persistent: bool = True) -> None
 

@@ -1,5 +1,5 @@
-:py:method:`dagma.nonlinear.DagmaMLP.share_memory`
-===============================================
+:py:meth:`dagma.nonlinear.DagmaMLP.share_memory <dagma.nonlinear.DagmaMLP.share_memory>`
+========================================================================================
 .. _dagma.nonlinear.DagmaMLP.share_memory:
 .. py:method:: share_memory() -> T
 

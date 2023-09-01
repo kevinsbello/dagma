@@ -1,5 +1,5 @@
-:py:method:`dagma.locally_connected.LocallyConnected.extra_repr`
-=============================================================
+:py:meth:`dagma.locally_connected.LocallyConnected.extra_repr <dagma.locally_connected.LocallyConnected.extra_repr>`
+====================================================================================================================
 .. _dagma.locally_connected.LocallyConnected.extra_repr:
 .. py:method:: extra_repr()
 

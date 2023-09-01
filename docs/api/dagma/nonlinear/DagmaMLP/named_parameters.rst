@@ -1,5 +1,5 @@
-:py:method:`dagma.nonlinear.DagmaMLP.named_parameters`
-===================================================
+:py:meth:`dagma.nonlinear.DagmaMLP.named_parameters <dagma.nonlinear.DagmaMLP.named_parameters>`
+================================================================================================
 .. _dagma.nonlinear.DagmaMLP.named_parameters:
 .. py:method:: named_parameters(prefix: str = '', recurse: bool = True, remove_duplicate: bool = True) -> Iterator[Tuple[str, torch.nn.parameter.Parameter]]
 

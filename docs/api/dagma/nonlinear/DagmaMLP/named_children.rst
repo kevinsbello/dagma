@@ -1,5 +1,5 @@
-:py:method:`dagma.nonlinear.DagmaMLP.named_children`
-=================================================
+:py:meth:`dagma.nonlinear.DagmaMLP.named_children <dagma.nonlinear.DagmaMLP.named_children>`
+============================================================================================
 .. _dagma.nonlinear.DagmaMLP.named_children:
 .. py:method:: named_children() -> Iterator[Tuple[str, Module]]
 

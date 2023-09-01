@@ -1,5 +1,5 @@
-:py:method:`dagma.nonlinear.DagmaMLP.parameters`
-=============================================
+:py:meth:`dagma.nonlinear.DagmaMLP.parameters <dagma.nonlinear.DagmaMLP.parameters>`
+====================================================================================
 .. _dagma.nonlinear.DagmaMLP.parameters:
 .. py:method:: parameters(recurse: bool = True) -> Iterator[torch.nn.parameter.Parameter]
 

@@ -1,5 +1,5 @@
-:py:method:`dagma.nonlinear.DagmaMLP.double`
-=========================================
+:py:meth:`dagma.nonlinear.DagmaMLP.double <dagma.nonlinear.DagmaMLP.double>`
+============================================================================
 .. _dagma.nonlinear.DagmaMLP.double:
 .. py:method:: double() -> T
 

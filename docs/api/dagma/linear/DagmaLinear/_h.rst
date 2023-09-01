@@ -1,5 +1,5 @@
-:py:method:`dagma.linear.DagmaLinear._h`
-=====================================
+:py:meth:`dagma.linear.DagmaLinear._h <dagma.linear.DagmaLinear._h>`
+====================================================================
 .. _dagma.linear.DagmaLinear._h:
 .. py:method:: _h(W: numpy.ndarray, s: float = 1.0) -> Tuple[float, numpy.ndarray]
 

@@ -1,5 +1,5 @@
-:py:method:`dagma.nonlinear.DagmaMLP._register_load_state_dict_pre_hook`
-=====================================================================
+:py:meth:`dagma.nonlinear.DagmaMLP._register_load_state_dict_pre_hook <dagma.nonlinear.DagmaMLP._register_load_state_dict_pre_hook>`
+====================================================================================================================================
 .. _dagma.nonlinear.DagmaMLP._register_load_state_dict_pre_hook:
 .. py:method:: _register_load_state_dict_pre_hook(hook, with_module=False)
 

@@ -1,5 +1,5 @@
-:py:method:`dagma.nonlinear.DagmaMLP.float`
-========================================
+:py:meth:`dagma.nonlinear.DagmaMLP.float <dagma.nonlinear.DagmaMLP.float>`
+==========================================================================
 .. _dagma.nonlinear.DagmaMLP.float:
 .. py:method:: float() -> T
 

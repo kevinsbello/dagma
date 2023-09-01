@@ -1,5 +1,5 @@
-:py:method:`dagma.nonlinear.DagmaMLP.train`
-========================================
+:py:meth:`dagma.nonlinear.DagmaMLP.train <dagma.nonlinear.DagmaMLP.train>`
+==========================================================================
 .. _dagma.nonlinear.DagmaMLP.train:
 .. py:method:: train(mode: bool = True) -> T
 

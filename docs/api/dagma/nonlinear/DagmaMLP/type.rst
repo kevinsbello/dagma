@@ -1,5 +1,5 @@
-:py:method:`dagma.nonlinear.DagmaMLP.type`
-=======================================
+:py:meth:`dagma.nonlinear.DagmaMLP.type <dagma.nonlinear.DagmaMLP.type>`
+========================================================================
 .. _dagma.nonlinear.DagmaMLP.type:
 .. py:method:: type(dst_type: Union[torch.dtype, str]) -> T
 

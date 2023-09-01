@@ -1,5 +1,5 @@
-:py:method:`dagma.nonlinear.DagmaMLP.cpu`
-======================================
+:py:meth:`dagma.nonlinear.DagmaMLP.cpu <dagma.nonlinear.DagmaMLP.cpu>`
+======================================================================
 .. _dagma.nonlinear.DagmaMLP.cpu:
 .. py:method:: cpu() -> T
 

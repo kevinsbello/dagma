@@ -1,5 +1,5 @@
-:py:method:`dagma.locally_connected.LocallyConnected.double`
-=========================================================
+:py:meth:`dagma.locally_connected.LocallyConnected.double <dagma.locally_connected.LocallyConnected.double>`
+============================================================================================================
 .. _dagma.locally_connected.LocallyConnected.double:
 .. py:method:: double() -> T
 

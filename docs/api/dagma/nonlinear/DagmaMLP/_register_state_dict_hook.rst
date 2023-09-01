@@ -1,5 +1,5 @@
-:py:method:`dagma.nonlinear.DagmaMLP._register_state_dict_hook`
-============================================================
+:py:meth:`dagma.nonlinear.DagmaMLP._register_state_dict_hook <dagma.nonlinear.DagmaMLP._register_state_dict_hook>`
+==================================================================================================================
 .. _dagma.nonlinear.DagmaMLP._register_state_dict_hook:
 .. py:method:: _register_state_dict_hook(hook)
 

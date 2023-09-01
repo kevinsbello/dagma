@@ -1,5 +1,5 @@
-:py:method:`dagma.nonlinear.DagmaMLP.fc1_to_adj`
-=============================================
+:py:meth:`dagma.nonlinear.DagmaMLP.fc1_to_adj <dagma.nonlinear.DagmaMLP.fc1_to_adj>`
+====================================================================================
 .. _dagma.nonlinear.DagmaMLP.fc1_to_adj:
 .. py:method:: fc1_to_adj() -> numpy.ndarray
 

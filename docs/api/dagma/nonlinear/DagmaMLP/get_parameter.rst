@@ -1,5 +1,5 @@
-:py:method:`dagma.nonlinear.DagmaMLP.get_parameter`
-================================================
+:py:meth:`dagma.nonlinear.DagmaMLP.get_parameter <dagma.nonlinear.DagmaMLP.get_parameter>`
+==========================================================================================
 .. _dagma.nonlinear.DagmaMLP.get_parameter:
 .. py:method:: get_parameter(target: str) -> torch.nn.parameter.Parameter
 

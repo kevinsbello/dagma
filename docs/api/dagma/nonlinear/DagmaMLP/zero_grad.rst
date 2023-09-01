@@ -1,5 +1,5 @@
-:py:method:`dagma.nonlinear.DagmaMLP.zero_grad`
-============================================
+:py:meth:`dagma.nonlinear.DagmaMLP.zero_grad <dagma.nonlinear.DagmaMLP.zero_grad>`
+==================================================================================
 .. _dagma.nonlinear.DagmaMLP.zero_grad:
 .. py:method:: zero_grad(set_to_none: bool = True) -> None
 

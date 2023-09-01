@@ -1,5 +1,5 @@
-:py:method:`dagma.locally_connected.LocallyConnected.to_empty`
-===========================================================
+:py:meth:`dagma.locally_connected.LocallyConnected.to_empty <dagma.locally_connected.LocallyConnected.to_empty>`
+================================================================================================================
 .. _dagma.locally_connected.LocallyConnected.to_empty:
 .. py:method:: to_empty(*, device: Union[str, Module.to_empty.device]) -> T
 

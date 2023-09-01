@@ -1,5 +1,5 @@
-:py:method:`dagma.nonlinear.DagmaMLP.h_func`
-=========================================
+:py:meth:`dagma.nonlinear.DagmaMLP.h_func <dagma.nonlinear.DagmaMLP.h_func>`
+============================================================================
 .. _dagma.nonlinear.DagmaMLP.h_func:
 .. py:method:: h_func(s: float = 1.0) -> torch.Tensor
 

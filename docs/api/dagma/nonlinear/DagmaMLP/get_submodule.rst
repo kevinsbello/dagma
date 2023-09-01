@@ -1,5 +1,5 @@
-:py:method:`dagma.nonlinear.DagmaMLP.get_submodule`
-================================================
+:py:meth:`dagma.nonlinear.DagmaMLP.get_submodule <dagma.nonlinear.DagmaMLP.get_submodule>`
+==========================================================================================
 .. _dagma.nonlinear.DagmaMLP.get_submodule:
 .. py:method:: get_submodule(target: str) -> Module
 

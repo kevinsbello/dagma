@@ -1,5 +1,5 @@
-:py:method:`dagma.linear.DagmaLinear.fit`
-======================================
+:py:meth:`dagma.linear.DagmaLinear.fit <dagma.linear.DagmaLinear.fit>`
+======================================================================
 .. _dagma.linear.DagmaLinear.fit:
 .. py:method:: fit(X: numpy.ndarray, lambda1: float = 0.03, w_threshold: float = 0.3, T: int = 5, mu_init: float = 1.0, mu_factor: float = 0.1, s: Union[List[float], float] = [1.0, 0.9, 0.8, 0.7, 0.6], warm_iter: int = 30000.0, max_iter: int = 60000.0, lr: float = 0.0003, checkpoint: int = 1000, beta_1: float = 0.99, beta_2: float = 0.999, exclude_edges: Optional[List[Tuple[int, int]]] = None, include_edges: Optional[List[Tuple[int, int]]] = None) -> numpy.ndarray
 
@@ -19,9 +19,9 @@
    :type mu_factor: float, optional
    :param s: Controls the domain of M-matrices. Defaults to [1.0, .9, .8, .7, .6].
    :type s: typing.Union[typing.List[float], float], optional
-   :param warm_iter: Number of iterations for :py:method:`~dagma.linear.DagmaLinear.minimize` for :math:`t < T`. Defaults to 3e4.
+   :param warm_iter: Number of iterations for :py:meth:`~dagma.linear.DagmaLinear.minimize` for :math:`t < T`. Defaults to 3e4.
    :type warm_iter: int, optional
-   :param max_iter: Number of iterations for :py:method:`~dagma.linear.DagmaLinear.minimize` for :math:`t = T`. Defaults to 6e4.
+   :param max_iter: Number of iterations for :py:meth:`~dagma.linear.DagmaLinear.minimize` for :math:`t = T`. Defaults to 6e4.
    :type max_iter: int, optional
    :param lr: Learning rate. Defaults to 0.0003.
    :type lr: float, optional
@@ -41,7 +41,7 @@
 
    .. important::
 
-       If the output of :py:method:`~dagma.linear.DagmaLinear.fit` is not a DAG, then the user should try larger values of ``T`` (e.g., 6, 7, or 8)
+       If the output of :py:meth:`~dagma.linear.DagmaLinear.fit` is not a DAG, then the user should try larger values of ``T`` (e.g., 6, 7, or 8)
        before raising an issue in github.
 
    .. warning::

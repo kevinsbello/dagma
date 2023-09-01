@@ -1,5 +1,5 @@
-:py:method:`dagma.nonlinear.DagmaMLP.__setattr__`
-==============================================
+:py:meth:`dagma.nonlinear.DagmaMLP.__setattr__ <dagma.nonlinear.DagmaMLP.__setattr__>`
+======================================================================================
 .. _dagma.nonlinear.DagmaMLP.__setattr__:
 .. py:method:: __setattr__(name: str, value: Union[torch.Tensor, Module]) -> None
 

@@ -1,5 +1,5 @@
-:py:method:`dagma.nonlinear.DagmaMLP._load_from_state_dict`
-========================================================
+:py:meth:`dagma.nonlinear.DagmaMLP._load_from_state_dict <dagma.nonlinear.DagmaMLP._load_from_state_dict>`
+==========================================================================================================
 .. _dagma.nonlinear.DagmaMLP._load_from_state_dict:
 .. py:method:: _load_from_state_dict(state_dict, prefix, local_metadata, strict, missing_keys, unexpected_keys, error_msgs)
 

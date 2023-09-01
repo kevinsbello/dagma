@@ -1,5 +1,5 @@
-:py:method:`dagma.nonlinear.DagmaMLP.forward`
-==========================================
+:py:meth:`dagma.nonlinear.DagmaMLP.forward <dagma.nonlinear.DagmaMLP.forward>`
+==============================================================================
 .. _dagma.nonlinear.DagmaMLP.forward:
 .. py:method:: forward(x: torch.Tensor) -> torch.Tensor
 

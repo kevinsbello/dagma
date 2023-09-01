@@ -1,5 +1,5 @@
-:py:method:`dagma.locally_connected.LocallyConnected.train`
-========================================================
+:py:meth:`dagma.locally_connected.LocallyConnected.train <dagma.locally_connected.LocallyConnected.train>`
+==========================================================================================================
 .. _dagma.locally_connected.LocallyConnected.train:
 .. py:method:: train(mode: bool = True) -> T
 
