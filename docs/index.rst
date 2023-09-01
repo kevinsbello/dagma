@@ -105,10 +105,15 @@ and we can observe how the solution at the final iteration (bottom-right plot) i
    :align: center
 
 .. toctree::
-   :caption: Getting Started
+   :caption: Home
    :hidden:
 
    Home<self>
+
+.. toctree::
+   :caption: Getting Started
+   :hidden:
+
    usage
 
 .. toctree::
