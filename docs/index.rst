@@ -108,6 +108,7 @@ and we can observe how the solution at the final iteration (bottom-right plot) i
    :caption: Getting Started
    :hidden:
 
+   Home<self>
    usage
 
 .. toctree::

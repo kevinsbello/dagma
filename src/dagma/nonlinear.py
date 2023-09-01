@@ -333,7 +333,7 @@ class DagmaNonlinear:
 
 def test():
     from timeit import default_timer as timer
-    import utils
+    from . import utils
     
     utils.set_random_seed(1)
     torch.manual_seed(1)

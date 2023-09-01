@@ -355,7 +355,7 @@ class DagmaLinear:
         return self.W_est
 
 def test():
-    import utils
+    from . import utils
     from timeit import default_timer as timer
     utils.set_random_seed(1)
     
