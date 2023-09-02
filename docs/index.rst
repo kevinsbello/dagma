@@ -9,8 +9,8 @@ is constrained to be a ``directed acyclic graph`` (DAG).
 Due to the super-exponential number of DAGs w.r.t. the number of variables, 
 the vanilla formulation results in a hard combinatorial optimization problem. 
 DAGMA reformulates this optimization problem, by replacing the combinatorial constraint
-by a non-convex differentiable function that exactly characterizes DAGs, thus, 
-making the optimization ammenable to continuous optimization methods such as gradient descent. 
+with a non-convex differentiable function that exactly characterizes DAGs, thus, 
+making the optimization amenable to continuous optimization methods such as gradient descent. 
 
 
 .. important::

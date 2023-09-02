@@ -11,7 +11,7 @@ authors = [
 ]
 description = 'Implementation of the DAGMA algorithm'
 readme = "README.md"
-license = {text = "LICENCE"}
+license = {text = "Apache 2.0"}
 keywords = ['dagma', 'notears', 'causal discovery', 'bayesian network', 'structure learning']
 classifiers = [
     'Programming Language :: Python :: 3',
@@ -33,8 +33,9 @@ dependencies = [
 version = {file = "src/VERSION"}
 
 [project.urls]
-'Bug Tracker' = 'https://github.com/kevinsbello/dagma/issues'
-'repository' = 'https://github.com/kevinsbello/dagma'
+'Repository' = 'https://github.com/kevinsbello/dagma'
+'Documentation' = "https://dagma.readthedocs.io/en/latest/"
+'Issues' = 'https://github.com/kevinsbello/dagma/issues'
 
 [metadata]
 long_description = 'file: README.md, LICENSE'

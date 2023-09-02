@@ -1,4 +1,19 @@
-# DAGMA: Faster and more accurate structure learning with a log-det constraint
+# ![DAGMA](https://raw.githubusercontent.com/kevinsbello/dagma/main/logo/dagma.png)
+
+<div align=center>
+  <a href="https://pypi.org/project/dagma"><img src="https://img.shields.io/pypi/v/dagma"></a>
+  <a href="https://pypi.org/project/dagma"><img src="https://img.shields.io/pypi/pyversions/dagma"></a>
+  <a href="https://pypi.org/project/dagma"><img src="https://img.shields.io/pypi/wheel/dagma"></a>
+  <a href="https://pypistats.org/packages/dagma"><img src="https://img.shields.io/pypi/dm/dagma"></a>
+  <a href="https://pypi.org/project/dagma"><img src="https://img.shields.io/pypi/l/dagma"></a>
+</div>
+
+
+The `dagma` library is a Python 3 package for learning DAGs (a.k.a. Bayesian networks) from data.
+
+DAGMA works by optimizing a given **score/loss function**, where the structure that relates the variables is constrained to be a directed acyclic graph (DAG). Due to the super-exponential number of DAGs w.r.t. the number of variables, the vanilla formulation results in a hard combinatorial optimization problem. DAGMA reformulates this optimization problem, by **replacing the combinatorial constraint with a non-convex differentiable function that exactly characterizes DAGs**, thus, making the optimization amenable to continuous optimization methods such as gradient descent.
+
+## Citation
 
 This is an implementation of the following paper:
 
@@ -8,7 +23,10 @@ This is an implementation of the following paper:
 [dagma]: https://arxiv.org/abs/2209.08037
 
 If you find this code useful, please consider citing:
-```
+
+### BibTeX
+
+```bibtex
 @inproceedings{bello2022dagma,
     author = {Bello, Kevin and Aragam, Bryon and Ravikumar, Pradeep},
     booktitle = {Advances in Neural Information Processing Systems},
@@ -17,26 +35,30 @@ If you find this code useful, please consider citing:
 }
 ```
 
-## Installing DAGMA
+## Features
+
+- Supports continuous data for linear (see [dagma.linear][dagma-linear]) and nonlinear models (see [dagma.nonlinear][dagma-nonlinear]).
+- Supports binary (0/1) data for generalized linear models, via [dagma.linear.DagmaLinear][DagmaLinear] and using ``logistic`` as score.
+- Faster than other continuous optimization methods for structure learning, e.g., NOTEARS, GOLEM.
+
+[dagma-linear]: https://dagma.readthedocs.io/en/latest/api/dagma/linear/
+[dagma-nonlinear]: https://dagma.readthedocs.io/en/latest/api/dagma/nonlinear/
+[DagmaLinear]: https://dagma.readthedocs.io/en/latest/api/dagma/linear/DagmaLinear/
+
+## Getting Started
+
+### Install the package
 
 We recommend using a virtual environment via `virtualenv` or `conda`, and use `pip` to install the `dagma` package.
 ```bash
 $ pip install dagma
 ```
 
-## Using DAGMA
+### Using dagma
 
 See an example on how to use dagma in this [iPython notebook][example].
 
-## Table of Content
-  * [Summary](#summary)
-    + [The log-det acyclicity characterization](#the-log-det-acyclicity-characterization)
-    + [A path-following approach](#a-path-following-approach)
-  * [Requirements](#requirements)
-  * [Contents](#contents)
-  * [Acknowledgments](#acknowledgments)
-
-## Summary
+## An Overview of DAGMA
 
 We propose a new acyclicity characterization of DAGs via a log-det function for learning DAGs from observational data. Similar to previously proposed acyclicity functions (e.g. [NOTEARS][notears]), our characterization is also exact and differentiable. However, when compared to existing characterizations, our log-det function: (1) Is better at detecting large cycles; (2) Has better-behaved gradients; and (3) Its runtime is in practice about an order of magnitude faster. These advantages of our log-det formulation, together with a path-following scheme, lead to significant improvements in structure accuracy (e.g. SHD).
 
