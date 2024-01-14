@@ -4,7 +4,7 @@
   <a href="https://pypi.org/project/dagma"><img src="https://img.shields.io/pypi/v/dagma"></a>
   <a href="https://pypi.org/project/dagma"><img src="https://img.shields.io/pypi/pyversions/dagma"></a>
   <a href="https://pypi.org/project/dagma"><img src="https://img.shields.io/pypi/wheel/dagma"></a>
-  <a href="https://pypistats.org/packages/dagma"><img src="https://img.shields.io/pypi/dm/dagma"></a>
+  <a href="https://pepy.tech/project/dagma"><img src="https://pepy.tech/badge/dagma"></a>
   <a href="https://pypi.org/project/dagma"><img src="https://img.shields.io/pypi/l/dagma"></a>
 </div>
 
